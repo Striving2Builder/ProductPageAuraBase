@@ -1,0 +1,34 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur" />
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0  0 1 0 0 0  0 1 0 0 0  0 0 0 1 0" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="auraGradient" x1="256" y1="0" x2="256" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00FFFF" /> <!-- Electric Cyan -->
+      <stop offset="100%" stop-color="#008B8B" /> <!-- Dark Cyan -->
+    </linearGradient>
+  </defs>
+  
+  <!-- Background (Optional, useful for preview, usually transparent for logo) -->
+  <!-- <rect width="512" height="512" fill="#0F172A" rx="100" /> -->
+
+  <!-- Pulsing Ring 1 -->
+  <circle cx="256" cy="256" r="180" stroke="#00FFFF" stroke-width="2" opacity="0.2" />
+  
+  <!-- Pulsing Ring 2 -->
+  <circle cx="256" cy="256" r="140" stroke="#00FFFF" stroke-width="2" opacity="0.4" />
+
+  <!-- The Stylized 'A' -->
+  <g filter="url(#glow)">
+    <!-- Main Peak -->
+    <path d="M256 80 L100 432 L160 432 L256 180 L352 432 L412 432 L256 80 Z" fill="url(#auraGradient)" />
+    
+    <!-- Crossbar / Wave -->
+    <path d="M145 350 Q 256 280 367 350" stroke="#00FFFF" stroke-width="20" stroke-linecap="round" fill="none" opacity="0.9" />
+  </g>
+</svg>
