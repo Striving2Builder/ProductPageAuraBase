@@ -23,16 +23,10 @@ export const WaitlistModal: React.FC<WaitlistModalProps> = ({ isOpen, onClose })
         // 2. Create a new form and get your unique ID (e.g., "mdoqyjkb")
         // 3. Replace 'YOUR_FORMSPREE_ID' below with your actual ID.
 
-        const FORMSPREE_ID = 'YOUR_FORMSPREE_ID'; // <--- PASTE YOUR ID HERE
-
-        if (FORMSPREE_ID === 'YOUR_FORMSPREE_ID') {
-            alert("Please update the Formspree ID in WaitlistModal.tsx to collect emails.");
-            setStatus('idle');
-            return;
-        }
+        const FORMSPREE_ID = 'mjgknrwn';
 
         try {
-            const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+            const response = await fetch(`https://formspree.io/f/mjgknrwn`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
