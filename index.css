@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+    --color-brand-50: #f0fdfa;
+    --color-brand-100: #ccfbf1;
+    --color-brand-200: #99f6e4;
+    --color-brand-300: #5eead4;
+    --color-brand-400: #2dd4bf;
+    --color-brand-500: #14b8a6;
+    --color-brand-600: #0d9488;
+    --color-brand-700: #0f766e;
+
+    --font-display: "Outfit", sans-serif;
+    --font-sans: "Inter", sans-serif;
+}
+
+@utility glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-brand-500/10 dark:bg-slate-900/60 dark:border-white/10;
+}
+
+@utility btn-primary {
+    @apply bg-brand-500 text-white transition-all duration-300 hover:bg-brand-600 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-brand-500/40;
+}
+
+/* Custom Gradients */
+.gradient-mind {
+    background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+}
+
+.gradient-body {
+    background: linear-gradient(135deg, #f97316 0%, #ef4444 100%);
+}
+
+.gradient-spirit {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+}
+
+.gradient-primary {
+    background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+}
+
+/* Base styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @apply bg-white text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100 font-sans;
+}
