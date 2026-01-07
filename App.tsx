@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { WellnessTab } from './types';
 import PrivacyPolicyView from './PrivacyPolicy';
 import { WaitlistModal } from './WaitlistModal';
+import { WaitlistModal } from './WaitlistModal';
 import {
   COACHES,
   WELLNESS_FEATURES,
@@ -184,8 +185,8 @@ const App: React.FC = () => {
                     key={tab}
                     onClick={() => setActiveTab(tab)}
                     className={`px-10 py-4 rounded-[1.1rem] font-bold transition-all text-xs uppercase tracking-[0.2em] ${activeTab === tab
-                        ? `bg-brand-500 text-white shadow-lg shadow-brand-500/20`
-                        : 'text-slate-500 hover:text-brand-500 dark:text-slate-400'
+                      ? `bg-brand-500 text-white shadow-lg shadow-brand-500/20`
+                      : 'text-slate-500 hover:text-brand-500 dark:text-slate-400'
                       }`}
                   >
                     {tab}
@@ -476,6 +477,7 @@ const App: React.FC = () => {
           </div>
         </div>
       )}
+      <WaitlistModal isOpen={isWaitlistOpen} onClose={() => setIsWaitlistOpen(false)} />
     </div>
   );
 }
