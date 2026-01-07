@@ -3,7 +3,7 @@ import { Coach, WellnessTab, PricingPlan, Feature, SpecializedFeature, Community
 // PRODUCT INFO VAULT - DO NOT UPDATE WITHOUT EXPLICIT INSTRUCTION
 export const PRODUCT_NAME = "AuraBase";
 export const HERO_TAGLINE = "Integrate Your Mind, Body, & Spirit";
-export const HERO_DESCRIPTION = "The world's first AI-powered council for holistic health integration. One interface for your entire evolution.";
+export const HERO_DESCRIPTION = "The world's first AI-powered council for holistic health, fitness, and nutrition integration. One interface for your entire evolution.";
 
 export const COACHES: Coach[] = [
   {
@@ -55,55 +55,55 @@ export const COACHES: Coach[] = [
 
 export const WELLNESS_FEATURES: Record<WellnessTab, Feature[]> = {
   [WellnessTab.MIND]: [
-    { 
-      id: 'm1', 
-      title: 'Mood & Emotion Logging', 
-      description: 'Track your emotional journey with our comprehensive mood and emotion logging system. Monitor your mental state with daily check-ins to build deep self-awareness.', 
-      icon: '🧠' 
+    {
+      id: 'm1',
+      title: 'Mood & Emotion Logging',
+      description: 'Track your emotional journey with our comprehensive mood and emotion logging system. Monitor your mental state with daily check-ins to build deep self-awareness.',
+      icon: '🧠'
     },
-    { 
-      id: 'm2', 
-      title: 'Meditation & Sound', 
-      description: 'Our Meditation library and Sound Sanctuary provide the perfect escape for stress relief and mental clarity through immersive guided sessions and 3D audio.', 
-      icon: '🧘' 
+    {
+      id: 'm2',
+      title: 'Meditation & Sound',
+      description: 'Our Meditation library and Sound Sanctuary provide the perfect escape for stress relief and mental clarity through immersive guided sessions and 3D audio.',
+      icon: '🧘'
     },
-    { 
-      id: 'm3', 
-      title: 'Digital Wellbeing', 
-      description: 'Gain insights into your digital habits through Screen Time and Social Media Awareness tracking. Reclaim your focus and find true digital balance in a connected world.', 
-      icon: '📱' 
+    {
+      id: 'm3',
+      title: 'Digital Wellbeing',
+      description: 'Gain insights into your digital habits through Screen Time and Social Media Awareness tracking. Reclaim your focus and find true digital balance in a connected world.',
+      icon: '📱'
     },
-    { 
-      id: 'm4', 
-      title: 'Guided Breathing', 
-      description: 'Practice guided breathing exercises with our AI Mindfulness Coach. Targeted techniques designed to help you master your stress response and ground your energy instantly.', 
-      icon: '💨' 
+    {
+      id: 'm4',
+      title: 'Guided Breathing',
+      description: 'Practice guided breathing exercises with our AI Mindfulness Coach. Targeted techniques designed to help you master your stress response and ground your energy instantly.',
+      icon: '💨'
     }
   ],
   [WellnessTab.BODY]: [
-    { 
-      id: 'b1', 
-      title: 'AuraForge (Strength Training)', 
-      description: '• AI-powered workout planning & real-time form correction.\n• Cinematic social sharing—export your gains straight to Stories.\n• Precision logging to farm Aura and track every rep.', 
-      icon: '⚔️' 
+    {
+      id: 'b1',
+      title: 'AuraForge (Strength Training)',
+      description: '• AI-powered workout planning & real-time form correction.\n• Cinematic social sharing—export your gains straight to Stories.\n• Precision logging to farm Aura and track every rep.',
+      icon: '⚔️'
     },
-    { 
-      id: 'b2', 
-      title: 'AuraFlex (Yoga & Flexibility)', 
-      description: '• Support for 8+ yoga styles & 50+ pose tracking.\n• Advanced Flow Builder with integrated breathwork protocols.\n• Pre/Post-session mood mapping to visualize your peace.', 
-      icon: '🧘‍♀️' 
+    {
+      id: 'b2',
+      title: 'AuraFlex (Yoga & Flexibility)',
+      description: '• Support for 8+ yoga styles & 50+ pose tracking.\n• Advanced Flow Builder with integrated breathwork protocols.\n• Pre/Post-session mood mapping to visualize your peace.',
+      icon: '🧘‍♀️'
     },
-    { 
-      id: 'b3', 
-      title: 'AuraEndure (Cardio & Endurance)', 
-      description: '• Zero-friction auto-sync with all major fitness devices.\n• Gamified performance tracking—watch your XP surge as you move.\n• Stunning visual stats to inspire your circle on social.', 
-      icon: '🏃' 
+    {
+      id: 'b3',
+      title: 'AuraEndure (Cardio & Endurance)',
+      description: '• Zero-friction auto-sync with all major fitness devices.\n• Gamified performance tracking—watch your XP surge as you move.\n• Stunning visual stats to inspire your circle on social.',
+      icon: '🏃'
     },
-    { 
-      id: 'b4', 
-      title: 'AI Nutrition Scanner', 
-      description: '• Snap & Analyze: Instant AI recognition for global cuisines.\n• Deep macro insights & calorie tracking in seconds.\n• Precision fuel mapping to optimize your evolution.', 
-      icon: '📸' 
+    {
+      id: 'b4',
+      title: 'AI Nutrition Scanner',
+      description: '• Snap & Analyze: Instant AI recognition for global cuisines.\n• Deep macro insights & calorie tracking in seconds.\n• Precision fuel mapping to optimize your evolution.',
+      icon: '📸'
     }
   ],
   [WellnessTab.SPIRIT]: [
