@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { WellnessTab } from './types';
 import PrivacyPolicyView from './PrivacyPolicy';
 import { WaitlistModal } from './WaitlistModal';
-import { WaitlistModal } from './WaitlistModal';
 import {
   COACHES,
   WELLNESS_FEATURES,

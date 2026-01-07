@@ -8,25 +8,47 @@ interface WaitlistModalProps {
 
 export const WaitlistModal: React.FC<WaitlistModalProps> = ({ isOpen, onClose }) => {
     const [email, setEmail] = useState('');
-    const [status, setStatus] = useState<'idle' | 'loading' | 'success'>('idle');
+    const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
     if (!isOpen) return null;
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!email) return;
 
         setStatus('loading');
 
-        // SIMULATION: In a real "no-backend" scenario, you would send a POST request here.
-        // Recommended: Use Formspree.io or a Google Sheets Webhook.
-        // Example:
-        // fetch('https://formspree.io/f/your_form_id', { method: 'POST', body: JSON.stringify({ email }) })
+        // REAL IMPLEMENTATION: Formspree
+        // 1. Create a free account at https://formspree.io/
+        // 2. Create a new form and get your unique ID (e.g., "mdoqyjkb")
+        // 3. Replace 'YOUR_FORMSPREE_ID' below with your actual ID.
 
-        setTimeout(() => {
-            setStatus('success');
-            setEmail('');
-        }, 1500);
+        const FORMSPREE_ID = 'YOUR_FORMSPREE_ID'; // <--- PASTE YOUR ID HERE
+
+        if (FORMSPREE_ID === 'YOUR_FORMSPREE_ID') {
+            alert("Please update the Formspree ID in WaitlistModal.tsx to collect emails.");
+            setStatus('idle');
+            return;
+        }
+
+        try {
+            const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email })
+            });
+
+            if (response.ok) {
+                setStatus('success');
+                setEmail('');
+            } else {
+                setStatus('error');
+            }
+        } catch (error) {
+            setStatus('error');
+        }
     };
 
     return (
@@ -72,6 +94,9 @@ export const WaitlistModal: React.FC<WaitlistModalProps> = ({ isOpen, onClose })
                                 required
                             />
                         </div>
+                        {status === 'error' && (
+                            <p className="text-red-500 text-sm text-center">Something went wrong. Please try again.</p>
+                        )}
                         <button
                             type="submit"
                             disabled={status === 'loading'}
