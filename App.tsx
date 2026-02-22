@@ -445,7 +445,7 @@ const App: React.FC = () => {
           <div className="flex flex-wrap justify-center gap-x-14 gap-y-6 mb-16 text-slate-400 font-black uppercase text-[11px] tracking-[0.3em]">
             <a href="#" className="hover:text-brand-500 transition-colors">Instagram</a>
             <a href="#" className="hover:text-brand-500 transition-colors">TikTok</a>
-            <button onClick={() => setView('privacy')} className="hover:text-brand-500 transition-colors">Privacy Policy</button>
+            <a href="https://aurabase.app/privicypolicy" className="hover:text-brand-500 transition-colors">Privacy Policy</a>
             <button onClick={() => setView('privacy')} className="hover:text-brand-500 transition-colors">Terms of Security</button>
           </div>
           <p className="text-slate-400 text-xs font-bold uppercase tracking-[0.2em] leading-relaxed">
