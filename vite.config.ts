@@ -19,6 +19,14 @@ export default defineConfig(({ mode }) => {
       alias: {
         '@': path.resolve(__dirname, '.'),
       }
-    }
+    },
+    build: {
+      rollupOptions: {
+        input: {
+          main: path.resolve(__dirname, 'index.html'),
+          privicypolicy: path.resolve(__dirname, 'public/privicypolicy.html'),
+        },
+      },
+    },
   };
 });
