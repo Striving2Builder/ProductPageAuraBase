@@ -24,7 +24,7 @@ export default defineConfig(({ mode }) => {
       rollupOptions: {
         input: {
           main: path.resolve(__dirname, 'index.html'),
-          privicypolicy: path.resolve(__dirname, 'public/privicypolicy.html'),
+          privicypolicy: path.resolve(__dirname, 'privicypolicy.html'),
         },
       },
     },
