@@ -418,6 +418,7 @@ const App: React.FC = () => {
             {['features', 'coaches', 'auraquest', 'security', 'pricing'].map(sec => (
               <button key={sec} onClick={() => scrollToSection(sec)} className="text-[11px] font-black hover:text-brand-500 transition-colors uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">{sec}</button>
             ))}
+            <a href="https://aurabase.app/privicypolicy" className="text-[11px] font-black hover:text-brand-500 transition-colors uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Privacy Policy</a>
             <div className="h-6 w-px bg-slate-200 dark:bg-slate-800"></div>
             <button onClick={() => setIsDarkMode(!isDarkMode)} className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 hover:bg-brand-50 dark:hover:bg-brand-900/20 transition-colors">
               {isDarkMode ? <Sun size={18} className="text-brand-400" /> : <Moon size={18} className="text-brand-600" />}
