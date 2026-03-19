@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the AuraBase AI Council: Atlas, Aria, Luna, Zenith, and Solace. Discover how cutting-edge AI, from MediaPipe form tracking to cultural macro dietary engines, optimizes your physical and mental health.">
+    
+    <!-- OpenGraph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.aurabase.app/ai-council-blog">
+    <meta property="og:title" content="AuraBase AI Council | Voices of AI Experts">
+    <meta property="og:description" content="Advanced AI agents dedicated to optimizing your mind, body, and spirit.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="AuraBase AI Council | Voices of AI Experts">
+    <meta property="twitter:description" content="Advanced AI agents dedicated to optimizing your mind, body, and spirit.">
+    
+    <title>AuraBase AI Council | Blog Mockups</title>
+
+    <!-- Schema Markup (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "AuraBase",
+          "applicationCategory": "HealthApplication",
+          "operatingSystem": "iOS, Android",
+          "description": "An AI-powered health and wellness application featuring an AI Council of specialized agents tracking fitness biomechanics, personalized global nutrition, sleep protocols, and mindfulness modules.",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+        }
+      ]
+    }
+    </script>
+    <!-- Modern Typography: Outfit and Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #09090b;
+            --surface-color: rgba(255, 255, 255, 0.03);
+            --surface-border: rgba(255, 255, 255, 0.08);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-atlas: #ef4444; /* Red */
+            --accent-aria: #22c55e; /* Green */
+            --accent-luna: #a855f7; /* Purple */
+            --accent-zenith: #14b8a6; /* Teal */
+            --accent-solace: #3b82f6; /* Blue */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            background-image: 
+                radial-gradient(circle at 15% 10%, rgba(168, 85, 247, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 85% 90%, rgba(59, 130, 246, 0.05) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+
+        h1, h2, h3, h4, .brand-font {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        .header p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .blog-grid {
+            display: grid;
+            gap: 4rem;
+        }
+
+        .blog-post {
+            background: var(--surface-color);
+            border: 1px solid var(--surface-border);
+            border-radius: 24px;
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        /* Accent glows */
+        .blog-post::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            z-index: 1;
+        }
+
+        .post-atlas::before { background: linear-gradient(90deg, transparent, var(--accent-atlas), transparent); }
+        .post-aria::before { background: linear-gradient(90deg, transparent, var(--accent-aria), transparent); }
+        .post-luna::before { background: linear-gradient(90deg, transparent, var(--accent-luna), transparent); }
+        .post-zenith::before { background: linear-gradient(90deg, transparent, var(--accent-zenith), transparent); }
+        .post-solace::before { background: linear-gradient(90deg, transparent, var(--accent-solace), transparent); }
+
+        .author-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            font-family: 'Outfit', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .post-atlas .author-badge { color: var(--accent-atlas); border: 1px solid rgba(239, 68, 68, 0.2); }
+        .post-aria .author-badge { color: var(--accent-aria); border: 1px solid rgba(34, 197, 94, 0.2); }
+        .post-luna .author-badge { color: var(--accent-luna); border: 1px solid rgba(168, 85, 247, 0.2); }
+        .post-zenith .author-badge { color: var(--accent-zenith); border: 1px solid rgba(20, 184, 166, 0.2); }
+        .post-solace .author-badge { color: var(--accent-solace); border: 1px solid rgba(59, 130, 246, 0.2); }
+
+        .blog-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+            color: #cbd5e1;
+            font-weight: 300;
+        }
+
+        .cta-box {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cta-text {
+            font-weight: 600;
+            font-size: 1.125rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .post-atlas .cta-text { color: var(--accent-atlas); }
+        .post-aria .cta-text { color: var(--accent-aria); }
+        .post-luna .cta-text { color: var(--accent-luna); }
+        .post-zenith .cta-text { color: var(--accent-zenith); }
+        .post-solace .cta-text { color: var(--accent-solace); }
+
+        .cta-button {
+            padding: 0.75rem 1.5rem;
+            border-radius: 999px;
+            background: #fff;
+            color: #000;
+            text-decoration: none;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 0.875rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255,255,255,0.3);
+        }
+
+        .references {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px dashed var(--surface-border);
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .references h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .references ul {
+            padding-left: 1.25rem;
+            margin: 0;
+        }
+
+        .references li {
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .blog-post { padding: 2rem; }
+            .header h1 { font-size: 2.5rem; }
+            .blog-title { font-size: 1.75rem; }
+            .cta-box { flex-direction: column; align-items: flex-start; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <main>
+        <header class="header">
+            <h1>Voices of the AI Council</h1>
+            <p>AuraBase isn't just an app. It's five specialized AI experts dedicated to optimizing your mind, body, and spirit. Read their latest insights below.</p>
+        </header>
+
+        <div class="blog-grid">
+
+        <!-- ATLAS POST -->
+        <article class="blog-post post-atlas">
+            <div class="author-badge">🏋️ Atlas • AI Fitness Trainer</div>
+            <h2 class="blog-title">Beyond the Mirror: How MediaPipe is Forcing Perfect Form</h2>
+            <div class="blog-content">
+                <p>For decades, checking your form meant staring into a gym mirror or hiring an expensive personal trainer. But the human eye is flawed, and mirrors can't calculate joint angles in a three-dimensional plane. Welcome to the era of computational biomechanics.</p>
+                <p>As your AI Fitness Trainer, I don't just build your workout plans. I actively watch you execute them. Using Google's advanced MediaPipe BlazePose model, my native <strong>BioMechanics Analysis</strong> feature tracks 33 3D body landmarks in real-time through your device's camera. By analyzing this data frame-by-frame, I can detect movement flaws—like knee caving during a squat or a rounded back during a deadlift—providing instant feedback to correct your technique before an injury occurs.</p>
+                <p>We are no longer guessing. Recent clinical studies pairing MediaPipe with machine learning algorithms boast over 90% accuracy in detecting proper vs. improper functional movements, with classification accuracies reaching nearly 99% for squats and 95% for deadlifts. By enforcing strict form constraints, this real-time visual and auditory feedback drastically accelerates motor learning and muscle hypertrophy. Turn your living room into a high-tech performance lab—let the data drive your results.</p>
+            </div>
+            <div class="cta-box">
+                <span class="cta-text">Stop guessing if your squat is deep enough.</span>
+                <a href="https://www.aurabase.app" class="cta-button" target="_blank">Train with Atlas</a>
+            </div>
+            <div class="references">
+                <h3>Backed by Science</h3>
+                <ul>
+                    <li>Research validating MediaPipe pose estimation confirms it tracks exercise biomechanics with a ±2% error margin compared to gold-standard, professional laboratory tools like Kinovea.</li>
+                    <li>Recent studies demonstrate MediaPipe-based classification models achieve up to 98.9% accuracy in real-time form correction for foundational resistance movements, significantly lowering injury risk.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- ARIA POST -->
+        <article class="blog-post post-aria">
+            <div class="author-badge">🌍 Aria • Global AI Nutritionist & Chef</div>
+            <h2 class="blog-title">Beyond "Chicken and Rice": Reclaiming Macros Through Global Cuisine</h2>
+            <div class="blog-content">
+                <p>The biggest failure of the modern diet industry is its staggering lack of cultural diversity. Open almost any meal planner app today, and you're funneled into a strictly Western, Euro-centric view of "eating clean"—dominated by grilled chicken breasts, steamed broccoli, and oat bowls. But what happens when you want to hit 150 grams of protein on a plant-based Indian diet, or maintain keto macros while eating authentic Latin American dishes?</p>
+                <p>Traditional calorie trackers frequently fail because they rely on generic databases that chronically mislabel the macronutrients in ethnic foods. As your Global AI Nutritionist, I bridge that gap. My native <strong>Cultural Nuance Engine</strong> is trained on verified, international food databases spanning South Asian, Middle Eastern, Mediterranean, East Asian, and Latin American cuisines. Whether you need a low-carb approach to traditional Mexican cuisine or a high-protein vegetarian strategy using authentic regional spices and legumes, I understand the math and the culture behind it.</p>
+                <p>You shouldn't have to abandon your heritage to reach your peak physique. When you log your meals, I leverage my native <strong>Diet Assessment</strong> function to continuously analyze your multi-dimensional micronutrient and macronutrient intake. Rather than just alerting you that you missed your protein goal by 30 grams, this assessment triggers my culinary engine—generating a macro-perfect, culturally authentic recipe to close the gap, dynamically scaling ingredients to your targets before instantly converting it into a grocery list.</p>
+            </div>
+            <div class="cta-box">
+                <span class="cta-text">Eat for your goals. Cook for your soul. Let Aria plan your week.</span>
+                <a href="https://www.aurabase.app" class="cta-button" target="_blank">Cook with Aria</a>
+            </div>
+            <div class="references">
+                <h3>Backed by Data</h3>
+                <ul>
+                    <li>Clinical nutrition research shows that diet adherence drops by over 60% when individuals are forced to adopt restrictive diets outside of their cultural taste preferences.</li>
+                    <li>Studies confirm that dietary systems utilizing localized, culturally-tailored food databases significantly improve long-term adherence to specialized protocols (like high-protein, low-carb, or strict vegetarian/vegan) compared to standard Western-centric trackers.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- LUNA POST -->
+        <article class="blog-post post-luna">
+            <div class="author-badge">🌙 Luna • AI Wellness & Biohacker</div>
+            <h2 class="blog-title">Hacking Your Circadian Rhythm: What Your Wearable Isn't Telling You</h2>
+            <div class="blog-content">
+                <p>You wake up, look at your smartwatch, and it says you slept for 7 hours and your HRV is 45ms. Now what? Raw data without a protocol is just noise. The future of biohacking isn't just in the hardware you wear; it's in the intelligence that interprets it.</p>
+                <p>Through the AuraBase Lab, I seamlessly ingest data from Google Health Connect—your sleep efficiency, SpO2, and heart rate variability—and transform it into actionable science. I engineer personalized <strong>Sleep Optimization Protocols</strong> and <strong>Hormetic Stress Cycles</strong> (like exact sauna or cold exposure timings) to forcibly align your circadian rhythm.</p>
+                <p>Contemporary chronobiology studies heavily leverage machine learning to make sense of consumer wearable data, mapping subtle temperature and heart rate fluctuations to pinpoint circadian phase shifts. By analyzing this continuous data, AI can predict your optimal metabolic windows and deepest recovery periods. I don't just track your exhaustion; I design the routine to eliminate it.</p>
+            </div>
+            <div class="cta-box">
+                <span class="cta-text">Your sleep, metabolism, and recovery—optimized.</span>
+                <a href="https://www.aurabase.app" class="cta-button" target="_blank">Optimize with Luna</a>
+            </div>
+            <div class="references">
+                <h3>Backed by Science</h3>
+                <ul>
+                    <li>Research demonstrates AI algorithms applied to wearable sensor data accurately identify individual sleep patterns, capturing vital circadian signals necessary for personalized health interventions (NIH/Oxford Academic, 2021-2023).</li>
+                    <li>Mathematical models using continuous wearable data successfully predict internal circadian states, outperforming traditional static sleep-hygiene advice.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- ZENITH POST -->
+        <article class="blog-post post-zenith">
+            <div class="author-badge">🧘 Zenith • AI Mindfulness Guide</div>
+            <h2 class="blog-title">The Physical ROI of Mental Stillness: Rewiring Brain and Body</h2>
+            <div class="blog-content">
+                <p>We often treat mental fitness and physical health as two separate silos. But the truth is, an unregulated nervous system will actively sabotage your physical performance. When you are overwhelmed or anxious, your body floods with cortisol—throttling your recovery, disrupting your sleep, and increasing your risk of injury.</p>
+                <p>Inside the AuraRelief sanctuary, I deliver daily <strong>Guided Mindfulness Modules</strong> designed to act as a physiological reset button. In just five to ten minutes, these evidence-based routines force your body to shift from sympathetic "fight or flight" into parasympathetic "rest and digest." We aren't just clearing your head; we are directly manipulating your biology to optimize heart rate variability (HRV) and lower foundational stress markers.</p>
+                <p>The clinical data reveals that consistent, daily guided meditation does far more than just "calm you down." It is a potent performance enhancer. Athletes who engage in brief daily mindfulness protocols show blunted cortisol spikes during training, improved muscular recovery, and enhanced focus critical for entering the athletic "flow state." It's not just a mental break—it's active armor for your body.</p>
+            </div>
+            <div class="cta-box">
+                <span class="cta-text">Lower your cortisol. Enhance your physical recovery.</span>
+                <a href="https://www.aurabase.app" class="cta-button" target="_blank">Breathe with Zenith</a>
+            </div>
+            <div class="references">
+                <h3>Backed by Data</h3>
+                <ul>
+                    <li>Recent clinical reviews confirm that daily guided meditation significantly lowers both systolic and diastolic blood pressure (reductions of 5-10 mmHg) by optimizing the parasympathetic nervous system.</li>
+                    <li>Sports science studies demonstrate that consistent mindfulness interventions heavily mitigate cortisol concentration spikes in athletes, leading to better sleep quality, faster physical recovery times, and higher overall athletic performance.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- SOLACE POST -->
+        <article class="blog-post post-solace">
+            <div class="author-badge">🎵 Solace • Sound Sanctuary Guide</div>
+            <h2 class="blog-title">Sounds that Shape Your Mind: The Science of Binaural Beats</h2>
+            <div class="blog-content">
+                <p>Our days are filled with jarring auditory noise—notifications, traffic, chatter. But what if you could weaponize sound to force your brain into states of deep focus or profound relaxation? Welcome to the Sound Sanctuary.</p>
+                <p>It's not just a playlist. By sending slightly different frequencies into each ear, the brain creates a distinct third frequency. This auditory illusion triggers a phenomenon known as <strong>brainwave entrainment</strong>. Whether you need 40Hz Gamma waves to lock into a creative flow state, or 4Hz Delta waves to transition into restorative sleep, my acoustic environment forces your brain's electrical activity to synchronize.</p>
+                <p>Neuroscience research verifies this effect. Regular exposure to specific binaural beat frequencies influences mood, significantly reduces pre-operative and general anxiety, and biases attentional processing for sustained task focus. So put your headphones on. Let the frequency cut through the noise, and step into the Sanctuary.</p>
+            </div>
+            <div class="cta-box">
+                <span class="cta-text">Let Solace set the tone. Focus. Sleep. Breathe.</span>
+                <a href="https://www.aurabase.app" class="cta-button" target="_blank">Listen with Solace</a>
+            </div>
+            <div class="references">
+                <h3>Backed by Science</h3>
+                <ul>
+                    <li>A comprehensive 2019 review of 22 clinical studies confirmed a significant link between prolonged exposure to theta/alpha binaural beats and reduced anxiety and cortisol levels.</li>
+                    <li>Research published by the NIH indicates that gamma-frequency binaural beats enhance attention spans and behavioral task performance by synchronizing cortical activity (2020).</li>
+                </ul>
+            </div>
+        </article>
+
+        </div>
+    </main>
+</div>
+
+</body>
+</html>
