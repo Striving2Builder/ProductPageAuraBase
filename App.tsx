@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { WellnessTab } from './types';
 import PrivacyPolicyView from './PrivacyPolicy';
 import { WaitlistModal } from './WaitlistModal';
+import { AiCouncilBlogs } from './AiCouncilBlogs';
 import {
   COACHES,
   WELLNESS_FEATURES,
@@ -281,6 +282,8 @@ const App: React.FC = () => {
         </div>
       </section>
 
+      <AiCouncilBlogs />
+
       {/* AuraQuest - Gamified RPG Section */}
       <section id="auraquest" className="py-32 bg-slate-950 text-white overflow-hidden relative">
         <div className="absolute inset-0 bg-brand-500/5 pointer-events-none"></div>
@@ -415,7 +418,7 @@ const App: React.FC = () => {
           </div>
 
           <div className="hidden md:flex items-center space-x-10">
-            {['features', 'coaches', 'auraquest', 'security', 'pricing'].map(sec => (
+            {['features', 'coaches', 'blogs', 'auraquest', 'security', 'pricing'].map(sec => (
               <button key={sec} onClick={() => scrollToSection(sec)} className="text-[11px] font-black hover:text-brand-500 transition-colors uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">{sec}</button>
             ))}
             <a href="https://aurabase.app/privicypolicy" className="text-[11px] font-black hover:text-brand-500 transition-colors uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Privacy Policy</a>
@@ -471,6 +474,7 @@ const App: React.FC = () => {
           <div className="flex flex-col gap-10 text-4xl font-bold font-display uppercase tracking-tight">
             <button onClick={() => scrollToSection('features')} className="text-left hover:text-brand-500">Features</button>
             <button onClick={() => scrollToSection('coaches')} className="text-left hover:text-brand-500">Coaches</button>
+            <button onClick={() => scrollToSection('blogs')} className="text-left hover:text-brand-500">Blogs</button>
             <button onClick={() => scrollToSection('auraquest')} className="text-left hover:text-brand-500">AuraQuest</button>
             <button onClick={() => scrollToSection('security')} className="text-left hover:text-brand-500">Security</button>
             <button onClick={() => { setIsMenuOpen(false); setIsWaitlistOpen(true); }} className="text-left text-brand-500">Waitlist</button>
