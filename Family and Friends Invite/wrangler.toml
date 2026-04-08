@@ -1,0 +1,7 @@
+# Cloudflare Workers (Git) — static assets only for join.aurabase.app.
+# In the Cloudflare dashboard: Settings → Build → Root directory = "Family and Friends Invite"
+name = "productpageaurabasefamilyinvite"
+compatibility_date = "2025-04-01"
+
+[assets]
+directory = "."
