@@ -1,0 +1,59 @@
+Invite subdomain: join.aurabase.app (Universal Links + App Links)
+================================================================
+
+LOCATION (source of truth)
+  This folder lives under the AuraBase Product Page workspace:
+  …/AuraBase Product Page/Family and Friends Invite/
+
+  It is NOT part of the mobile app repository — static assets here are not bundled into the app.
+
+WHAT YOU HOST HERE
+  This folder is the entire static site for the invite subdomain only — not your main marketing
+  homepage. Deploy it as its own Cloudflare Pages project (or static host) with custom hostname
+  join.aurabase.app. Build output directory = this folder’s contents (repo root if this folder
+  is the Git root for the Pages project).
+
+FILES TO FILL IN BEFORE GO-LIVE
+  .well-known/apple-app-site-association
+    FILLED: Team ID **2K4MXMK6K4** (from iOS Xcode project `DEVELOPMENT_TEAM` in App.xcodeproj).
+    If your Apple team ever changes, update appIDs to YOURTEAMID.com.aurabase.mobile.
+
+  .well-known/assetlinks.json
+    FILLED: SHA-256 from Play App Signing (App integrity → App signing key certificate).
+    Optional second fingerprint: debug keystore for local testing only.
+
+HOW TO MOVE THIS TO YOUR OTHER COMPUTER
+  - Git: commit and push the AuraBase Product Page repo (or a repo that contains only this folder
+    as root), pull on the other machine.
+  - Copy this folder via AirDrop, cloud drive, or USB — no special format.
+  - Zip this folder and email it to yourself.
+
+CLOUDFLARE — DNS (aurabase.app is already on Cloudflare)
+  1) Pages → your invite project → Custom domains → Add "join.aurabase.app".
+  2) Cloudflare will usually add the DNS record for you (CNAME to *.pages.dev).
+  3) If you add DNS manually: CNAME name "join", target = your Pages hostname (shown in dashboard).
+  4) SSL: Full (strict) is default; wait until the certificate shows Active.
+
+CLOUDFLARE — NOTHING EXTRA TO "ENABLE"
+  Universal Links do not need a Cloudflare toggle. You need:
+  - HTTPS working on join.aurabase.app
+  - The two files under /.well-known/ reachable at 200 (no login wall, no redirect loop)
+  - Optional: Page Rules should NOT cache-bust .well-known incorrectly (default is fine)
+
+APPLE DEVELOPER (required once)
+  - Identifiers → App ID com.aurabase.mobile → enable "Associated Domains" (if not already).
+  - Xcode → Signing & Capabilities → ensure Associated Domains lists applinks:join.aurabase.app
+    (the mobile app repo has this in App.entitlements).
+
+ANDROID
+  - After assetlinks.json is live, install a release build from Play or sideload; Android verifies
+    the domain. Debug keystore SHA will NOT match — use Play App Signing cert for production.
+
+APP BUILD (.env for shipped iOS/Android — in the mobile app repo)
+  VITE_FAMILY_INVITE_BASE_URL=https://join.aurabase.app/join
+
+SHARED LINK FORMAT
+  https://join.aurabase.app/join?ref=<UUID>&gift=true
+
+FALLBACK
+  Supabase join-invite Edge Function remains available if VITE_FAMILY_INVITE_BASE_URL is unset.
