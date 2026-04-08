@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["2K4MXMK6K4.com.aurabase.mobile"],
+        "paths": ["/join", "/join/*", "/"]
+      }
+    ]
+  }
+}

@@ -418,7 +418,7 @@ const App: React.FC = () => {
           </div>
 
           <div className="hidden md:flex items-center space-x-10">
-            {['features', 'coaches', 'blogs', 'auraquest', 'security', 'pricing'].map(sec => (
+            {['features', 'coaches', 'blogs', 'security', 'pricing'].map(sec => (
               <button key={sec} onClick={() => scrollToSection(sec)} className="text-[11px] font-black hover:text-brand-500 transition-colors uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">{sec}</button>
             ))}
             <a href="https://aurabase.app/privicypolicy" className="text-[11px] font-black hover:text-brand-500 transition-colors uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Privacy Policy</a>
@@ -475,7 +475,6 @@ const App: React.FC = () => {
             <button onClick={() => scrollToSection('features')} className="text-left hover:text-brand-500">Features</button>
             <button onClick={() => scrollToSection('coaches')} className="text-left hover:text-brand-500">Coaches</button>
             <button onClick={() => scrollToSection('blogs')} className="text-left hover:text-brand-500">Blogs</button>
-            <button onClick={() => scrollToSection('auraquest')} className="text-left hover:text-brand-500">AuraQuest</button>
             <button onClick={() => scrollToSection('security')} className="text-left hover:text-brand-500">Security</button>
             <button onClick={() => { setIsMenuOpen(false); setIsWaitlistOpen(true); }} className="text-left text-brand-500">Waitlist</button>
           </div>

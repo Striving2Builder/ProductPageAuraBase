@@ -1,0 +1,2 @@
+# Serve the same landing page at /join (Universal Link path + shared link path)
+/join /index.html 200
