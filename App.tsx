@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { WellnessTab } from './types';
 import PrivacyPolicyView from './PrivacyPolicy';
-import { WaitlistModal } from './WaitlistModal';
 import { AiCouncilBlogs } from './AiCouncilBlogs';
 import {
   COACHES,
@@ -33,13 +32,41 @@ import {
   Sparkles,
   Sword,
   Apple,
-  Play,
   Lock,
   Target,
   Trophy,
   Activity,
   ArrowLeft
 } from 'lucide-react';
+
+/** Official “Get it on Google Play” badge art (Google-hosted). */
+const GOOGLE_PLAY_URL =
+  'https://play.google.com/store/apps/details?id=com.aurabase.mobile&pcampaignid=web_share';
+const GOOGLE_PLAY_BADGE_IMG =
+  'https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png';
+
+const GooglePlayBadge: React.FC<{
+  className?: string;
+  imgClassName?: string;
+  onClick?: () => void;
+}> = ({ className = '', imgClassName = 'h-14 w-auto max-w-[280px] sm:max-w-[300px]', onClick }) => (
+  <a
+    href={GOOGLE_PLAY_URL}
+    target="_blank"
+    rel="noopener noreferrer"
+    onClick={onClick}
+    className={`inline-block leading-none transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 rounded ${className}`}
+  >
+    <img
+      src={GOOGLE_PLAY_BADGE_IMG}
+      alt="Get it on Google Play"
+      width={646}
+      height={250}
+      decoding="async"
+      className={imgClassName}
+    />
+  </a>
+);
 
 const IconMap: Record<string, any> = {
   Heart,
@@ -115,8 +142,6 @@ const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<WellnessTab>(WellnessTab.MIND);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [view, setView] = useState<'landing' | 'privacy'>('landing');
-  const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
-
   useEffect(() => {
     if (isDarkMode) document.documentElement.classList.add('dark');
     else document.documentElement.classList.remove('dark');
@@ -161,9 +186,9 @@ const App: React.FC = () => {
             {HERO_DESCRIPTION}
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-            <button onClick={() => setIsWaitlistOpen(true)} className="w-full sm:w-auto px-12 py-5 rounded-2xl bg-brand-500 text-white font-bold text-xl shadow-2xl shadow-brand-500/30 hover:bg-brand-600 hover:scale-105 transition-all">
-              Join the Waitlist
-            </button>
+            <div className="w-full sm:w-auto flex justify-center">
+              <GooglePlayBadge imgClassName="h-[52px] sm:h-16 w-auto max-w-[min(280px,90vw)]" />
+            </div>
             <button onClick={() => scrollToSection('features')} className="w-full sm:w-auto px-12 py-5 rounded-2xl border-2 border-slate-200 dark:border-slate-800 font-bold text-xl hover:bg-slate-50 dark:hover:bg-slate-900 transition-all">
               Explore The Pillars
             </button>
@@ -390,15 +415,12 @@ const App: React.FC = () => {
               </div>
             ))}
           </div>
-          <div className="mt-28 flex flex-wrap justify-center gap-8 opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700">
-            <div className="px-10 py-5 rounded-[1.5rem] bg-black text-white flex items-center gap-4 cursor-not-allowed">
+          <div className="mt-28 flex flex-wrap justify-center items-center gap-8 sm:gap-10">
+            <div className="px-10 py-5 rounded-[1.5rem] bg-black text-white flex items-center gap-4 cursor-not-allowed opacity-35 grayscale pointer-events-none select-none" aria-hidden="true">
               <Apple size={28} fill="white" />
               <div className="text-left"><p className="text-[10px] uppercase font-black tracking-widest opacity-60">Download on</p><p className="text-xl font-bold leading-none">App Store</p></div>
             </div>
-            <div className="px-10 py-5 rounded-[1.5rem] bg-black text-white flex items-center gap-4 cursor-not-allowed">
-              <Play size={28} fill="white" />
-              <div className="text-left"><p className="text-[10px] uppercase font-black tracking-widest opacity-60">Get it on</p><p className="text-xl font-bold leading-none">Google Play</p></div>
-            </div>
+            <GooglePlayBadge imgClassName="h-[56px] sm:h-[72px] w-auto max-w-[min(300px,88vw)]" />
           </div>
         </div>
       </section>
@@ -426,7 +448,7 @@ const App: React.FC = () => {
             <button onClick={() => setIsDarkMode(!isDarkMode)} className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 hover:bg-brand-50 dark:hover:bg-brand-900/20 transition-colors">
               {isDarkMode ? <Sun size={18} className="text-brand-400" /> : <Moon size={18} className="text-brand-600" />}
             </button>
-            <button onClick={() => setIsWaitlistOpen(true)} className="px-7 py-3 rounded-xl bg-brand-500 text-white font-bold text-sm shadow-xl shadow-brand-500/20 hover:bg-brand-600 hover:translate-y-[-2px] transition-all">Join Waitlist</button>
+            <GooglePlayBadge className="py-1" imgClassName="h-9 sm:h-10 w-auto max-w-[200px]" />
           </div>
 
           <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden p-2 text-slate-600 dark:text-slate-400">
@@ -476,11 +498,14 @@ const App: React.FC = () => {
             <button onClick={() => scrollToSection('coaches')} className="text-left hover:text-brand-500">Coaches</button>
             <button onClick={() => scrollToSection('blogs')} className="text-left hover:text-brand-500">Blogs</button>
             <button onClick={() => scrollToSection('security')} className="text-left hover:text-brand-500">Security</button>
-            <button onClick={() => { setIsMenuOpen(false); setIsWaitlistOpen(true); }} className="text-left text-brand-500">Waitlist</button>
+            <GooglePlayBadge
+              onClick={() => setIsMenuOpen(false)}
+              className="text-left"
+              imgClassName="h-12 w-auto max-w-[240px]"
+            />
           </div>
         </div>
       )}
-      <WaitlistModal isOpen={isWaitlistOpen} onClose={() => setIsWaitlistOpen(false)} />
     </div>
   );
 }
