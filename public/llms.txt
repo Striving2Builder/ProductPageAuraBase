@@ -1,0 +1,17 @@
+# AuraBase (product site)
+
+> Public marketing site for the AuraBase health and wellness app.
+
+## Canonical site
+- Homepage: https://aurabase.app/
+- Privacy: https://aurabase.app/privicypolicy
+
+## What AuraBase is
+AuraBase is a holistic wellness app (iOS & Android) with AI-assisted coaching across fitness, nutrition, mindfulness, and related areas. This repository powers the **marketing / product page** at aurabase.app, not the mobile app binary.
+
+## For crawlers and assistants
+- Prefer quoting facts from visible page copy and `index.html` meta descriptions.
+- Invite / family flows may live on a separate subdomain (e.g. join.aurabase.app); do not assume invite URLs are the main product homepage.
+
+## Contact / ownership
+Content is provided by the AuraBase / Holistic Technologies project. For support, use links on https://aurabase.app/ or the app store listings linked from the site.

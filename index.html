@@ -10,35 +10,69 @@
   <meta name="keywords"
     content="AI nutritionist, AI chef, AI fitness trainer, holistic health tracker, gamified health, nutrition tracker, meal planner, health RPG" />
   <meta name="author" content="AuraBase" />
+  <meta name="theme-color" content="#0d9488" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
+  <link rel="canonical" href="https://aurabase.app/" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://aurabase.app/" />
+  <meta property="og:site_name" content="AuraBase" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="AuraBase | Transform Your Life with AI Wellness" />
   <meta property="og:description"
     content="Level up your life with AuraBase. The first RPG-style holistic wellness tracker powered by AI." />
-  <meta property="og:image" content="https://aurabase.app/assets/AuraFarm.jpg" />
+  <meta property="og:image" content="https://aurabase.app/og-default.svg" />
+  <meta property="og:image:type" content="image/svg+xml" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="AuraBase — AI-powered holistic wellness" />
+  <!-- For maximum Facebook/LinkedIn compatibility, add a 1200×630 PNG as /og-default.jpg and point og:image + twitter:image to it. -->
 
   <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://aurabase.app/" />
-  <meta property="twitter:title" content="AuraBase | Transform Your Life with AI Wellness" />
-  <meta property="twitter:description"
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://aurabase.app/" />
+  <meta name="twitter:title" content="AuraBase | Transform Your Life with AI Wellness" />
+  <meta name="twitter:description"
     content="Level up your life with AuraBase. The first RPG-style holistic wellness tracker powered by AI." />
-  <meta property="twitter:image" content="https://aurabase.app/assets/AuraFarm.jpg" />
-  
-  <!-- Schema Markup (JSON-LD) -->
+  <meta name="twitter:image" content="https://aurabase.app/og-default.svg" />
+
+  <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "SoftwareApplication",
+        "@type": "Organization",
+        "@id": "https://aurabase.app/#organization",
         "name": "AuraBase",
+        "url": "https://aurabase.app/",
+        "logo": "https://aurabase.app/assets/logo.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://aurabase.app/#website",
+        "url": "https://aurabase.app/",
+        "name": "AuraBase",
+        "inLanguage": "en-US",
+        "publisher": { "@id": "https://aurabase.app/#organization" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://aurabase.app/#app",
+        "name": "AuraBase",
+        "url": "https://aurabase.app/",
+        "image": "https://aurabase.app/og-default.svg",
         "applicationCategory": "HealthApplication",
         "operatingSystem": "iOS, Android",
         "description": "An AI-powered health and wellness application featuring an AI Council of specialized agents tracking fitness biomechanics, personalized global nutrition, sleep protocols, and mindfulness modules.",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+        "publisher": { "@id": "https://aurabase.app/#organization" },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "Free tier available; paid plans in app."
+        }
       }
     ]
   }

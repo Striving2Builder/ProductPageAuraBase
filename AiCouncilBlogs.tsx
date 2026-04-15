@@ -2,6 +2,47 @@ import React from 'react';
 
 const BLOG_POSTS = [
   {
+    id: 'google-play-launch',
+    authorBadge: '✨ Founder’s note • AuraBase',
+    accentColor: 'text-emerald-400 border-emerald-500/30',
+    glowColor: 'from-emerald-500',
+    title: 'Six months in—and we are live on Google Play',
+    content: (
+      <>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          I’m writing this myself because today matters: <strong>AuraBase is live on Google Play</strong>. If you’re on Android, you can install it here—{' '}
+          <a
+            href="https://play.google.com/store/apps/details?id=com.aurabase.mobile&pcampaignid=web_share"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-emerald-400 font-semibold underline decoration-emerald-500/50 hover:decoration-emerald-400"
+          >
+            AuraBase on Google Play
+          </a>
+          .
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          <strong>Thank you</strong>—truly—to everyone who supported this product along the way. Early testers who lived with broken builds, friends who listened to me talk about “one more week,” people who shared feedback when it would have been easier to stay quiet, and anyone who simply believed AuraBase should exist: you carried this across the finish line. I don’t take that for granted.
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Getting here meant more than <strong>eighty numbered ship cycles</strong> on iOS alone (we’re on <strong>85</strong> now), <strong>86</strong> on Android, and a public release tagged <strong>2.0.86</strong>—each one a late night, a regression pass, and a choice to keep going. I built AuraBase as a real companion for mind, body, and spirit: nutrition with an <strong>AI Nutritionist</strong> and <strong>International AI Chef</strong>, training, mindfulness, AuraQuest, family flows, wearables, and the rest—always with the idea that <strong>what you log should sharpen what we give back</strong>, not generic fluff.
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          I’ll stay brief on one hard lesson: we <strong>invested in AI-assisted blood-work</strong>, then <strong>stepped it back from the app</strong> until I’m confident we can meet the <strong>trust and accuracy bar you deserve</strong>. The work isn’t forgotten—it’s waiting for the right moment. I’d rather disappoint the roadmap than disappoint you.
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          <strong>Looking ahead</strong>, I’m excited—not anxious—about what’s next: deeper integrations, faster performance, richer AuraQuest, tighter family experiences, and privacy work that never really ends. AuraBase remains a <strong>wellness companion</strong>, not a medical device and not a replacement for your clinician—but I want it to feel indispensable in the best way. Google Play is one door; iOS walks beside it. Wherever you find us, I’m grateful you’re here—and I can’t wait to show you what comes next.
+        </p>
+      </>
+    ),
+    ctaText: 'Get AuraBase on Google Play—and thank you for being here.',
+    referencesType: 'Links',
+    references: [
+      'Google Play — AuraBase: Mind & Body Tracker (Nappy Dog Studios Ltd.).',
+      'Release context: iOS build 85, Android version 86, app 2.0.86 at time of posting.'
+    ]
+  },
+  {
     id: 'atlas',
     authorBadge: '🏋️ Atlas • AI Fitness Trainer',
     accentColor: 'text-brand-500 border-brand-500/20',

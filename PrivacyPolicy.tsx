@@ -26,7 +26,7 @@ const PrivacyPolicyView: React.FC<PrivacyPolicyProps> = ({ onBack }) => {
               Welcome to AuraBase ("we," "our," or "us"). We are committed to protecting your personal information and your right to privacy. Your health data is deeply personal, and we've built our entire platform around keeping it secure and private.
             </p>
             <p className="mt-4">
-              If you have any questions or concerns about this privacy notice or our practices, please contact us at <span className="text-brand-600 dark:text-brand-400 font-bold">ng.nicolas.social@gmail.com</span>.
+              If you have any questions or concerns about this privacy notice or our practices, please contact us at <span className="text-brand-600 dark:text-brand-400 font-bold">nick@ndstudios.dev</span>.
             </p>
           </section>
 
@@ -130,7 +130,7 @@ const PrivacyPolicyView: React.FC<PrivacyPolicyProps> = ({ onBack }) => {
             <p className="mb-6">
               If you have questions about this policy or want to exercise your rights, please contact our Data Protection Officer at:
             </p>
-            <p className="text-2xl font-bold text-brand-400 mb-8 select-all">ng.nicolas.social@gmail.com</p>
+            <p className="text-2xl font-bold text-brand-400 mb-8 select-all">nick@ndstudios.dev</p>
             <div className="pt-6 border-t border-white/10">
               <p className="text-slate-400 font-bold uppercase tracking-widest text-[11px]">AuraBase Data Protection Officer</p>
               <p className="text-sm font-medium mt-1">Response time: Within 48 hours</p>
