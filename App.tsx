@@ -476,7 +476,7 @@ const App: React.FC = () => {
             <a href="https://aurabase.app/termsofuse" className="hover:text-brand-500 transition-colors">Terms of Use (EULA)</a>
           </div>
           <p className="text-slate-400 text-xs font-bold uppercase tracking-[0.2em] leading-relaxed">
-            © 2024 {PRODUCT_NAME} Holistic Technologies Inc.<br />
+            © 2024 {PRODUCT_NAME} Nappy Dog Studios Ltd.<br />
             All biometric data is zero-knowledge encrypted and remains your sovereign property.
           </p>
         </div>

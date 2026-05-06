@@ -25,7 +25,7 @@ const TermsOfUseView: React.FC<TermsOfUseProps> = ({ onBack }) => {
           <section>
             <h2 className="text-2xl font-bold font-display text-slate-900 dark:text-white mb-4">1. Agreement to Terms</h2>
             <p>
-              These Terms of Use govern your access to and use of AuraBase on iOS, Android, and web experiences operated by AuraBase Holistic Technologies Inc. By using AuraBase, you agree to be bound by these terms.
+              These Terms of Use govern your access to and use of AuraBase on iOS, Android, and web experiences operated by Nappy Dog Studios Ltd. By using AuraBase, you agree to be bound by these terms.
             </p>
           </section>
 
