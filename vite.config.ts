@@ -25,6 +25,7 @@ export default defineConfig(({ mode }) => {
         input: {
           main: path.resolve(__dirname, 'index.html'),
           privicypolicy: path.resolve(__dirname, 'privicypolicy.html'),
+          termsofuse: path.resolve(__dirname, 'termsofuse.html'),
         },
       },
     },

@@ -444,6 +444,7 @@ const App: React.FC = () => {
               <button key={sec} onClick={() => scrollToSection(sec)} className="text-[11px] font-black hover:text-brand-500 transition-colors uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">{sec}</button>
             ))}
             <a href="https://aurabase.app/privicypolicy" className="text-[11px] font-black hover:text-brand-500 transition-colors uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Privacy Policy</a>
+            <a href="https://aurabase.app/termsofuse" className="text-[11px] font-black hover:text-brand-500 transition-colors uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Terms of Use (EULA)</a>
             <div className="h-6 w-px bg-slate-200 dark:bg-slate-800"></div>
             <button onClick={() => setIsDarkMode(!isDarkMode)} className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 hover:bg-brand-50 dark:hover:bg-brand-900/20 transition-colors">
               {isDarkMode ? <Sun size={18} className="text-brand-400" /> : <Moon size={18} className="text-brand-600" />}
@@ -472,7 +473,7 @@ const App: React.FC = () => {
             <a href="#" className="hover:text-brand-500 transition-colors">Instagram</a>
             <a href="#" className="hover:text-brand-500 transition-colors">TikTok</a>
             <a href="https://aurabase.app/privicypolicy" className="hover:text-brand-500 transition-colors">Privacy Policy</a>
-            <button onClick={() => setView('privacy')} className="hover:text-brand-500 transition-colors">Terms of Security</button>
+            <a href="https://aurabase.app/termsofuse" className="hover:text-brand-500 transition-colors">Terms of Use (EULA)</a>
           </div>
           <p className="text-slate-400 text-xs font-bold uppercase tracking-[0.2em] leading-relaxed">
             © 2024 {PRODUCT_NAME} Holistic Technologies Inc.<br />
