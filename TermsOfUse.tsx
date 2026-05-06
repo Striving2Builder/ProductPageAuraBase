@@ -18,7 +18,7 @@ const TermsOfUseView: React.FC<TermsOfUseProps> = ({ onBack }) => {
           <ArrowLeft size={16} /> Back to AuraBase
         </button>
 
-        <h1 className="text-4xl md:text-6xl font-bold font-display mb-4 tracking-tight">Terms of Use (EULA)</h1>
+        <h1 className="text-4xl md:text-6xl font-bold font-display mb-4 tracking-tight">Terms of Use</h1>
         <p className="text-slate-500 dark:text-slate-400 font-medium mb-16">Last Updated: May 2026</p>
 
         <div className="space-y-12 text-slate-700 dark:text-slate-300 leading-relaxed font-medium">
@@ -43,12 +43,12 @@ const TermsOfUseView: React.FC<TermsOfUseProps> = ({ onBack }) => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold font-display text-slate-900 dark:text-white mb-4">3. Apple Standard EULA</h2>
+            <h2 className="text-2xl font-bold font-display text-slate-900 dark:text-white mb-4">3. App Store downloads</h2>
             <p>
-              AuraBase uses Apple's Standard End User License Agreement for apps distributed through the App Store.
+              Apps distributed through the Apple App Store are also subject to Apple&apos;s standard license agreement for licensed applications.
             </p>
             <p className="mt-4">
-              View Apple Standard EULA:{' '}
+              View Apple&apos;s standard terms:{' '}
               <a
                 href={APPLE_STANDARD_EULA_URL}
                 target="_blank"
