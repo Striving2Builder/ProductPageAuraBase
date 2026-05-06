@@ -443,7 +443,7 @@ const App: React.FC = () => {
             {['features', 'coaches', 'blogs', 'security', 'pricing'].map(sec => (
               <button key={sec} onClick={() => scrollToSection(sec)} className="text-[11px] font-black hover:text-brand-500 transition-colors uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">{sec}</button>
             ))}
-            <a href="https://aurabase.app/privicypolicy" className="text-[11px] font-black hover:text-brand-500 transition-colors uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Privacy Policy</a>
+            <a href="https://aurabase.app/privacypolicy" className="text-[11px] font-black hover:text-brand-500 transition-colors uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Privacy Policy</a>
             <a href="https://aurabase.app/termsofuse" className="text-[11px] font-black hover:text-brand-500 transition-colors uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Terms of Use</a>
             <div className="h-6 w-px bg-slate-200 dark:bg-slate-800"></div>
             <button onClick={() => setIsDarkMode(!isDarkMode)} className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 hover:bg-brand-50 dark:hover:bg-brand-900/20 transition-colors">
@@ -472,7 +472,7 @@ const App: React.FC = () => {
           <div className="flex flex-wrap justify-center gap-x-14 gap-y-6 mb-16 text-slate-400 font-black uppercase text-[11px] tracking-[0.3em]">
             <a href="#" className="hover:text-brand-500 transition-colors">Instagram</a>
             <a href="#" className="hover:text-brand-500 transition-colors">TikTok</a>
-            <a href="https://aurabase.app/privicypolicy" className="hover:text-brand-500 transition-colors">Privacy Policy</a>
+            <a href="https://aurabase.app/privacypolicy" className="hover:text-brand-500 transition-colors">Privacy Policy</a>
             <a href="https://aurabase.app/termsofuse" className="hover:text-brand-500 transition-colors">Terms of Use</a>
           </div>
           <p className="text-slate-400 text-xs font-bold uppercase tracking-[0.2em] leading-relaxed">

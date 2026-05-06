@@ -4,7 +4,7 @@
 
 ## Canonical site
 - Homepage: https://aurabase.app/
-- Privacy: https://aurabase.app/privicypolicy
+- Privacy: https://aurabase.app/privacypolicy
 
 ## What AuraBase is
 AuraBase is a holistic wellness app (iOS & Android) with AI-assisted coaching across fitness, nutrition, mindfulness, and related areas. This repository powers the **marketing / product page** at aurabase.app, not the mobile app binary.

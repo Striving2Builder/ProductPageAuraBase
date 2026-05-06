@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import PrivacyPolicyPage from './src/Privicypolicy';
+import PrivacyPolicyPage from './Privacypolicy';
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
