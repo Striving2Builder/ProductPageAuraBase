@@ -84,7 +84,18 @@ const PrivacyPolicyView: React.FC<PrivacyPolicyProps> = ({ onBack }) => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold font-display text-slate-900 dark:text-white mb-4">6. How Long We Keep Your Data</h2>
+            <h2 className="text-2xl font-bold font-display text-slate-900 dark:text-white mb-4">6. Request to Delete your account</h2>
+            <p>
+              To request deletion of your AuraBase account, email us at{' '}
+              <a href="mailto:nick@ndstudios.dev?subject=AuraBase%20account%20deletion%20request" className="text-brand-600 dark:text-brand-400 font-bold underline underline-offset-2 hover:opacity-90">
+                nick@ndstudios.dev
+              </a>{' '}
+              and clearly ask us to delete your account. Please include your <strong className="text-slate-900 dark:text-white">full name</strong> and the <strong className="text-slate-900 dark:text-white">email address</strong> associated with your AuraBase account so we can complete your request.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold font-display text-slate-900 dark:text-white mb-4">7. How Long We Keep Your Data</h2>
             <ul className="list-disc pl-6 space-y-2">
               <li><strong className="text-slate-900 dark:text-white">Active Accounts:</strong> We retain your data as long as your account is active.</li>
               <li><strong className="text-slate-900 dark:text-white">Deleted Accounts:</strong> All data is permanently deleted within 30 days of account deletion.</li>
@@ -94,7 +105,7 @@ const PrivacyPolicyView: React.FC<PrivacyPolicyProps> = ({ onBack }) => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold font-display text-slate-900 dark:text-white mb-4">7. Security Measures</h2>
+            <h2 className="text-2xl font-bold font-display text-slate-900 dark:text-white mb-4">8. Security Measures</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
                 "✅ TLS/SSL Encryption for all data in transit",
@@ -112,21 +123,21 @@ const PrivacyPolicyView: React.FC<PrivacyPolicyProps> = ({ onBack }) => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold font-display text-slate-900 dark:text-white mb-4">8. Where Is Your Data Stored?</h2>
+            <h2 className="text-2xl font-bold font-display text-slate-900 dark:text-white mb-4">9. Where Is Your Data Stored?</h2>
             <p>
               Your data is securely stored using a hybrid approach. Sensitive data resides encrypted on your local device, while synced data is hosted on secure Supabase servers located in Canada, ensuring compliance with Canadian data sovereignty and privacy laws.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold font-display text-slate-900 dark:text-white mb-4">9. Changes to This Policy</h2>
+            <h2 className="text-2xl font-bold font-display text-slate-900 dark:text-white mb-4">10. Changes to This Policy</h2>
             <p>
               We may update this privacy policy from time to time. We will notify you of any changes by updating the "Last Updated" date at the top of this policy. Significant changes will be communicated via email or in-app notification.
             </p>
           </section>
 
           <section className="p-8 rounded-[3rem] bg-slate-950 text-white border border-white/10">
-            <h2 className="text-3xl font-bold font-display mb-6">10. Contact Us</h2>
+            <h2 className="text-3xl font-bold font-display mb-6">11. Contact Us</h2>
             <p className="mb-6">
               If you have questions about this policy or want to exercise your rights, please contact our Data Protection Officer at:
             </p>
