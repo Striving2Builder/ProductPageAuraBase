@@ -2,6 +2,42 @@ import React from 'react';
 
 const BLOG_POSTS = [
   {
+    id: 'ios-app-store-launch',
+    authorBadge: '✨ Founder’s note • AuraBase',
+    accentColor: 'text-sky-400 border-sky-500/30',
+    glowColor: 'from-sky-500',
+    title: 'AuraBase is Officially Live on the Apple App Store',
+    content: (
+      <>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          The wait is over: <strong>AuraBase is now available on the Apple App Store</strong>. You can download the iOS app right now—{' '}
+          <a
+            href="https://apps.apple.com/ca/app/aurabase-mind-body-tracker/id6760844634"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sky-400 font-semibold underline decoration-sky-500/50 hover:decoration-sky-400"
+          >
+            AuraBase on the App Store
+          </a>.
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          I want to take a moment to specifically <strong>thank the Apple review team</strong>. Their rigorous guidelines pushed us to ensure that AuraBase meets the highest possible standards for privacy, performance, and user experience. 
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          To our incredible <strong>Alpha and Beta testers</strong>: thank you. You navigated the early builds, reported the hard-to-find bugs, and provided the critical feedback needed to shape AuraBase into the polished companion it is today. We couldn't have reached this milestone without your dedication.
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          While we're celebrating this launch, we are already looking ahead. We have a lot of exciting new features planned for the near future. Keep an eye out for our upcoming <strong>5-to-7 day meal planner</strong> and an innovative <strong>AI Fridge Scanner</strong> feature that will redefine how you interact with Aria, your Global AI Chef.
+        </p>
+      </>
+    ),
+    ctaText: 'Start your evolution on iOS today.',
+    referencesType: 'Links',
+    references: [
+      'App Store — AuraBase: Mind & Body Tracker (Nappy Dog Studios Ltd.).'
+    ]
+  },
+  {
     id: 'google-play-launch',
     authorBadge: '✨ Founder’s note • AuraBase',
     accentColor: 'text-emerald-400 border-emerald-500/30',
@@ -149,7 +185,7 @@ export const AiCouncilBlogs: React.FC = () => {
     <section id="blogs" className="py-32 bg-[#09090b] relative overflow-hidden text-white border-y border-white/5">
       <div className="absolute top-[20%] right-[-10%] w-[500px] h-[500px] bg-brand-500/10 blur-[150px] rounded-full pointer-events-none"></div>
       <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-purple-500/10 blur-[150px] rounded-full pointer-events-none"></div>
-      
+
       <div className="max-w-7xl mx-auto px-6 mb-16 relative z-10">
         <header className="text-center">
           <h2 className="text-5xl md:text-7xl font-bold mb-6 font-display tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">Voices of the AI Council</h2>
@@ -167,23 +203,23 @@ export const AiCouncilBlogs: React.FC = () => {
             .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }
             .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
           `}</style>
-          
+
           <div className="snap-center shrink-0 w-[5vw] sm:w-[10vw]"></div> {/* Spacer for offset centering */}
-          
+
           {BLOG_POSTS.map((post) => (
-            <article 
-              key={post.id} 
+            <article
+              key={post.id}
               className="snap-center shrink-0 w-[85vw] sm:w-[500px] lg:w-[600px] bg-white/5 border border-white/10 rounded-[2rem] p-8 sm:p-12 relative overflow-hidden backdrop-blur-3xl hover:border-white/20 hover:-translate-y-2 transition-all duration-300 shadow-2xl group"
             >
               {/* Top Accent Glow */}
               <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-transparent via-current to-transparent opacity-70 ${post.accentColor.split(' ')[0]}`}></div>
-              
+
               <div className={`inline-flex items-center px-4 py-2 rounded-full border bg-white/5 mb-8 text-sm font-bold uppercase tracking-widest ${post.accentColor}`}>
                 {post.authorBadge}
               </div>
-              
+
               <h3 className="text-3xl sm:text-4xl font-bold mb-8 font-display leading-[1.1]">{post.title}</h3>
-              
+
               <div className="relative z-10 leading-relaxed">
                 {post.content}
               </div>

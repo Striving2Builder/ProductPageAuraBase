@@ -45,11 +45,16 @@ const GOOGLE_PLAY_URL =
 const GOOGLE_PLAY_BADGE_IMG =
   'https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png';
 
+const APPLE_APP_STORE_URL =
+  'https://apps.apple.com/ca/app/aurabase-mind-body-tracker/id6760844634';
+const APPLE_APP_STORE_BADGE_IMG =
+  'https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg';
+
 const GooglePlayBadge: React.FC<{
   className?: string;
-  imgClassName?: string;
+  heightClassName?: string;
   onClick?: () => void;
-}> = ({ className = '', imgClassName = 'h-14 w-auto max-w-[280px] sm:max-w-[300px]', onClick }) => (
+}> = ({ className = '', heightClassName = 'h-16', onClick }) => (
   <a
     href={GOOGLE_PLAY_URL}
     target="_blank"
@@ -63,7 +68,28 @@ const GooglePlayBadge: React.FC<{
       width={646}
       height={250}
       decoding="async"
-      className={imgClassName}
+      className={`${heightClassName} w-auto object-contain scale-[1.35] -mx-[5%]`}
+    />
+  </a>
+);
+
+const AppStoreBadge: React.FC<{
+  className?: string;
+  heightClassName?: string;
+  onClick?: () => void;
+}> = ({ className = '', heightClassName = 'h-10', onClick }) => (
+  <a
+    href={APPLE_APP_STORE_URL}
+    target="_blank"
+    rel="noopener noreferrer"
+    onClick={onClick}
+    className={`inline-block leading-none transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 rounded ${className}`}
+  >
+    <img
+      src={APPLE_APP_STORE_BADGE_IMG}
+      alt="Download on the App Store"
+      decoding="async"
+      className={`${heightClassName} w-auto object-contain`}
     />
   </a>
 );
@@ -138,14 +164,9 @@ const AriaSmartphoneMockup: React.FC = () => {
 };
 
 const App: React.FC = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [activeTab, setActiveTab] = useState<WellnessTab>(WellnessTab.MIND);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [view, setView] = useState<'landing' | 'privacy'>('landing');
-  useEffect(() => {
-    if (isDarkMode) document.documentElement.classList.add('dark');
-    else document.documentElement.classList.remove('dark');
-  }, [isDarkMode]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -185,9 +206,10 @@ const App: React.FC = () => {
           <p className="text-xl md:text-2xl text-slate-500 dark:text-slate-400 max-w-3xl mx-auto mb-16 leading-relaxed font-medium">
             {HERO_DESCRIPTION}
           </p>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-            <div className="w-full sm:w-auto flex justify-center">
-              <GooglePlayBadge imgClassName="h-[52px] sm:h-16 w-auto max-w-[min(280px,90vw)]" />
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-10">
+            <div className="flex items-center gap-4 sm:gap-8">
+              <AppStoreBadge heightClassName="h-10 sm:h-12" />
+              <GooglePlayBadge heightClassName="h-10 sm:h-12" />
             </div>
             <button onClick={() => scrollToSection('features')} className="w-full sm:w-auto px-12 py-5 rounded-2xl border-2 border-slate-200 dark:border-slate-800 font-bold text-xl hover:bg-slate-50 dark:hover:bg-slate-900 transition-all">
               Explore The Pillars
@@ -415,12 +437,9 @@ const App: React.FC = () => {
               </div>
             ))}
           </div>
-          <div className="mt-28 flex flex-wrap justify-center items-center gap-8 sm:gap-10">
-            <div className="px-10 py-5 rounded-[1.5rem] bg-black text-white flex items-center gap-4 cursor-not-allowed opacity-35 grayscale pointer-events-none select-none" aria-hidden="true">
-              <Apple size={28} fill="white" />
-              <div className="text-left"><p className="text-[10px] uppercase font-black tracking-widest opacity-60">Download on</p><p className="text-xl font-bold leading-none">App Store</p></div>
-            </div>
-            <GooglePlayBadge imgClassName="h-[56px] sm:h-[72px] w-auto max-w-[min(300px,88vw)]" />
+          <div className="mt-28 flex justify-center items-center gap-6 sm:gap-12">
+            <AppStoreBadge heightClassName="h-12 sm:h-16" />
+            <GooglePlayBadge heightClassName="h-12 sm:h-16" />
           </div>
         </div>
       </section>
@@ -430,7 +449,7 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen font-sans selection:bg-brand-100 selection:text-brand-700 transition-colors duration-500 bg-white dark:bg-slate-950">
       {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isDarkMode ? 'bg-slate-950/90 border-slate-800' : 'bg-white/90 border-slate-100'} backdrop-blur-md border-b`}>
+      <nav className="fixed top-0 w-full z-50 transition-all duration-300 bg-white/90 dark:bg-slate-950/90 border-slate-100 dark:border-slate-800 backdrop-blur-md border-b">
         <div className="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
           <div className="flex items-center gap-3 cursor-pointer group" onClick={() => { setView('landing'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
             <div className="w-10 h-10 group-hover:scale-110 transition-transform flex items-center justify-center bg-white rounded-md p-1 dark:bg-slate-800">
@@ -443,13 +462,10 @@ const App: React.FC = () => {
             {['features', 'coaches', 'blogs', 'security', 'pricing'].map(sec => (
               <button key={sec} onClick={() => scrollToSection(sec)} className="text-[11px] font-black hover:text-brand-500 transition-colors uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">{sec}</button>
             ))}
-            <a href="https://aurabase.app/privacypolicy" className="text-[11px] font-black hover:text-brand-500 transition-colors uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Privacy Policy</a>
-            <a href="https://aurabase.app/termsofuse" className="text-[11px] font-black hover:text-brand-500 transition-colors uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Terms of Use</a>
-            <div className="h-6 w-px bg-slate-200 dark:bg-slate-800"></div>
-            <button onClick={() => setIsDarkMode(!isDarkMode)} className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 hover:bg-brand-50 dark:hover:bg-brand-900/20 transition-colors">
-              {isDarkMode ? <Sun size={18} className="text-brand-400" /> : <Moon size={18} className="text-brand-600" />}
-            </button>
-            <GooglePlayBadge className="py-1" imgClassName="h-9 sm:h-10 w-auto max-w-[200px]" />
+            <div className="flex items-center gap-4 ml-6">
+              <AppStoreBadge heightClassName="h-7 sm:h-8" />
+              <GooglePlayBadge heightClassName="h-7 sm:h-8" />
+            </div>
           </div>
 
           <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden p-2 text-slate-600 dark:text-slate-400">
@@ -499,11 +515,16 @@ const App: React.FC = () => {
             <button onClick={() => scrollToSection('coaches')} className="text-left hover:text-brand-500">Coaches</button>
             <button onClick={() => scrollToSection('blogs')} className="text-left hover:text-brand-500">Blogs</button>
             <button onClick={() => scrollToSection('security')} className="text-left hover:text-brand-500">Security</button>
-            <GooglePlayBadge
-              onClick={() => setIsMenuOpen(false)}
-              className="text-left"
-              imgClassName="h-12 w-auto max-w-[240px]"
-            />
+            <div className="flex flex-col gap-8 mt-6">
+              <AppStoreBadge
+                onClick={() => setIsMenuOpen(false)}
+                heightClassName="h-10"
+              />
+              <GooglePlayBadge
+                onClick={() => setIsMenuOpen(false)}
+                heightClassName="h-10"
+              />
+            </div>
           </div>
         </div>
       )}
