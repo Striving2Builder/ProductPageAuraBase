@@ -486,9 +486,9 @@ const App: React.FC = () => {
             <span className="text-3xl font-bold font-display tracking-tighter uppercase tracking-[0.1em]">{PRODUCT_NAME}</span>
           </div>
           <div className="flex flex-wrap justify-center gap-x-14 gap-y-6 mb-16 text-slate-400 font-black uppercase text-[11px] tracking-[0.3em]">
-            <a href="https://www.instagram.com/aurabaseapp/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-500 transition-colors">Instagram</a>
-            <a href="#" className="hover:text-brand-500 transition-colors">TikTok</a>
-            <a href="https://www.youtube.com/@AuraBaseCompanion" target="_blank" rel="noopener noreferrer" className="hover:text-brand-500 transition-colors">YouTube</a>
+            <a href="https://www.instagram.com/aurabaseapp/" target="_blank" rel="noopener noreferrer" aria-label="Visit the official AuraBase Instagram page" className="hover:text-brand-500 transition-colors">Instagram</a>
+            <a href="#" aria-label="Visit the official AuraBase TikTok page (Coming Soon)" className="hover:text-brand-500 transition-colors">TikTok</a>
+            <a href="https://www.youtube.com/@AuraBaseCompanion" target="_blank" rel="noopener noreferrer" aria-label="Visit the official AuraBase YouTube channel" className="hover:text-brand-500 transition-colors">YouTube</a>
             <a href="https://aurabase.app/privacypolicy" className="hover:text-brand-500 transition-colors">Privacy Policy</a>
             <a href="https://aurabase.app/termsofuse" className="hover:text-brand-500 transition-colors">Terms of Use</a>
           </div>
