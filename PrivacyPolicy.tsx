@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowLeft } from 'lucide-react';
+import { Seo } from './Seo';
 
 interface PrivacyPolicyProps {
   onBack: () => void;
@@ -8,6 +9,11 @@ interface PrivacyPolicyProps {
 const PrivacyPolicyView: React.FC<PrivacyPolicyProps> = ({ onBack }) => {
   return (
     <div className="min-h-screen pt-32 pb-24 bg-white dark:bg-slate-950 transition-colors duration-500">
+      <Seo 
+        title="Privacy Policy | AuraBase"
+        description="AuraBase Privacy Policy. Learn how we protect your holistic health data using zero-knowledge encryption and our PrivateVault architecture."
+        canonical="https://aurabase.app/privacypolicy"
+      />
       <div className="max-w-4xl mx-auto px-6">
         <button 
           onClick={onBack}

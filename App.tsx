@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { WellnessTab } from './types';
 import PrivacyPolicyView from './PrivacyPolicy';
 import { AiCouncilBlogs } from './AiCouncilBlogs';
+import BlogPostView from './BlogPostView';
+import { Seo } from './Seo';
 import {
   COACHES,
   WELLNESS_FEATURES,
@@ -164,17 +166,34 @@ const AriaSmartphoneMockup: React.FC = () => {
 };
 
 const App: React.FC = () => {
+  const getInitialView = (): string => {
+    const path = window.location.pathname;
+    if (path === '/privacypolicy') return 'privacy';
+    if (path === '/blogs') return 'blogs';
+    if (path.startsWith('/blogs/')) return `blog-post:${path.split('/')[2]}`;
+    return 'landing';
+  };
+
   const [activeTab, setActiveTab] = useState<WellnessTab>(WellnessTab.MIND);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [view, setView] = useState<'landing' | 'privacy'>('landing');
+  const [view, setView] = useState<string>(getInitialView());
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [view]);
+    const handlePopState = () => setView(getInitialView());
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  const navigateTo = (newView: string, path: string) => {
+    window.history.pushState({}, '', path);
+    setView(newView);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsMenuOpen(false);
+  };
 
   const scrollToSection = (id: string) => {
     if (view !== 'landing') {
-      setView('landing');
+      navigateTo('landing', '/');
       setTimeout(() => {
         const element = document.getElementById(id);
         if (element) window.scrollTo({ top: element.offsetTop - 80, behavior: 'smooth' });
@@ -190,6 +209,12 @@ const App: React.FC = () => {
 
   const LandingContent = () => (
     <>
+      <Seo 
+        title="AuraBase | Transform Your Life with AI Wellness"
+        description="AI Fitness, Nutrition, & Holistic Health Tracker. The world's first AI-powered council featuring an International AI Chef and Nutritionist. One interface for your entire evolution."
+        keywords="AI nutritionist, AI chef, AI fitness trainer, holistic health tracker, gamified health, nutrition tracker, meal planner, health RPG"
+        canonical="https://aurabase.app/"
+      />
       {/* Hero Section */}
       <section className="relative pt-44 pb-24 md:pt-60 md:pb-48 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
@@ -329,7 +354,7 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      <AiCouncilBlogs />
+
 
       {/* AuraQuest - Gamified RPG Section */}
       <section id="auraquest" className="py-32 bg-slate-950 text-white overflow-hidden relative">
@@ -451,17 +476,18 @@ const App: React.FC = () => {
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 transition-all duration-300 bg-white/90 dark:bg-slate-950/90 border-slate-100 dark:border-slate-800 backdrop-blur-md border-b">
         <div className="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-          <div className="flex items-center gap-3 cursor-pointer group" onClick={() => { setView('landing'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+          <a href="/" onClick={(e) => { e.preventDefault(); navigateTo('landing', '/'); }} className="flex items-center gap-3 cursor-pointer group">
             <div className="w-10 h-10 group-hover:scale-110 transition-transform flex items-center justify-center bg-white rounded-md p-1 dark:bg-slate-800">
               <img src="assets/logo.svg" alt={PRODUCT_NAME} className="w-full h-full object-contain" />
             </div>
             <span className="text-2xl font-bold font-display tracking-tighter uppercase">{PRODUCT_NAME}</span>
-          </div>
+          </a>
 
           <div className="hidden md:flex items-center space-x-10">
-            {['features', 'coaches', 'blogs', 'security', 'pricing'].map(sec => (
+            {['features', 'coaches', 'security', 'pricing'].map(sec => (
               <button key={sec} onClick={() => scrollToSection(sec)} className="text-[11px] font-black hover:text-brand-500 transition-colors uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">{sec}</button>
             ))}
+            <a href="/blogs" onClick={(e) => { e.preventDefault(); navigateTo('blogs', '/blogs'); }} className="text-[11px] font-black hover:text-brand-500 transition-colors uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">BLOGS</a>
             <div className="flex items-center gap-4 ml-6">
               <AppStoreBadge heightClassName="h-7 sm:h-8" />
               <GooglePlayBadge heightClassName="h-7 sm:h-8" />
@@ -474,7 +500,15 @@ const App: React.FC = () => {
         </div>
       </nav>
 
-      {view === 'landing' ? <LandingContent /> : <PrivacyPolicyView onBack={() => setView('landing')} />}
+      {view === 'landing' && <LandingContent />}
+      {view === 'privacy' && <PrivacyPolicyView onBack={() => navigateTo('landing', '/')} />}
+      {view === 'blogs' && <div className="pt-20 bg-[#09090b] min-h-screen"><AiCouncilBlogs onNavigate={navigateTo} /></div>}
+      {view.startsWith('blog-post:') && (
+        <BlogPostView 
+          postId={view.split(':')[1]} 
+          onBack={() => navigateTo('blogs', '/blogs')} 
+        />
+      )}
 
       {/* Footer */}
       <footer className="py-32 text-center bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-900">
@@ -489,7 +523,7 @@ const App: React.FC = () => {
             <a href="https://www.instagram.com/aurabaseapp/" target="_blank" rel="noopener noreferrer" aria-label="Visit the official AuraBase Instagram page" className="hover:text-brand-500 transition-colors">Instagram</a>
             <a href="#" aria-label="Visit the official AuraBase TikTok page (Coming Soon)" className="hover:text-brand-500 transition-colors">TikTok</a>
             <a href="https://www.youtube.com/@AuraBaseCompanion" target="_blank" rel="noopener noreferrer" aria-label="Visit the official AuraBase YouTube channel" className="hover:text-brand-500 transition-colors">YouTube</a>
-            <a href="https://aurabase.app/privacypolicy" className="hover:text-brand-500 transition-colors">Privacy Policy</a>
+            <a href="/privacypolicy" onClick={(e) => { e.preventDefault(); navigateTo('privacy', '/privacypolicy'); }} className="hover:text-brand-500 transition-colors">Privacy Policy</a>
             <a href="https://aurabase.app/termsofuse" className="hover:text-brand-500 transition-colors">Terms of Use</a>
           </div>
           <p className="text-slate-400 text-xs font-bold uppercase tracking-[0.2em] leading-relaxed">
@@ -514,7 +548,7 @@ const App: React.FC = () => {
           <div className="flex flex-col gap-10 text-4xl font-bold font-display uppercase tracking-tight">
             <button onClick={() => scrollToSection('features')} className="text-left hover:text-brand-500">Features</button>
             <button onClick={() => scrollToSection('coaches')} className="text-left hover:text-brand-500">Coaches</button>
-            <button onClick={() => scrollToSection('blogs')} className="text-left hover:text-brand-500">Blogs</button>
+            <a href="/blogs" onClick={(e) => { e.preventDefault(); navigateTo('blogs', '/blogs'); }} className="text-left hover:text-brand-500">Blogs</a>
             <button onClick={() => scrollToSection('security')} className="text-left hover:text-brand-500">Security</button>
             <div className="flex flex-col gap-8 mt-6">
               <AppStoreBadge
