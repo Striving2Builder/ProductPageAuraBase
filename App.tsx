@@ -523,6 +523,7 @@ const App: React.FC = () => {
             <a href="https://www.instagram.com/aurabaseapp/" target="_blank" rel="noopener noreferrer" aria-label="Visit the official AuraBase Instagram page" className="hover:text-brand-500 transition-colors">Instagram</a>
             <a href="#" aria-label="Visit the official AuraBase TikTok page (Coming Soon)" className="hover:text-brand-500 transition-colors">TikTok</a>
             <a href="https://www.youtube.com/@AuraBaseCompanion" target="_blank" rel="noopener noreferrer" aria-label="Visit the official AuraBase YouTube channel" className="hover:text-brand-500 transition-colors">YouTube</a>
+            <a href="https://music.youtube.com/channel/UC0DJH61-UHKjZ_XYw1sF1BQ?si=Aqp0v_sUcXOB6IIO" target="_blank" rel="noopener noreferrer" aria-label="Visit the official AuraBase YouTube Music artist channel" className="hover:text-brand-500 transition-colors">YouTube Music</a>
             <a href="/privacypolicy" onClick={(e) => { e.preventDefault(); navigateTo('privacy', '/privacypolicy'); }} className="hover:text-brand-500 transition-colors">Privacy Policy</a>
             <a href="https://aurabase.app/termsofuse" className="hover:text-brand-500 transition-colors">Terms of Use</a>
           </div>
