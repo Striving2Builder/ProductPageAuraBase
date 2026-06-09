@@ -1,5 +1,6 @@
 import React from 'react';
 import { Seo } from './Seo';
+import { BLOG_INDEX_META } from './blogPostsMeta';
 
 export const BLOG_POSTS = [
   {
@@ -322,8 +323,8 @@ export const AiCouncilBlogs: React.FC<AiCouncilBlogsProps> = ({ onNavigate }) =>
   return (
     <section id="blogs" className="py-32 bg-[#09090b] relative overflow-hidden text-white border-y border-white/5">
       <Seo 
-        title="AuraBase AI Council Blogs | Insights on Holistic Health"
-        description="Read the latest insights from AuraBase's AI Council. Expert protocols on fitness biomechanics, global nutrition, biohacking, mindfulness meditation, calorie tracking, and sleep optimization."
+        title={BLOG_INDEX_META.title}
+        description={BLOG_INDEX_META.description}
         keywords="AuraBase blogs, mindfulness meditation, guided meditation, calorie calculator, food calorie calculator, recipe nutrition calculator, apple watch sleep tracking, wearable fitness tracker, meditation for sleep, 10 minute meditation, meditation for anxiety"
         canonical="https://aurabase.app/blogs"
         jsonLd={jsonLd}
@@ -372,7 +373,7 @@ export const AiCouncilBlogs: React.FC<AiCouncilBlogsProps> = ({ onNavigate }) =>
               <div className="mt-10 p-6 rounded-2xl bg-white/5 border border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 hover:bg-white/10 transition-colors">
                 <span className={`font-bold font-display text-lg ${post.accentColor.split(' ')[0]}`}>{post.ctaText}</span>
                 <button 
-                  onClick={() => onNavigate && onNavigate(`blogs/${post.id}`, `/blogs/${post.id}`)}
+                  onClick={() => onNavigate && onNavigate(`blog-post:${post.id}`, `/blogs/${post.id}`)}
                   className="whitespace-nowrap px-6 py-3 rounded-full bg-white text-black font-bold text-sm tracking-wide hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all"
                 >
                   Read Full Protocol

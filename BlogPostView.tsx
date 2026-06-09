@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { Seo } from './Seo';
 import { BLOG_POSTS } from './AiCouncilBlogs';
+import { BLOG_POSTS_META } from './blogPostsMeta';
 
 interface BlogPostViewProps {
   postId: string;
@@ -20,9 +21,10 @@ const BlogPostView: React.FC<BlogPostViewProps> = ({ postId, onBack }) => {
     );
   }
 
-  // Generate plain text from JSX content for SEO description if possible
-  // For a generic approach, we can provide a curated description based on the title if we don't want to parse JSX.
-  const description = `${post.title}. Read the full protocol and insights from ${post.authorBadge.split('•')[0].trim()} on AuraBase.`;
+  const meta = BLOG_POSTS_META.find((entry) => entry.id === postId);
+  const description =
+    meta?.description ??
+    `${post.title}. Read the full protocol and insights from ${post.authorBadge.split('•')[0].trim()} on AuraBase.`;
 
   const jsonLd = {
     "@context": "https://schema.org",
