@@ -10,10 +10,18 @@ export const BLOG_INDEX_META = {
   title: 'AuraBase AI Council Blogs | Insights on Holistic Health',
   description:
     'Read the latest insights from AuraBase\'s AI Council. Expert protocols on fitness biomechanics, global nutrition, biohacking, mindfulness meditation, and sleep optimization.',
-  lastmod: '2026-05-22',
+  lastmod: '2026-06-09',
 };
 
 export const BLOG_POSTS_META: BlogPostMeta[] = [
+  {
+    id: 'aria-ai-meal-scanner-v2',
+    title: 'Why Your Meal Photo Needs a Database: Inside AuraBase\'s Hybrid AI Meal Scanner V2',
+    description:
+      'Aria cites 2024–2026 research on GPS, timestamps, and EXIF metadata improving meal-scan accuracy, plus AuraBase V2\'s hybrid LLM + USDA/Canadian Nutrient File architecture.',
+    author: 'Aria',
+    lastmod: '2026-06-09',
+  },
   {
     id: 'sound-sanctuary-youtube-music',
     title: 'Introducing Our YouTube Music Page: An Extension of the Sound Sanctuary',

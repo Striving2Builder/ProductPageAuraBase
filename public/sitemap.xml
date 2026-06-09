@@ -20,8 +20,14 @@
   </url>
   <url>
     <loc>https://aurabase.app/blogs</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aurabase.app/blogs/aria-ai-meal-scanner-v2</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
