@@ -1,4 +1,2 @@
 /privicypolicy /privacypolicy 301
-/blogs /blogs.html 200
-/blogs/* /blogs/:splat.html 200
 /* /index.html 200
