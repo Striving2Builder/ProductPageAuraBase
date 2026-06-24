@@ -19,7 +19,13 @@ const blogPages = BLOG_POSTS_META.map((post) => ({
   loc: `${SITE}/blogs/${post.id}`,
   lastmod: post.lastmod,
   changefreq: 'monthly',
-  priority: post.id.includes('meal-scanner') || post.id.includes('nutritionist') ? '0.8' : '0.7',
+  priority:
+    post.id === 'lab-data-driven-pivot' ||
+    post.id === 'ai-meal-photo-accuracy-research' ||
+    post.id.includes('meal-scanner') ||
+    post.id.includes('nutritionist')
+      ? '0.9'
+      : '0.7',
 }));
 
 const urls = [...staticPages, ...blogPages];

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AuraBase AI Council Blogs | Wellness Experiments &amp; Recovery Science</title>
+    <link>https://aurabase.app/blogs</link>
+    <description>Insights on personal wellness experiments, sleep recovery, AI nutrition and fitness coaching, biomechanics, mindfulness, and biohacking — from AuraBase's AI Council.</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Jun 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://aurabase.app/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>From Mind, Body &amp; Spirit to The Lab: Why We Rebuilt AuraBase Around Your Data</title>
+      <link>https://aurabase.app/blogs/lab-data-driven-pivot</link>
+      <guid isPermaLink="true">https://aurabase.app/blogs/lab-data-driven-pivot</guid>
+      <description>A founder's note on pivoting away from gamified holistic wellness toward personal experiments, cross-domain signal mapping, and a serious data-driven loop — Train, Fuel, Recover.</description>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>What Research Says About AI Meal Photos for Calories &amp; Macros — and Where AuraBase Stands</title>
+      <link>https://aurabase.app/blogs/ai-meal-photo-accuracy-research</link>
+      <guid isPermaLink="true">https://aurabase.app/blogs/ai-meal-photo-accuracy-research</guid>
+      <description>Aria surveys 2021–2026 studies on vision-only meal scanning accuracy, compares hybrid USDA + Canadian Nutrient File grounding, and explains AuraBase's honest accuracy position.</description>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Why Your Meal Photo Needs a Database: Inside AuraBase's Hybrid AI Meal Scanner V2</title>
+      <link>https://aurabase.app/blogs/aria-ai-meal-scanner-v2</link>
+      <guid isPermaLink="true">https://aurabase.app/blogs/aria-ai-meal-scanner-v2</guid>
+      <description>Aria cites 2024–2026 research on GPS, timestamps, and EXIF metadata improving meal-scan accuracy, plus AuraBase V2's hybrid LLM + USDA/Canadian Nutrient File architecture.</description>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Introducing Our YouTube Music Page: An Extension of the Sound Sanctuary</title>
+      <link>https://aurabase.app/blogs/sound-sanctuary-youtube-music</link>
+      <guid isPermaLink="true">https://aurabase.app/blogs/sound-sanctuary-youtube-music</guid>
+      <description>Launching our YouTube Music Artist Page — a digital sanctuary for meditation, yoga, deep focus, and healing. New spiritual meditation tracks released monthly.</description>
+      <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Matter Over Mind: The Biological Impact of Mindfulness Meditation</title>
+      <link>https://aurabase.app/blogs/zenith-mindfulness-anxiety</link>
+      <guid isPermaLink="true">https://aurabase.app/blogs/zenith-mindfulness-anxiety</guid>
+      <description>How mindfulness meditation rewires neural pathways associated with anxiety. Clinical protocols from Zenith, your AI Mindfulness Guide at AuraBase.</description>
+      <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>The AI Nutritionist: Designing Your Optimal Healthy Eating Plan</title>
+      <link>https://aurabase.app/blogs/aria-ai-nutritionist-diet</link>
+      <guid isPermaLink="true">https://aurabase.app/blogs/aria-ai-nutritionist-diet</guid>
+      <description>Stop crash dieting. Learn how Aria, your Global AI Nutritionist, architects personalized healthy eating plans from global cuisine.</description>
+      <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>The Data-Driven Yogi: Merging Ancient Flow with Modern Wearables</title>
+      <link>https://aurabase.app/blogs/atlas-yoga-wearables</link>
+      <guid isPermaLink="true">https://aurabase.app/blogs/atlas-yoga-wearables</guid>
+      <description>How Atlas merges yoga, wearable fitness trackers, and AI coaching to turn every session into actionable biometric data.</description>
+      <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>AuraBase is Officially Live on the Apple App Store</title>
+      <link>https://aurabase.app/blogs/ios-app-store-launch</link>
+      <guid isPermaLink="true">https://aurabase.app/blogs/ios-app-store-launch</guid>
+      <description>AuraBase is now available on the Apple App Store. Download the iOS app and start your holistic wellness evolution today.</description>
+      <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Six months in—and we are live on Google Play</title>
+      <link>https://aurabase.app/blogs/google-play-launch</link>
+      <guid isPermaLink="true">https://aurabase.app/blogs/google-play-launch</guid>
+      <description>AuraBase is live on Google Play. A founder's note on the journey, the community that made it possible, and what comes next.</description>
+      <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Beyond the Mirror: How MediaPipe is Forcing Perfect Form</title>
+      <link>https://aurabase.app/blogs/atlas</link>
+      <guid isPermaLink="true">https://aurabase.app/blogs/atlas</guid>
+      <description>Atlas uses Google MediaPipe BlazePose to track 33 body landmarks in real time and correct your form before injury occurs.</description>
+      <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Beyond &quot;Chicken and Rice&quot;: Reclaiming Macros Through Global Cuisine</title>
+      <link>https://aurabase.app/blogs/aria</link>
+      <guid isPermaLink="true">https://aurabase.app/blogs/aria</guid>
+      <description>Aria's Cultural Nuance Engine builds macro-perfect meal plans from South Asian, Mediterranean, East Asian, and Latin American cuisines.</description>
+      <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Hacking Your Circadian Rhythm: What Your Wearable Isn't Telling You</title>
+      <link>https://aurabase.app/blogs/luna</link>
+      <guid isPermaLink="true">https://aurabase.app/blogs/luna</guid>
+      <description>Luna transforms raw wearable sleep data into personalized Sleep Optimization Protocols and hormetic stress cycles.</description>
+      <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>The Physical ROI of Mental Stillness: Rewiring Brain and Body</title>
+      <link>https://aurabase.app/blogs/zenith</link>
+      <guid isPermaLink="true">https://aurabase.app/blogs/zenith</guid>
+      <description>Daily mindfulness meditation lowers cortisol, improves HRV, and accelerates physical recovery. The science from Zenith.</description>
+      <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Sounds that Shape Your Mind: The Science of Binaural Beats</title>
+      <link>https://aurabase.app/blogs/solace</link>
+      <guid isPermaLink="true">https://aurabase.app/blogs/solace</guid>
+      <description>Solace explains how binaural beats trigger brainwave entrainment for deep focus, relaxation, and restorative sleep.</description>
+      <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

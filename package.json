@@ -6,11 +6,12 @@
   "scripts": {
     "generate:blog-pages": "tsx scripts/generate-blog-pages.ts",
     "generate:sitemap": "tsx scripts/generate-sitemap.ts",
+    "generate:rss": "tsx scripts/generate-rss.ts",
     "prepare:landing": "tsx scripts/prepare-landing.ts",
     "optimize:images": "tsx scripts/optimize-images.ts",
     "prerender:index": "tsx scripts/prerender-index.ts",
-    "dev": "npm run generate:sitemap && npm run generate:blog-pages && npm run prepare:landing && vite",
-    "build": "npm run generate:sitemap && npm run generate:blog-pages && npm run prepare:landing && npm run optimize:images && vite build && npm run prerender:index",
+    "dev": "npm run generate:sitemap && npm run generate:rss && npm run generate:blog-pages && npm run prepare:landing && vite",
+    "build": "npm run generate:sitemap && npm run generate:rss && npm run generate:blog-pages && npm run prepare:landing && npm run optimize:images && vite build && npm run prerender:index",
     "preview": "vite preview"
   },
   "dependencies": {

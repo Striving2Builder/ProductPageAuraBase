@@ -5,3 +5,6 @@ Allow: /
 # https://aurabase.app/llms.txt
 
 Sitemap: https://aurabase.app/sitemap.xml
+
+# RSS feed for blog subscribers and aggregators
+# https://aurabase.app/feed.xml
