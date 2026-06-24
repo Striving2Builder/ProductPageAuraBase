@@ -9,7 +9,7 @@ export interface BlogPostMeta {
 export const BLOG_INDEX_META = {
   title: 'AuraBase AI Council Blogs | Wellness Experiments & Recovery Science',
   description:
-    'Insights on personal wellness experiments, sleep recovery, AI nutrition and fitness coaching, biomechanics, mindfulness, and biohacking — from AuraBase\'s AI Council.',
+    'Wellness experiments, sleep recovery, AI nutrition and fitness coaching, biomechanics, mindfulness, and biohacking from AuraBase.',
   lastmod: '2026-06-24',
 };
 
@@ -18,7 +18,7 @@ export const BLOG_POSTS_META: BlogPostMeta[] = [
     id: 'lab-data-driven-pivot',
     title: 'From Mind, Body & Spirit to The Lab: Why We Rebuilt AuraBase Around Your Data',
     description:
-      'A founder\'s note on pivoting away from gamified holistic wellness toward personal experiments, cross-domain signal mapping, and a serious data-driven loop — Train, Fuel, Recover.',
+      'Founder\'s note on pivoting to personal experiments, cross-domain signal mapping, and AuraBase\'s Train, Fuel, Recover data loop.',
     author: 'AuraBase',
     lastmod: '2026-06-24',
   },
@@ -26,7 +26,7 @@ export const BLOG_POSTS_META: BlogPostMeta[] = [
     id: 'ai-meal-photo-accuracy-research',
     title: 'What Research Says About AI Meal Photos for Calories & Macros — and Where AuraBase Stands',
     description:
-      'Aria surveys 2021–2026 studies on vision-only meal scanning accuracy, compares hybrid USDA + Canadian Nutrient File grounding, and explains AuraBase\'s honest accuracy position.',
+      'Aria on meal-photo research (2021–2026), hybrid USDA + Canadian Nutrient File grounding, and AuraBase\'s honest accuracy position.',
     author: 'Aria',
     lastmod: '2026-06-24',
   },
@@ -34,7 +34,7 @@ export const BLOG_POSTS_META: BlogPostMeta[] = [
     id: 'aria-ai-meal-scanner-v2',
     title: 'Why Your Meal Photo Needs a Database: Inside AuraBase\'s Hybrid AI Meal Scanner V2',
     description:
-      'Aria cites 2024–2026 research on GPS, timestamps, and EXIF metadata improving meal-scan accuracy, plus AuraBase V2\'s hybrid LLM + USDA/Canadian Nutrient File architecture.',
+      'How GPS, timestamps, and EXIF improve meal scans, plus AuraBase V2\'s hybrid LLM + USDA/Canadian Nutrient File architecture.',
     author: 'Aria',
     lastmod: '2026-06-09',
   },

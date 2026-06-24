@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { clipMetaDescription } from './siteMeta';
 
 interface SeoProps {
   title: string;
@@ -33,8 +34,9 @@ export const Seo: React.FC<SeoProps> = ({
   jsonLd,
 }) => {
   useEffect(() => {
+    const metaDescription = clipMetaDescription(description);
     document.title = title;
-    upsertMeta('meta[name="description"]', 'content', description, { name: 'description' });
+    upsertMeta('meta[name="description"]', 'content', metaDescription, { name: 'description' });
 
     if (keywords) {
       upsertMeta('meta[name="keywords"]', 'content', keywords, { name: 'keywords' });
@@ -53,9 +55,9 @@ export const Seo: React.FC<SeoProps> = ({
     }
 
     upsertMeta('meta[property="og:title"]', 'content', title, { property: 'og:title' });
-    upsertMeta('meta[property="og:description"]', 'content', description, { property: 'og:description' });
+    upsertMeta('meta[property="og:description"]', 'content', metaDescription, { property: 'og:description' });
     upsertMeta('meta[name="twitter:title"]', 'content', title, { name: 'twitter:title' });
-    upsertMeta('meta[name="twitter:description"]', 'content', description, { name: 'twitter:description' });
+    upsertMeta('meta[name="twitter:description"]', 'content', metaDescription, { name: 'twitter:description' });
 
     if (ogImage) {
       upsertMeta('meta[property="og:image"]', 'content', ogImage, { property: 'og:image' });

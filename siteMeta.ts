@@ -1,5 +1,16 @@
 export const SITE_URL = 'https://aurabase.app';
 
+/** Bing/Google recommend 25–160 characters for meta descriptions. */
+export const META_DESCRIPTION_MAX = 155;
+
+export function clipMetaDescription(text: string, max = META_DESCRIPTION_MAX): string {
+  const normalized = text.replace(/\s+/g, ' ').trim();
+  if (normalized.length <= max) return normalized;
+  const clipped = normalized.slice(0, max - 1);
+  const lastSpace = clipped.lastIndexOf(' ');
+  return `${(lastSpace > 80 ? clipped.slice(0, lastSpace) : clipped).trimEnd()}…`;
+}
+
 export const SITE_TITLE = 'AuraBase — Health, Recovery & Personal Experiments';
 
 export const SITE_DESCRIPTION =
@@ -116,8 +127,7 @@ export const HOME_JSON_LD = {
 };
 
 export const NOSCRIPT_SUMMARY = `
-  <h1>AuraBase — Health, Recovery &amp; Personal Experiments</h1>
-  <p>${SITE_DESCRIPTION}</p>
+  <p><strong>AuraBase — Health, Recovery &amp; Personal Experiments.</strong> ${SITE_DESCRIPTION}</p>
   <p>Connect sleep, nutrition, supplements, mood, and habits. Run personal wellness experiments in The Lab. AI coaches include Aria (nutrition) and Atlas (fitness &amp; biomechanics).</p>
   <ul>
     <li><a href="/blogs/aria-ai-meal-scanner-v2">AI Meal Scanner deep dive</a></li>

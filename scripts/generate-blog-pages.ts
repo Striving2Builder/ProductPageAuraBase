@@ -3,6 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { BLOG_INDEX_META, BLOG_POSTS_META } from '../blogPostsMeta';
 import { buildBlogIndexJsonLd, buildBlogPostPageJsonLd } from '../seo/schema';
+import { clipMetaDescription } from '../siteMeta';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -30,13 +31,14 @@ function sharedHead({
   canonical: string;
   jsonLd: Record<string, unknown>;
 }): string {
+  const metaDescription = clipMetaDescription(description);
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${escapeHtml(title)}</title>
-  <meta name="description" content="${escapeHtml(description)}" />
+  <meta name="description" content="${escapeHtml(metaDescription)}" />
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#0d9488" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
@@ -46,12 +48,12 @@ function sharedHead({
   <meta property="og:url" content="${escapeHtml(canonical)}" />
   <meta property="og:site_name" content="AuraBase" />
   <meta property="og:title" content="${escapeHtml(title)}" />
-  <meta property="og:description" content="${escapeHtml(description)}" />
+  <meta property="og:description" content="${escapeHtml(metaDescription)}" />
   <meta property="og:image" content="${OG_IMAGE}" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${escapeHtml(title)}" />
-  <meta name="twitter:description" content="${escapeHtml(description)}" />
+  <meta name="twitter:description" content="${escapeHtml(metaDescription)}" />
   <meta name="twitter:image" content="${OG_IMAGE}" />
 
   <script type="application/ld+json">
@@ -77,12 +79,11 @@ function pageShell({
 }): string {
   return `${sharedHead({ title, description, canonical, jsonLd })}
 <body class="bg-white text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
-  <noscript>
+  <div id="root" data-prerender="true">
     <main style="max-width:48rem;margin:0 auto;padding:6rem 1.5rem 3rem;font-family:system-ui,sans-serif;">
       ${bodyHtml}
     </main>
-  </noscript>
-  <div id="root"></div>
+  </div>
   <script type="module" src="/index.tsx"></script>
 </body>
 </html>
