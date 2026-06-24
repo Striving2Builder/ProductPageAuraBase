@@ -7,13 +7,29 @@ export interface BlogPostMeta {
 }
 
 export const BLOG_INDEX_META = {
-  title: 'AuraBase AI Council Blogs | Insights on Holistic Health',
+  title: 'AuraBase AI Council Blogs | Wellness Experiments & Recovery Science',
   description:
-    'Read the latest insights from AuraBase\'s AI Council. Expert protocols on fitness biomechanics, global nutrition, biohacking, mindfulness meditation, and sleep optimization.',
-  lastmod: '2026-06-09',
+    'Insights on personal wellness experiments, sleep recovery, AI nutrition and fitness coaching, biomechanics, mindfulness, and biohacking — from AuraBase\'s AI Council.',
+  lastmod: '2026-06-24',
 };
 
 export const BLOG_POSTS_META: BlogPostMeta[] = [
+  {
+    id: 'lab-data-driven-pivot',
+    title: 'From Mind, Body & Spirit to The Lab: Why We Rebuilt AuraBase Around Your Data',
+    description:
+      'A founder\'s note on pivoting away from gamified holistic wellness toward personal experiments, cross-domain signal mapping, and a serious data-driven loop — Train, Fuel, Recover.',
+    author: 'AuraBase',
+    lastmod: '2026-06-24',
+  },
+  {
+    id: 'ai-meal-photo-accuracy-research',
+    title: 'What Research Says About AI Meal Photos for Calories & Macros — and Where AuraBase Stands',
+    description:
+      'Aria surveys 2021–2026 studies on vision-only meal scanning accuracy, compares hybrid USDA + Canadian Nutrient File grounding, and explains AuraBase\'s honest accuracy position.',
+    author: 'Aria',
+    lastmod: '2026-06-24',
+  },
   {
     id: 'aria-ai-meal-scanner-v2',
     title: 'Why Your Meal Photo Needs a Database: Inside AuraBase\'s Hybrid AI Meal Scanner V2',

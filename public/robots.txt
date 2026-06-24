@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# Optional: site summary for AI assistants / tools that read llms.txt
+# Site summary for AI assistants / tools
 # https://aurabase.app/llms.txt
 
 Sitemap: https://aurabase.app/sitemap.xml

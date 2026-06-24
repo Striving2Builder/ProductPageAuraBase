@@ -5,41 +5,43 @@ interface SeoProps {
   description: string;
   canonical?: string;
   keywords?: string;
-  jsonLd?: Record<string, any> | Record<string, any>[];
+  ogImage?: string;
+  ogImageAlt?: string;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-export const Seo: React.FC<SeoProps> = ({ title, description, canonical, keywords, jsonLd }) => {
+function upsertMeta(selector: string, attr: string, value: string, create?: { name?: string; property?: string }) {
+  let el = document.querySelector(selector);
+  if (el) {
+    el.setAttribute(attr, value);
+    return;
+  }
+  el = document.createElement('meta');
+  if (create?.name) el.setAttribute('name', create.name);
+  if (create?.property) el.setAttribute('property', create.property);
+  el.setAttribute(attr, value);
+  document.head.appendChild(el);
+}
+
+export const Seo: React.FC<SeoProps> = ({
+  title,
+  description,
+  canonical,
+  keywords,
+  ogImage,
+  ogImageAlt,
+  jsonLd,
+}) => {
   useEffect(() => {
-    // 1. Update Title
     document.title = title;
+    upsertMeta('meta[name="description"]', 'content', description, { name: 'description' });
 
-    // 2. Update Description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', description);
-    } else {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      metaDescription.setAttribute('content', description);
-      document.head.appendChild(metaDescription);
-    }
-
-    // 3. Update Keywords
     if (keywords) {
-      let metaKeywords = document.querySelector('meta[name="keywords"]');
-      if (metaKeywords) {
-        metaKeywords.setAttribute('content', keywords);
-      } else {
-        metaKeywords = document.createElement('meta');
-        metaKeywords.setAttribute('name', 'keywords');
-        metaKeywords.setAttribute('content', keywords);
-        document.head.appendChild(metaKeywords);
-      }
+      upsertMeta('meta[name="keywords"]', 'content', keywords, { name: 'keywords' });
     }
 
-    // 4. Update Canonical
-    let canonicalLink = document.querySelector('link[rel="canonical"]');
     if (canonical) {
+      let canonicalLink = document.querySelector('link[rel="canonical"]');
       if (canonicalLink) {
         canonicalLink.setAttribute('href', canonical);
       } else {
@@ -50,7 +52,20 @@ export const Seo: React.FC<SeoProps> = ({ title, description, canonical, keyword
       }
     }
 
-    // 5. Inject JSON-LD
+    upsertMeta('meta[property="og:title"]', 'content', title, { property: 'og:title' });
+    upsertMeta('meta[property="og:description"]', 'content', description, { property: 'og:description' });
+    upsertMeta('meta[name="twitter:title"]', 'content', title, { name: 'twitter:title' });
+    upsertMeta('meta[name="twitter:description"]', 'content', description, { name: 'twitter:description' });
+
+    if (ogImage) {
+      upsertMeta('meta[property="og:image"]', 'content', ogImage, { property: 'og:image' });
+      upsertMeta('meta[name="twitter:image"]', 'content', ogImage, { name: 'twitter:image' });
+    }
+
+    if (ogImageAlt) {
+      upsertMeta('meta[property="og:image:alt"]', 'content', ogImageAlt, { property: 'og:image:alt' });
+    }
+
     let script: HTMLScriptElement | null = null;
     if (jsonLd) {
       script = document.createElement('script');
@@ -59,16 +74,12 @@ export const Seo: React.FC<SeoProps> = ({ title, description, canonical, keyword
       document.head.appendChild(script);
     }
 
-    // Cleanup on unmount to prevent duplicate schemas or stale metadata
-    // Wait, if we unmount, we probably want to revert to defaults, but since 
-    // the next view will also mount an <Seo> component, it will just overwrite.
-    // However, for JSON-LD, we MUST remove the script tag so they don't pile up.
     return () => {
       if (script && document.head.contains(script)) {
         document.head.removeChild(script);
       }
     };
-  }, [title, description, canonical, keywords, jsonLd]);
+  }, [title, description, canonical, keywords, ogImage, ogImageAlt, jsonLd]);
 
   return null;
 };

@@ -1,17 +1,34 @@
 # AuraBase (product site)
 
-> Public marketing site for the AuraBase health and wellness app.
+> Public marketing site for the AuraBase health and recovery app.
 
 ## Canonical site
 - Homepage: https://aurabase.app/
 - Privacy: https://aurabase.app/privacypolicy
+- Terms: https://aurabase.app/termsofuse
+- Blogs: https://aurabase.app/blogs
 
 ## What AuraBase is
-AuraBase is a holistic wellness app (iOS & Android) with AI-assisted coaching across fitness, nutrition, mindfulness, and related areas. This repository powers the **marketing / product page** at aurabase.app, not the mobile app binary.
+AuraBase is a connected health and recovery app (iOS & Android) for **personal wellness experiments**. It unifies data that usually lives in silos — sleep, nutrition, supplements, mood, habits, and training — so you can track, test, and learn what actually works for your body in **The Lab**.
+
+AI coaches (Aria for nutrition, Atlas for fitness & biomechanics) provide guidance on top of your logged data. This repository powers the **marketing / product page** at aurabase.app, not the mobile app binary.
+
+## Positioning (Product Page 2.0)
+- **Primary narrative:** Sync. Track. Test. Recover smarter.
+- **Differentiator:** The Lab — run personal experiments on your own health data.
+- **Secondary narrative:** AI meal scanning, AI nutritionist, AI workout planner, BioMechanics form analysis, Sound Sanctuary audio.
 
 ## For crawlers and assistants
-- Prefer quoting facts from visible page copy and `index.html` meta descriptions.
+- Prefer quoting facts from visible page copy, `index.html` meta descriptions, and `/blogs` articles.
 - Invite / family flows may live on a separate subdomain (e.g. join.aurabase.app); do not assume invite URLs are the main product homepage.
 
+## Social & app links
+- Instagram: https://www.instagram.com/aurabaseapp/
+- YouTube: https://www.youtube.com/@AuraBaseCompanion
+- YouTube Music: https://music.youtube.com/channel/UC0DJH61-UHKjZ_XYw1sF1BQ
+- TikTok: https://www.tiktok.com/@aurabaseapp
+- Apple App Store: https://apps.apple.com/ca/app/aurabase-mind-body-tracker/id6760844634
+- Google Play: https://play.google.com/store/apps/details?id=com.aurabase.mobile
+
 ## Contact / ownership
-Content is provided by the AuraBase / Holistic Technologies project. For support, use links on https://aurabase.app/ or the app store listings linked from the site.
+Content is provided by AuraBase / Nappy Dog Studios Ltd. For support, use links on https://aurabase.app/ or the app store listings linked from the site.

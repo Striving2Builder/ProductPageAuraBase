@@ -3,6 +3,8 @@ import { ArrowLeft } from 'lucide-react';
 import { Seo } from './Seo';
 import { BLOG_POSTS } from './AiCouncilBlogs';
 import { BLOG_POSTS_META } from './blogPostsMeta';
+import { buildBlogPostPageJsonLd } from './seo/schema';
+import { OG_IMAGE, OG_IMAGE_ALT } from './siteMeta';
 
 interface BlogPostViewProps {
   postId: string;
@@ -26,21 +28,7 @@ const BlogPostView: React.FC<BlogPostViewProps> = ({ postId, onBack }) => {
     meta?.description ??
     `${post.title}. Read the full protocol and insights from ${post.authorBadge.split('•')[0].trim()} on AuraBase.`;
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": post.title,
-    "description": description,
-    "author": {
-      "@type": "Person",
-      "name": post.authorBadge.split('•')[0].trim()
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "AuraBase"
-    },
-    "url": `https://aurabase.app/blogs/${post.id}`
-  };
+  const jsonLd = meta ? buildBlogPostPageJsonLd(meta) : undefined;
 
   return (
     <article className="min-h-screen pt-32 pb-24 bg-white dark:bg-slate-950 transition-colors duration-500">
@@ -48,6 +36,8 @@ const BlogPostView: React.FC<BlogPostViewProps> = ({ postId, onBack }) => {
         title={`${post.title} | AuraBase`}
         description={description}
         canonical={`https://aurabase.app/blogs/${post.id}`}
+        ogImage={OG_IMAGE}
+        ogImageAlt={OG_IMAGE_ALT}
         jsonLd={jsonLd}
       />
       
@@ -78,6 +68,17 @@ const BlogPostView: React.FC<BlogPostViewProps> = ({ postId, onBack }) => {
               <li key={i}>{ref}</li>
             ))}
           </ul>
+        </div>
+
+        <div className="mt-16 p-8 rounded-3xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10">
+          <h3 className="text-lg font-bold font-display text-slate-900 dark:text-white mb-3">Try it in AuraBase</h3>
+          <p className="text-slate-600 dark:text-slate-400 mb-6">Explore the features behind this article on the product page.</p>
+          <div className="flex flex-wrap gap-4 text-sm font-bold">
+            <a href="/#nutrition" className="text-brand-600 dark:text-brand-400 hover:underline">Nutrition &amp; meal scanning</a>
+            <a href="/#training" className="text-brand-600 dark:text-brand-400 hover:underline">Training &amp; biomechanics</a>
+            <a href="/#lab" className="text-brand-600 dark:text-brand-400 hover:underline">The Lab experiments</a>
+            <a href="/#recover" className="text-brand-600 dark:text-brand-400 hover:underline">Recovery &amp; Sound Sanctuary</a>
+          </div>
         </div>
       </div>
     </article>

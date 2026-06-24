@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowLeft } from 'lucide-react';
+import { Seo } from './Seo';
 
 interface TermsOfUseProps {
   onBack: () => void;
@@ -10,6 +11,11 @@ const APPLE_STANDARD_EULA_URL = 'https://www.apple.com/legal/internet-services/i
 const TermsOfUseView: React.FC<TermsOfUseProps> = ({ onBack }) => {
   return (
     <div className="min-h-screen pt-32 pb-24 bg-white dark:bg-slate-950 transition-colors duration-500">
+      <Seo
+        title="Terms of Use | AuraBase"
+        description="AuraBase Terms of Use, including subscription, billing, and license terms for the AuraBase app."
+        canonical="https://aurabase.app/termsofuse"
+      />
       <div className="max-w-4xl mx-auto px-6">
         <button
           onClick={onBack}

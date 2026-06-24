@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { BLOG_INDEX_META, BLOG_POSTS_META } from '../blogPostsMeta';
+import { buildBlogIndexJsonLd, buildBlogPostPageJsonLd } from '../seo/schema';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -90,21 +91,7 @@ function pageShell({
 
 function writeBlogIndexPage(): void {
   const canonical = `${SITE}/blogs`;
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Blog',
-    name: 'AuraBase AI Council Blogs',
-    description: BLOG_INDEX_META.description,
-    url: canonical,
-    blogPost: BLOG_POSTS_META.map((post) => ({
-      '@type': 'BlogPosting',
-      headline: post.title,
-      url: `${SITE}/blogs/${post.id}`,
-      dateModified: post.lastmod,
-      author: { '@type': 'Person', name: post.author },
-      publisher: { '@type': 'Organization', name: 'AuraBase' },
-    })),
-  };
+  const jsonLd = buildBlogIndexJsonLd();
 
   const listItems = BLOG_POSTS_META.map(
     (post) =>
@@ -117,8 +104,9 @@ function writeBlogIndexPage(): void {
     canonical,
     jsonLd,
     bodyHtml: `
-      <h1>Voices of the AI Council</h1>
+      <h1>Experiments, Recovery Science &amp; AI Coaching</h1>
       <p>${escapeHtml(BLOG_INDEX_META.description)}</p>
+      <p><a href="/">Explore AuraBase — The Lab, nutrition, training &amp; recovery →</a></p>
       <ul style="padding-left:1.25rem;">
       ${listItems}
       </ul>
@@ -134,17 +122,7 @@ function writeBlogPostPages(): void {
   for (const post of BLOG_POSTS_META) {
     const canonical = `${SITE}/blogs/${post.id}`;
     const pageTitle = `${post.title} | AuraBase`;
-    const jsonLd = {
-      '@context': 'https://schema.org',
-      '@type': 'BlogPosting',
-      headline: post.title,
-      description: post.description,
-      url: canonical,
-      dateModified: post.lastmod,
-      author: { '@type': 'Person', name: post.author },
-      publisher: { '@type': 'Organization', name: 'AuraBase', url: SITE },
-      mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
-    };
+    const jsonLd = buildBlogPostPageJsonLd(post);
 
     const html = pageShell({
       title: pageTitle,
@@ -152,10 +130,11 @@ function writeBlogPostPages(): void {
       canonical,
       jsonLd,
       bodyHtml: `
-      <p><a href="/blogs">← All blogs</a></p>
+      <p><a href="/blogs">← All blogs</a> · <a href="/">AuraBase home</a></p>
       <p style="color:#64748b;font-size:0.875rem;text-transform:uppercase;letter-spacing:0.08em;">${escapeHtml(post.author)}</p>
       <h1>${escapeHtml(post.title)}</h1>
       <p>${escapeHtml(post.description)}</p>
+      <p><a href="/#nutrition">Nutrition features</a> · <a href="/#training">Training &amp; biomechanics</a> · <a href="/#lab">The Lab</a></p>
     `,
     });
 

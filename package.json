@@ -5,8 +5,12 @@
   "type": "module",
   "scripts": {
     "generate:blog-pages": "tsx scripts/generate-blog-pages.ts",
-    "dev": "npm run generate:blog-pages && vite",
-    "build": "npm run generate:blog-pages && vite build",
+    "generate:sitemap": "tsx scripts/generate-sitemap.ts",
+    "prepare:landing": "tsx scripts/prepare-landing.ts",
+    "optimize:images": "tsx scripts/optimize-images.ts",
+    "prerender:index": "tsx scripts/prerender-index.ts",
+    "dev": "npm run generate:sitemap && npm run generate:blog-pages && npm run prepare:landing && vite",
+    "build": "npm run generate:sitemap && npm run generate:blog-pages && npm run prepare:landing && npm run optimize:images && vite build && npm run prerender:index",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -20,6 +24,7 @@
     "@vitejs/plugin-react": "^5.0.0",
     "autoprefixer": "^10.4.23",
     "postcss": "^8.5.6",
+    "sharp": "^0.35.2",
     "tailwindcss": "^4.1.18",
     "tsx": "^4.19.4",
     "typescript": "~5.8.2",

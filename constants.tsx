@@ -2,8 +2,8 @@ import { Coach, WellnessTab, PricingPlan, Feature, SpecializedFeature, Community
 
 // PRODUCT INFO VAULT - DO NOT UPDATE WITHOUT EXPLICIT INSTRUCTION
 export const PRODUCT_NAME = "AuraBase";
-export const HERO_TAGLINE = "AI Fitness, Nutrition, & Holistic Health Tracker";
-export const HERO_DESCRIPTION = "The world's first AI-powered council featuring an International AI Chef and Nutritionist. One interface for your entire evolution.";
+export const HERO_TAGLINE = "Health, Recovery & Personal Experiments";
+export const HERO_DESCRIPTION = "Connect sleep, nutrition, supplements, mood, and habits. Run personal wellness experiments in The Lab. Track. Test. Recover smarter.";
 
 export const COACHES: Coach[] = [
   {

@@ -1,8 +1,190 @@
 import React from 'react';
 import { Seo } from './Seo';
 import { BLOG_INDEX_META } from './blogPostsMeta';
+import { buildBlogIndexJsonLd } from './seo/schema';
 
 export const BLOG_POSTS = [
+  {
+    id: 'lab-data-driven-pivot',
+    authorBadge: '✨ Founder\'s note • AuraBase',
+    accentColor: 'text-teal-400 border-teal-500/30',
+    glowColor: 'from-teal-500',
+    title: 'From Mind, Body & Spirit to The Lab: Why We Rebuilt AuraBase Around Your Data',
+    content: (
+      <>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          When we launched AuraBase, we framed the product around a familiar promise: <strong>Mind, Body, and Spirit</strong> — three pillars of holistic wellness, animated by an AI Council of coaches and a gamified progression system called <strong>AuraQuest</strong>. Earn XP. Level up your ECHO character. Check boxes across meditation, macros, and movement. It was visually compelling. It felt complete. And for a while, it worked — especially for people who wanted a single beautiful home for their wellness habits.
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          But the more our community used the app, the clearer a different question became — one that badges and streaks could not answer: <em>Which of my practices actually drive the results I care about?</em> Not in a generic wellness article. Not in a one-size-fits-all protocol. In <strong>your</strong> sleep score. <strong>Your</strong> recovery radar. <strong>Your</strong> bench press. <strong>Your</strong> afternoon energy crash. That question is not spiritual branding. It is personal science. And answering it required us to rebuild AuraBase from the ground up.
+        </p>
+        <h4 className="text-xl font-bold mb-4 font-display text-white">What We Got Right — and What We Outgrew</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          The Mind · Body · Spirit model was never wrong as a <em>map</em>. Humans do think, move, and reflect. Meditation matters. Training matters. Recovery matters. The problem was structural: we had organized the <strong>navigation</strong> around abstract categories while the <strong>data</strong> users needed lived in the connections <em>between</em> them. Sleep in one silo. Food in another. Supplements somewhere else. Mood logged if you remembered. Vice intake rarely connected to anything. Wearable biometrics floating above the daily log without causal context.
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Gamification amplified the gap. AuraQuest rewarded consistency — and consistency is valuable — but it also rewarded <em>activity</em> over <em>insight</em>. You could hit your meditation streak, log a workout, and scan a meal without ever learning whether the magnesium you started two weeks ago moved your deep sleep, or whether training five days instead of three actually improved your row PR. Points are motivating. They are not evidence.
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Our early users were not asking for more badges. They were asking variations of the same sentence: <em>&ldquo;I did everything the app told me. Why don&apos;t I feel different?&rdquo;</em> That feedback — direct, patient, and sometimes frustrated — is the reason for this pivot. We chose to optimize for <strong>causal clarity</strong> over cosmetic completeness.
+        </p>
+        <h4 className="text-xl font-bold mb-4 font-display text-white">The New Center of Gravity: The Lab</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          <strong>The Lab</strong> is no longer a feature tucked behind a persona. It is the product thesis. Pick a change. Pick an outcome. Check in daily. See what your own logged data says. That is the entire loop — and everything else in AuraBase now exists to feed it.
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Run a 14-day experiment: <em>Does a 10-minute walk after dinner improve my sleep score?</em> Or a 28-day protocol: <em>Does training five days per week (vs. three) increase my bench press 1RM?</em> Or a nutrition intervention: <em>Does increasing protein to 180g per day move my row strength after eight weeks?</em> Each experiment tracks adherence day by day, builds a <strong>confidence score</strong> estimated from your actual check-ins, and surfaces results with an honest disclaimer: this is personal signal, not a clinical diagnosis.
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Alongside individual experiments, the <strong>Signal Map</strong> shows cross-domain correlations from your logs — screen time against sleep, evening walks against recovery, caffeine after 2pm against next-morning readiness, magnesium against deep sleep. These are not motivational quotes. They are directional relationships computed from the unified daily record you build over time. When a correlation is strong, you have a hypothesis worth testing in The Lab. When it is weak or absent, you stop wasting willpower on rituals that do not move your numbers.
+        </p>
+        <h4 className="text-xl font-bold mb-4 font-display text-white">Train · Fuel · Recover — Replacing the Old Pillars</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          We replaced Mind · Body · Spirit as the primary daily loop with three operational domains that mirror how performance actually works:
+        </p>
+        <ul className="mb-6 text-lg text-slate-300 font-light list-disc pl-6 space-y-3">
+          <li><strong>Train</strong> — Workout logging, wearable sync from Apple Health, Google Health Connect, and Garmin, recovery-aware training context, and biomechanics feedback through Atlas. Every session auto-maps into The Lab as a testable variable.</li>
+          <li><strong>Fuel</strong> — AI Meal Scanner grounded in USDA and Canadian Nutrient File databases, barcode scanning, micronutrient gap analysis, supplement stack tracking with reference-range comparison, and Aria&apos;s Diet Assessment engine reading your real logged intake.</li>
+          <li><strong>Recover</strong> — Sleep Recovery Radar connecting last night&apos;s sleep stages to today&apos;s readiness, mood and screen-time context, non-judgmental vice logging, meditation and breathwork, women&apos;s health cycle tracking, and the Sound Sanctuary for auditory recovery support.</li>
+        </ul>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Mindfulness, reflection, and spirit-oriented practices did not disappear. They moved from <em>brand pillars</em> to <em>logged variables</em> — inputs you can correlate, experiment on, and measure. A meditation session is no longer just a Spirit checkbox. It is a data point that may explain tomorrow&apos;s HRV. That reframe is the pivot in one sentence.
+        </p>
+        <h4 className="text-xl font-bold mb-4 font-display text-white">Concrete Changes You Will Notice in the App</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          This was not a marketing refresh. It was a product rebuild. Here is what changed under the hood and in the interface:
+        </p>
+        <ul className="mb-6 text-lg text-slate-300 font-light list-disc pl-6 space-y-3">
+          <li><strong>Hero and navigation reframed</strong> around &ldquo;Sync. Track. Test.&rdquo; — connecting siloed health data so you can run personal experiments, not collect abstract wellness points.</li>
+          <li><strong>The Lab promoted</strong> from secondary feature to primary value proposition, with experiment cards, adherence grids, confidence bars, and Signal Map correlations visible on the product page and in-app.</li>
+          <li><strong>AuraQuest gamification de-emphasized</strong> — XP and character progression are no longer the motivational spine. We would rather you finish a 14-day experiment with a clear answer than finish a streak with none.</li>
+          <li><strong>Recovery Intelligence upgraded</strong> — Sleep Recovery Radar now explicitly ties sleep duration, pre-bed screen time, logged vices, and wearable sources into a single readiness picture. When integrations are off, we show N/A. We do not invent readings.</li>
+          <li><strong>Nutrition hardened for traceability</strong> — Meal Scanner V2 uses a hybrid architecture: AI for food identification and portion estimation, government reference tables for every calorie and macro. Your nutrition log is experiment-grade, not model-fiction. <a href="/blogs/aria-ai-meal-scanner-v2" className="text-green-400 font-semibold hover:underline">Read the technical deep dive →</a></li>
+          <li><strong>AI coaches repositioned</strong> — Atlas, Aria, Luna, Zenith, and Solace remain your specialist team, but their job is to interpret <em>your</em> unified data, not to decorate separate silos. Looking for The Lab? That is the experiment engine — not a persona.</li>
+          <li><strong>Vice and habit logging made explicit</strong> — alcohol, nicotine, and caffeine tracked objectively, without shame mechanics or gamified penalties, because these variables frequently explain recovery more than any meditation streak.</li>
+        </ul>
+        <h4 className="text-xl font-bold mb-4 font-display text-white">Why Data-Driven Beats Aesthetic-Driven for Long-Term Health</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          The wellness industry sells certainty: do this ritual, buy this supplement, follow this 30-day challenge. Real bodies do not work that way. Interventions interact. Context matters. A walk that helps your sleep in January may do nothing in July when your training load doubles. The only way to navigate that complexity without outsourcing your judgment to an influencer is to run small, honest experiments on yourself — with enough logged context that the results mean something.
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          That is the bar we are building toward. Not a gamified life simulator. Not a spiritual lifestyle brand with a step counter attached. A connected health record — sleep, nutrition, supplements, mood, habits, training, recovery — with an experiment engine on top that helps you answer the question that actually matters: <strong>what works for me?</strong>
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          We are still early. Confidence scores are estimates from your adherence and logged outcomes, not clinical measurements. Some integrations depend on what your devices share. Some experiments will end inconclusive — and that is a valid result. But inconclusive with data is infinitely more useful than confident without it.
+        </p>
+        <h4 className="text-xl font-bold mb-4 font-display text-white">What Comes Next</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          The Lab will get smarter as your log history grows — richer Signal Maps, tighter confidence intervals, and experiment templates seeded from patterns we see across the community (always anonymized, always opt-in where required). Nutrition, training, and recovery features will continue to deepen, but always in service of the same loop: capture reality, test a change, read your own results.
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          If you joined AuraBase for Mind, Body, and Spirit — thank you. That vision brought us here. If you stay for The Lab, you are exactly who we rebuilt this for: people who want to stop guessing and start knowing what their practices actually do. Open the app. Pick one change. Pick one outcome. Check in daily. Let your data answer the question.
+        </p>
+      </>
+    ),
+    ctaText: 'Run your first experiment in The Lab.',
+    referencesType: 'Product & Philosophy',
+    references: [
+      'AuraBase product pivot (2026): Primary navigation reframed from Mind · Body · Spirit to Train · Fuel · Recover; The Lab promoted as central experiment engine with Signal Map correlations and confidence-scored protocols.',
+      'AuraQuest gamification de-emphasized in favor of causal insight from logged cross-domain data (sleep, nutrition, training, mood, vices, supplements, wearables).',
+      'Sleep Recovery Radar integrates Apple Health, Google Health Connect, and Garmin biometrics with evening habits, screen time, and vice logs for same-day readiness context.',
+      'AI Meal Scanner V2: hybrid perception + USDA FoodData Central + Canadian Nutrient File composition lookup — see aria-ai-meal-scanner-v2 blog for architecture details.',
+      'AI Council (Atlas, Aria, Luna, Zenith, Solace) repositioned as data-interpreting specialists feeding the unified daily log rather than siloed persona tabs.'
+    ]
+  },
+  {
+    id: 'ai-meal-photo-accuracy-research',
+    authorBadge: '🌍 Aria • Global AI Nutritionist & Chef',
+    accentColor: 'text-green-500 border-green-500/20',
+    glowColor: 'from-green-500',
+    title: 'What Research Says About AI Meal Photos for Calories & Macros — and Where AuraBase Stands',
+    content: (
+      <>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          If you have tried a meal-photo app, you have felt the magic: snap, wait three seconds, and a full nutrition label appears. It feels like the future. Then you weigh your food on a kitchen scale, do the math, and discover the app was off by 200 calories — or worse, confidently wrong about fat and sodium in a sauce you cannot even see. You are not bad at logging. The technology is asking a vision model to do two fundamentally different jobs at once: <strong>recognize what is on the plate</strong> and <strong>invent laboratory-grade nutrition chemistry</strong>. The past five years of peer-reviewed research make one thing clear: those jobs must be separated — and the numbers must come from reference databases, not model imagination.
+        </p>
+        <h4 className="text-xl font-bold mb-4 font-display text-white">The Research Consensus (2021–2026): Recognition ≠ Nutrition</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Early deep-learning food recognition systems showed genuine progress on <em>classification</em> — identifying that an image contains rice, chicken, and broccoli. Lee et al. (2023) demonstrated that linking recognized foods systematically to the USDA Food and Nutrient Database for Dietary Studies (FNDDS) is essential for credible image-based dietary assessment; recognition accuracy alone does not produce valid nutrient intake (Lee et al., 2023). The bottleneck was never &ldquo;can AI see food?&rdquo; It was always &ldquo;can AI know what that food <em>contains</em> per gram?&rdquo;
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          The arrival of multimodal large language models accelerated the first task and dangerously inflated confidence in the second. O&apos;Hara et al. (2025) evaluated ChatGPT-4 on 114 real meal photographs: food identification precision reached <strong>93%</strong>, yet the model showed statistically poor agreement for <strong>10 of 16 nutrients</strong>, underestimated 11 nutrients overall, and systematically missed portion weights for medium and large meals (O&apos;Hara et al., 2025). Yan et al. (2025), authors of the DietAI24 framework, stated plainly that MLLMs &ldquo;often generate unreliable nutrition values&rdquo; without authoritative database access during inference — a hallucination risk that is especially dangerous when incorrect values could influence clinical or research decisions.
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Fridolfsson et al. (2025) tested three leading multimodal LLMs and documented <strong>negative systematic bias as portions grow larger</strong> — calorie-dense components hidden under vegetables and sauces get visually lost, and models progressively underestimate energy (Fridolfsson et al., 2025). A 2025 pilot in <em>Appetite</em> evaluating ChatGPT-4o on meals of varying complexity found initial energy errors up to <strong>54.4%</strong> and fat errors up to <strong>76.5%</strong> on complex dishes with visually obscured fats; providing supplementary ingredient context improved energy R² from 0.591 to 0.941 — confirming that context, not bigger models, moves accuracy (ChatGPT-4o pilot, 2025).
+        </p>
+        <h4 className="text-xl font-bold mb-4 font-display text-white">Portion Size: The Persistent Weak Link</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Phalle and Gokhale&apos;s 2025 scoping review in <em>Frontiers in Nutrition</em> surveyed the landscape of AI-assisted dietary assessment and concluded that while food recognition has improved substantially, <strong>portion-size estimation remains the weakest link</strong> in real-world pipelines — degraded by lighting, occlusion, mixed dishes, and restaurant-scale servings (Phalle &amp; Gokhale, 2025). This matches what dietitians have known for decades from Technology-Assisted Dietary Assessment (TADA) research: the image tells you <em>what</em>; scale, context, and reference objects tell you <em>how much</em> (Zhu et al., 2010; Ahmad et al., 2016).
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Virginia Tech&apos;s systematic evaluation of GPT-4o quantified the gap: calorie prediction mean absolute percentage error (MAPE) ran roughly <strong>51%</strong> with image-only input, dropping to approximately <strong>29%</strong> when verified ingredient masses were provided — the single largest accuracy lever in their cue-ladder protocol (Virginia Tech, 2024). Coburn et al. (2025), in the ACETADA benchmark, showed that adding GPS coordinates and timestamps to meal-image prompts reduced average energy error by ~<strong>76 kcal</strong> and portion error by ~<strong>53 g</strong> across eight large multimodal models. Context is not a nice-to-have. It is nutrition science.
+        </p>
+        <h4 className="text-xl font-bold mb-4 font-display text-white">Where Hybrid Database Grounding Wins</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          The research direction that consistently outperforms vision-only baselines is <strong>perception plus provenance</strong>: use AI to identify foods and estimate portions, then resolve nutrient composition against verified reference tables. DietAI24&apos;s MLLM + retrieval-augmented generation (RAG) against USDA FNDDS achieved a <strong>63% reduction in mean absolute error</strong> for food weight and key nutrients compared to vision-only methods (Yan et al., 2025). Sunto et al. (2026) found that an AI meal-recognition system linking image-identified foods to a standardized composition database — rather than asking the model to invent values — produced usable agreement with weighed dietary records for energy and macronutrients, though expert review still helps reduce systematic bias.
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Li et al. (2024) compared manual food logging and AI image recognition across nutrition-care apps and concluded that image recognition reduces recording burden, but <strong>accuracy and comparative validity depend heavily on database integration and user correction workflows</strong> — not on the flashiness of the vision model (Li et al., 2024). The Dietary Assessment Initiative&apos;s 2026 independent validation of six commercial AI diet apps against weighed-food ground truth using USDA FoodData Central entries found enormous variance between apps — underscoring that traceable methodology matters more than marketing claims (Dietary Assessment Initiative, 2026).
+        </p>
+        <h4 className="text-xl font-bold mb-4 font-display text-white">AuraBase&apos;s Approach: AI Identification + USDA &amp; CNF Merging</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          AuraBase was built on this research arc — not in spite of it. Our <strong>AI Meal Scanner</strong> deliberately splits the pipeline into layers that mirror what the literature recommends:
+        </p>
+        <ul className="mb-6 text-lg text-slate-300 font-light list-disc pl-6 space-y-3">
+          <li><strong>Context enrichment:</strong> GPS (with permission), capture timestamp mapped to meal type, and EXIF metadata for scale consistency — the same contextual signals ACETADA and TADA validated.</li>
+          <li><strong>Vision &amp; reasoning:</strong> Multimodal AI identifies discrete ingredients, infers preparation style where visible, and estimates relative portion sizes — the flexible layer that handles real-world mixed dishes no barcode will cover.</li>
+          <li><strong>Database composition lookup:</strong> Identified foods and estimated weights are mapped to <strong>USDA FoodData Central</strong> and the <strong>Canadian Nutrient File (CNF)</strong>. Calories, macronutrients, and micronutrients are calculated from published per-100g values, scaled to proposed portions. The LLM does not do nutrition math.</li>
+        </ul>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Why merge <em>both</em> USDA and CNF? Because our users eat globally, and North American reference coverage is not interchangeable. A Canadian poutine, a South Asian dal, or a packaged food sold in both countries may resolve more accurately against one authoritative table than the other. We select the best-matching reference row per identified ingredient — so nutrient density reflects a verified database entry, not a model&apos;s statistical prior. When you adjust the portion slider after a scan, the math stays consistent because the underlying composition came from a real database row.
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          This is the architectural difference between AuraBase and vision-only trackers that return confident calorie counts from pure inference. They optimize for demo speed. We optimize for <strong>nutrient traceability</strong> — the same property that lets your logged intake feed meaningfully into The Lab when you run experiments like <em>Does increasing protein to 180g per day improve my row 1RM?</em> If your protein log is fiction, your experiment is fiction.
+        </p>
+        <h4 className="text-xl font-bold mb-4 font-display text-white">Where We Are Accurate — and Where We Are Honest</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Here is our straight answer, grounded in the same research we cite:
+        </p>
+        <ul className="mb-6 text-lg text-slate-300 font-light list-disc pl-6 space-y-3">
+          <li><strong>Strong:</strong> Food identification on visible, distinguishable ingredients; nutrient <em>density per gram</em> once mapped to USDA/CNF; micronutrient profiles (iron, sodium, potassium, B vitamins) that vision-only apps routinely hallucinate; consistency when you edit portions — the chemistry does not re-roll.</li>
+          <li><strong>Improving:</strong> Portion-scale estimation on large restaurant plates, heavily sauced mixed dishes, and visually occluded calorie-dense components — exactly the scenarios Fridolfsson et al. and Phalle &amp; Gokhale flag as industry-wide weak points.</li>
+          <li><strong>Requires your input:</strong> Hidden fats (cooking oil, dressing volume, filling inside wraps), ambiguous restaurant preparations, and brand-specific recipes not in reference tables. We surface a review screen precisely because Li et al. (2024) showed user correction workflows are part of accuracy — not an admission of failure.</li>
+        </ul>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          We do not claim laboratory precision from a single JPEG. No responsible app should. What we claim is narrower and more useful: <strong>every macro and micro value in your log traces to a government-grade reference table</strong>, scaled by an AI portion estimate enriched with the contextual metadata research says matters. That is a fundamentally different accuracy contract than &ldquo;the model guessed 487 kcal and formatted it nicely.&rdquo;
+        </p>
+        <h4 className="text-xl font-bold mb-4 font-display text-white">How This Compares in Practice</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Vision-only apps tend to feel fast and agreeable on simple, home-prepared plates with separable ingredients. They degrade on restaurant mixed dishes, large portions, and micronutrient detail — the exact scenarios where O&apos;Hara et al. and the ChatGPT-4o complexity pilot showed the largest errors. Database-grounded hybrids trade a few seconds of review time for nutrient profiles you can build a protocol on — and when your scan feeds my <strong>Diet Assessment</strong> engine, I am reading standardized definitions, not improvised captions.
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          For a full walkthrough of our three-layer architecture — metadata, vision, reference tables — read <a href="/blogs/aria-ai-meal-scanner-v2" className="text-green-400 font-semibold hover:underline">Inside AuraBase&apos;s Hybrid AI Meal Scanner V2</a>. This article is the research landscape that architecture exists to satisfy.
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          The meal-photo revolution is real. But the revolution is not &ldquo;AI can count calories.&rdquo; It is <strong>AI can finally see your plate well enough that verified databases can do the counting</strong>. That is where the science landed. That is where AuraBase lives. Snap your next meal, review the mapping, adjust the portion if your eyes know better than the camera — and log nutrition you can actually experiment on.
+        </p>
+      </>
+    ),
+    ctaText: 'Scan with database-backed confidence.',
+    referencesType: 'Research & References',
+    references: [
+      'O\'Hara, C., Kent, G., Flynn, A.C., Gibney, E.R., & Timon, C.M. (2025). An Evaluation of ChatGPT for Nutrient Content Estimation from Meal Photographs. Nutrients, 17(4), 607. https://doi.org/10.3390/nu17040607 — 93% food ID precision but poor agreement on 10/16 nutrients; portion underestimation on medium/large meals.',
+      'Yan, R., Luo, H., Lu, J., et al. (2025). DietAI24 as a framework for comprehensive nutrition estimation using multimodal large language models. Communications Medicine, 5, 458. https://doi.org/10.1038/s43856-025-01159-0 — MLLM + RAG against USDA FNDDS: 63% MAE reduction vs. vision-only; MLLMs generate unreliable nutrient values without database access.',
+      'Fridolfsson, J., et al. (2025). Performance Evaluation of 3 Large Language Models for Nutritional Content Estimation from Food Images. Current Developments in Nutrition, 9(10), 107556. https://doi.org/10.1016/j.cdnut.2025.107556 — Systematic underestimation bias as portions and visual occlusion increase.',
+      'Phalle, A., & Gokhale, D. (2025). Navigating next-gen nutrition care using artificial intelligence-assisted dietary assessment tools—a scoping review. Frontiers in Nutrition, 12, 1518466. https://doi.org/10.3389/fnut.2025.1518466 — Portion-size estimation remains the critical real-world bottleneck.',
+      'Lee, C.D., et al. (2023). Integration of USDA Food Classification System and Food Composition Database for Image-Based Dietary Assessment. Nutrients, 15(14), 3183. https://doi.org/10.3390/nu15143183 — Systematic USDA FNDDS linkage required for credible nutrient analysis from images.',
+      'Coburn, B., He, J., Rollo, M.E., Dhaliwal, S.S., Kerr, D.A., & Zhu, F. (2025). Evaluating Large Multimodal Models for Nutrition Analysis: A Benchmark Enriched with Contextual Metadata (ACETADA). arXiv:2507.07048. https://arxiv.org/abs/2507.07048 — GPS + timestamp metadata reduced energy MAE ~76 kcal and portion error ~53 g across eight LMMs.',
+      'Zhu, F., Bosch, M., Woo, I., et al. (2010). The use of mobile devices in aiding dietary assessment and evaluation. IEEE J. Sel. Topics Signal Process., 4(4), 756–766. — Foundational TADA pipeline: images with date, time, and GPS metadata.',
+      'Ahmad, Z., Bosch, M., Khanna, N., Kerr, D.A., Boushey, C.J., Zhu, F., & Delp, E.J. (2016). A mobile food record for integrated dietary assessment. Proc. 2nd Int. Workshop on Multimedia Assisted Dietary Management, 53–62. https://pmc.ncbi.nlm.nih.gov/articles/PMC5499922/ — EXIF metadata (focal length, device, GPS) for portion calibration.',
+      'Virginia Tech (2024). Conversational Multimodal LLMs for Food Nutritional Information Retrieval: A Systematic Evaluation. https://vtechworks.lib.vt.edu/items/b67c2a61-f283-41ba-9602-9798306b9529 — GPT-4o calorie MAPE ~51% image-only vs. ~29% with verified ingredient masses.',
+      'Li, X., Yin, A., Choi, H.Y., Chan, V., Allman-Farinelli, M., & Chen, J. (2024). Evaluating the Quality and Comparative Validity of Manual Food Logging and AI-Enabled Food Image Recognition in Apps for Nutrition Care. Nutrients, 16, 2573. https://doi.org/10.3390/nu16162573 — Accuracy depends on database integration and user correction workflows.',
+      'Sunto, A., Aizawa, K., Yamakata, Y., Iida, A., & Suzuki, S. (2026). Agreement Between an AI-Based Meal Image Recognition System and the Weighed Dietary Record for Estimating Energy and Nutrient Intakes. Nutrients, 18(6), 980. https://doi.org/10.3390/nu18060980 — Database-linked hybrid system showed moderate agreement with weighed records for energy and macros.',
+      'ChatGPT-4o pilot (2025). Image-based nutritional assessment: Evaluating the performance of ChatGPT-4o on simple and complex meals. Appetite. https://doi.org/10.1016/j.appet.2025.107659 — Up to 54.4% energy error and 76.5% fat error on complex meals; context improved energy R² from 0.591 to 0.941.',
+      'Dietary Assessment Initiative (2026). Independent validation of six commercial AI-assisted dietary assessment applications against weighed-food reference. https://dietaryassessmentinitiative.org/publications/six-app-validation-study-2026/ — Wide accuracy variance across apps; methodology matters more than marketing.',
+      'AuraBase AI Meal Scanner: multimodal identification + portion estimation enriched with GPS/timestamp/EXIF context; macro and micronutrient composition resolved against USDA FoodData Central and Canadian Nutrient File (CNF) — never from model inference alone.'
+    ]
+  },
   {
     id: 'aria-ai-meal-scanner-v2',
     authorBadge: '🌍 Aria • Global AI Nutritionist & Chef',
@@ -390,25 +572,7 @@ interface AiCouncilBlogsProps {
 }
 
 export const AiCouncilBlogs: React.FC<AiCouncilBlogsProps> = ({ onNavigate }) => {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "AuraBase AI Council Blogs",
-    "description": "Insights on Holistic Health from the AuraBase AI Council.",
-    "url": "https://aurabase.app/blogs",
-    "blogPost": BLOG_POSTS.map(post => ({
-      "@type": "BlogPosting",
-      "headline": post.title,
-      "author": {
-        "@type": "Person",
-        "name": post.authorBadge.split('•')[0].trim()
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "AuraBase"
-      }
-    }))
-  };
+  const jsonLd = buildBlogIndexJsonLd();
 
   return (
     <section id="blogs" className="py-32 bg-[#09090b] relative overflow-hidden text-white border-y border-white/5">
@@ -424,8 +588,11 @@ export const AiCouncilBlogs: React.FC<AiCouncilBlogsProps> = ({ onNavigate }) =>
 
       <div className="max-w-7xl mx-auto px-6 mb-16 relative z-10">
         <header className="text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 font-display tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">Voices of the AI Council</h1>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto">AuraBase isn't just an app. It's five specialized AI experts dedicated to optimizing your mind, body, and spirit. Read their latest insights below.</p>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 font-display tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">Experiments, Recovery &amp; AI Coaching</h1>
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto">{BLOG_INDEX_META.description}</p>
+          <p className="text-sm text-brand-400 mt-6 font-semibold">
+            <a href="/" className="hover:underline">← Explore AuraBase: The Lab, nutrition, training &amp; recovery</a>
+          </p>
         </header>
       </div>
 
