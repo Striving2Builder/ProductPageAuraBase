@@ -7,7 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 const publicDir = path.join(root, 'public');
 
-const IMAGE_DIRS = ['assets/3', 'assets/5'];
+const IMAGE_DIRS = ['assets/3', 'assets/4', 'assets/5'];
 const OG_SOURCE = path.join(publicDir, 'og-default.jpg');
 
 async function optimizeFile(filePath: string): Promise<void> {

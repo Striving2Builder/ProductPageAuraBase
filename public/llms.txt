@@ -14,7 +14,7 @@ AuraBase is a connected health and recovery app (iOS & Android) for **personal w
 AI coaches (Aria for nutrition, Atlas for fitness & biomechanics) provide guidance on top of your logged data. This repository powers the **marketing / product page** at aurabase.app, not the mobile app binary.
 
 ## Positioning (Product Page 2.0)
-- **Primary narrative:** Sync. Track. Test. Recover smarter.
+- **Primary narrative:** Track it all. Test what works.
 - **Differentiator:** The Lab — run personal experiments on your own health data.
 - **Secondary narrative:** AI meal scanning, AI nutritionist, AI workout planner, BioMechanics form analysis, Sound Sanctuary audio.
 

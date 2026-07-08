@@ -3,7 +3,7 @@
   <channel>
     <title>AuraBase AI Council Blogs | Wellness Experiments &amp; Recovery Science</title>
     <link>https://aurabase.app/blogs</link>
-    <description>Insights on personal wellness experiments, sleep recovery, AI nutrition and fitness coaching, biomechanics, mindfulness, and biohacking — from AuraBase's AI Council.</description>
+    <description>Wellness experiments, sleep recovery, AI nutrition and fitness coaching, biomechanics, mindfulness, and biohacking from AuraBase.</description>
     <language>en-us</language>
     <lastBuildDate>Wed, 24 Jun 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://aurabase.app/feed.xml" rel="self" type="application/rss+xml" />
@@ -11,21 +11,21 @@
       <title>From Mind, Body &amp; Spirit to The Lab: Why We Rebuilt AuraBase Around Your Data</title>
       <link>https://aurabase.app/blogs/lab-data-driven-pivot</link>
       <guid isPermaLink="true">https://aurabase.app/blogs/lab-data-driven-pivot</guid>
-      <description>A founder's note on pivoting away from gamified holistic wellness toward personal experiments, cross-domain signal mapping, and a serious data-driven loop — Train, Fuel, Recover.</description>
+      <description>Founder's note on pivoting to personal experiments, cross-domain signal mapping, and AuraBase's Train, Fuel, Recover data loop.</description>
       <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>What Research Says About AI Meal Photos for Calories &amp; Macros — and Where AuraBase Stands</title>
       <link>https://aurabase.app/blogs/ai-meal-photo-accuracy-research</link>
       <guid isPermaLink="true">https://aurabase.app/blogs/ai-meal-photo-accuracy-research</guid>
-      <description>Aria surveys 2021–2026 studies on vision-only meal scanning accuracy, compares hybrid USDA + Canadian Nutrient File grounding, and explains AuraBase's honest accuracy position.</description>
+      <description>Aria on meal-photo research (2021–2026), hybrid USDA + Canadian Nutrient File grounding, and AuraBase's honest accuracy position.</description>
       <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>Why Your Meal Photo Needs a Database: Inside AuraBase's Hybrid AI Meal Scanner V2</title>
       <link>https://aurabase.app/blogs/aria-ai-meal-scanner-v2</link>
       <guid isPermaLink="true">https://aurabase.app/blogs/aria-ai-meal-scanner-v2</guid>
-      <description>Aria cites 2024–2026 research on GPS, timestamps, and EXIF metadata improving meal-scan accuracy, plus AuraBase V2's hybrid LLM + USDA/Canadian Nutrient File architecture.</description>
+      <description>How GPS, timestamps, and EXIF improve meal scans, plus AuraBase V2's hybrid LLM + USDA/Canadian Nutrient File architecture.</description>
       <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
     </item>
     <item>

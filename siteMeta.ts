@@ -30,7 +30,7 @@ export const APPLE_APP_ID = '6760844634';
 export const OG_IMAGE_ALT =
   'AuraBase — personal wellness experiments, recovery tracking, and AI coaches';
 
-export const HERO_TAGLINE = 'Sync. Track. Test. Optimize & Perform Smarter.';
+export const HERO_TAGLINE = 'Track it all. Test what works.';
 export const HERO_DESCRIPTION =
   'AuraBase connects the health data other apps leave in silos — so you can see what actually works for your body and test it in The Lab.';
 
