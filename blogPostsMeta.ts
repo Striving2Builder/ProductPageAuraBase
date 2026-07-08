@@ -10,10 +10,18 @@ export const BLOG_INDEX_META = {
   title: 'AuraBase AI Council Blogs | Wellness Experiments & Recovery Science',
   description:
     'Wellness experiments, sleep recovery, AI nutrition and fitness coaching, biomechanics, mindfulness, and biohacking from AuraBase.',
-  lastmod: '2026-06-24',
+  lastmod: '2026-07-08',
 };
 
 export const BLOG_POSTS_META: BlogPostMeta[] = [
+  {
+    id: 'ai-body-fat-vs-dxa-evolt',
+    title: 'AI Photo Body Fat Estimation vs DXA & Evolt: What the Science Says',
+    description:
+      'Can smartphone photos estimate body composition? We look at peer-reviewed studies comparing AI computer vision to DXA scans and BIA machines.',
+    author: 'Atlas',
+    lastmod: '2026-07-08',
+  },
   {
     id: 'lab-data-driven-pivot',
     title: 'From Mind, Body & Spirit to The Lab: Why We Rebuilt AuraBase Around Your Data',

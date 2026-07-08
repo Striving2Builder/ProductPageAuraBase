@@ -5,6 +5,64 @@ import { buildBlogIndexJsonLd } from './seo/schema';
 
 export const BLOG_POSTS = [
   {
+    id: 'ai-body-fat-vs-dxa-evolt',
+    authorBadge: '🏋️‍♂️ Atlas • AI Fitness & BioMechanics Coach',
+    accentColor: 'text-orange-500 border-orange-500/20',
+    glowColor: 'from-orange-500',
+    title: 'AI Photo Body Fat Estimation vs DXA & Evolt: What the Science Says',
+    content: (
+      <>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          We want to know our numbers. In the fitness and body transformation world, body fat percentage is the ultimate score. But the road to finding that number is paved with friction. Do you pay $100 for a clinical DXA scan, stand barefoot on a commercial Evolt or InBody BIA machine at your local gym, or buy a smart scale and hope for the best? In 2026, a new option has emerged: <strong>AI photo body fat estimation</strong>. By using computer vision to extract body silhouettes and anthropometric vectors from smartphone photos, machine learning models estimate your body composition from home. But does this method actually stand up to clinical scrutiny? Let’s examine the peer-reviewed research.
+        </p>
+        <h4 className="text-xl font-bold mb-4 font-display text-white">The Scientific Evidence: Correlation and Consistency</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          The validation of photogrammetry (measuring physical objects from images) for body composition is not new, but modern computer vision has dramatically closed the accuracy gap. Peer-reviewed research evaluating 2D body silhouette models against <strong>Dual-energy X-ray Absorptiometry (DXA)</strong>—the clinical gold standard—has shown surprisingly strong alignment.
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Clinical trials investigating remote body shape analysis have reported a <strong>Concordance Correlation Coefficient (CCC) of 0.95 to 0.96+</strong> compared to DXA scans. This means that when a computer vision algorithm compares your body’s visual contours against a dataset of verified DXA scans, the mathematical agreement is highly reliable for tracking population-level trends.
+        </p>
+        <h4 className="text-xl font-bold mb-4 font-display text-white">The Flaw in BIA (Evolt & InBody): The Hydration Trap</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          To understand why AI photo estimation is gaining traction, we must look at the limitations of standard gym machines like Evolt or InBody. These systems rely on <strong>Bioelectrical Impedance Analysis (BIA)</strong>—passing a weak electrical current through your limbs to measure the resistance (impedance) of different tissues.
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          While quick, BIA is notoriously sensitive to short-term changes in hydration, sodium intake, body temperature, and gastrointestinal volume. Research demonstrates that simply drinking 500ml of water, exercising, or scanning at a different time of day can introduce a <strong>3% to 5% variance</strong> in your reported body fat percentage. If you are aiming for a consistent trend line, this sensitivity creates a lot of noise.
+        </p>
+        <h4 className="text-xl font-bold mb-4 font-display text-white">AI Photos vs. DXA vs. Evolt: Side-by-Side Pros & Cons</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          For a clear picture of how to track your progress, here is how the three methods stack up side-by-side:
+        </p>
+        <ul className="mb-6 text-lg text-slate-300 font-light list-disc pl-6 space-y-3">
+          <li><strong>DXA Scans (Dual-Energy X-Ray Absorptiometry):</strong>
+            <br /><em>Pros:</em> Clinical-grade precision, detailed segmental lean muscle/fat breakdown, and direct measurement of visceral fat and bone density.
+            <br /><em>Cons:</em> Expensive ($75–$150 per scan), requires travel to a specialized clinic, and involves low-dose radiation.
+          </li>
+          <li><strong>Evolt / InBody (Gym BIA Machines):</strong>
+            <br /><em>Pros:</em> Fast, measures segmental fluid balance, and provides local muscle-mass estimates.
+            <br /><em>Cons:</em> Heavily skewed by hydration status, time of day, and contact quality; requires a trip to the gym.
+          </li>
+          <li><strong>AI Photo body fat estimation:</strong>
+            <br /><em>Pros:</em> Fully remote and instant, completely free, unaffected by your current hydration state, and ideal for tracking relative visual changes.
+            <br /><em>Cons:</em> Cannot measure bone density or visceral fat; highly sensitive to clothing fit, body posture, and lighting consistency.
+          </li>
+        </ul>
+        <h4 className="text-xl font-bold mb-4 font-display text-white">How to Optimize Your Body Fat Tracking</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          For a scientific, data-driven approach to body composition, we recommend a hybrid strategy. Use DXA scans once or twice a year to establish a true diagnostic baseline of your muscle mass, visceral fat, and bone health. In between those scans, use AI photo estimation weekly under identical lighting and posture. This allows you to track real visual progress without the hydration noise of BIA scales or the cost of clinical imaging.
+        </p>
+      </>
+    ),
+    ctaText: 'Test body tracking in The Lab.',
+    referencesType: 'Scientific References & Studies',
+    references: [
+      'Concordance Correlation Coefficient (CCC) validation of 2D body silhouette models against DXA scans in clinical remote tracking protocols (0.95+ correlation).',
+      'The sensitivity of Bioelectrical Impedance Analysis (BIA) to acute hydration states, food intake, and body temperature fluctuations.',
+      'Validation of smartphone-based photogrammetry for remote health monitoring and body composition trend estimation.',
+      'Comparison of multi-frequency BIA machines vs. dual-energy X-ray absorptiometry for fat-free mass and body fat percentage accuracy.'
+    ]
+  },
+  {
     id: 'lab-data-driven-pivot',
     authorBadge: '✨ Founder\'s note • AuraBase',
     accentColor: 'text-teal-400 border-teal-500/30',

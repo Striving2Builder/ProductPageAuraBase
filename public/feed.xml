@@ -5,8 +5,15 @@
     <link>https://aurabase.app/blogs</link>
     <description>Wellness experiments, sleep recovery, AI nutrition and fitness coaching, biomechanics, mindfulness, and biohacking from AuraBase.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Jun 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://aurabase.app/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Photo Body Fat Estimation vs DXA &amp; Evolt: What the Science Says</title>
+      <link>https://aurabase.app/blogs/ai-body-fat-vs-dxa-evolt</link>
+      <guid isPermaLink="true">https://aurabase.app/blogs/ai-body-fat-vs-dxa-evolt</guid>
+      <description>Can smartphone photos estimate body composition? We look at peer-reviewed studies comparing AI computer vision to DXA scans and BIA machines.</description>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>From Mind, Body &amp; Spirit to The Lab: Why We Rebuilt AuraBase Around Your Data</title>
       <link>https://aurabase.app/blogs/lab-data-driven-pivot</link>
