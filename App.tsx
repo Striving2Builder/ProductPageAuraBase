@@ -34,6 +34,21 @@ const App: React.FC = () => {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
+  useEffect(() => {
+    const isBlogView = view === 'blogs' || view.startsWith('blog-post:');
+    if (!isBlogView) return;
+
+    const previousBackground = document.body.style.background;
+    const previousColor = document.body.style.color;
+    document.body.style.background = '#09090b';
+    document.body.style.color = '#f1f5f9';
+
+    return () => {
+      document.body.style.background = previousBackground;
+      document.body.style.color = previousColor;
+    };
+  }, [view]);
+
   const navigateTo = (newView: string, path: string) => {
     window.history.pushState({}, '', path);
     setView(newView);
@@ -59,15 +74,19 @@ const App: React.FC = () => {
     );
   }
 
+  const isBlogView = view === 'blogs' || view.startsWith('blog-post:');
+
   return (
-    <div className="min-h-screen font-sans bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+    <div
+      className={
+        isBlogView
+          ? 'min-h-screen font-sans bg-[#09090b] text-slate-100'
+          : 'min-h-screen font-sans bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100'
+      }
+    >
       {view === 'privacy' && <PrivacyPolicyView onBack={() => navigateTo('landing', '/')} />}
       {view === 'terms' && <TermsOfUseView onBack={() => navigateTo('landing', '/')} />}
-      {view === 'blogs' && (
-        <div className="pt-20 bg-[#09090b] min-h-screen">
-          <AiCouncilBlogs onNavigate={navigateTo} />
-        </div>
-      )}
+      {view === 'blogs' && <AiCouncilBlogs onNavigate={navigateTo} />}
       {view.startsWith('blog-post:') && (
         <BlogPostView
           postId={view.split(':')[1]}

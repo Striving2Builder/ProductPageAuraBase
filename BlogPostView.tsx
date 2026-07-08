@@ -57,7 +57,7 @@ const BlogPostView: React.FC<BlogPostViewProps> = ({ postId, onBack }) => {
           {post.title}
         </h1>
 
-        <div className="prose prose-lg dark:prose-invert max-w-none text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+        <div className="max-w-none text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
           {post.content}
         </div>
 

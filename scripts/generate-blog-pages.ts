@@ -60,6 +60,15 @@ function sharedHead({
 ${JSON.stringify(jsonLd, null, 2)}
   </script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    body { background-color: #09090b; color: #e2e8f0; }
+    #root a { color: #2dd4bf; }
+    #root h1 { color: #f8fafc; font-size: 2rem; line-height: 1.2; margin-bottom: 1rem; }
+    #root p { color: #cbd5e1; line-height: 1.7; }
+  </style>
   <link rel="stylesheet" href="/index.css" />
 </head>`;
 }
@@ -78,9 +87,9 @@ function pageShell({
   bodyHtml: string;
 }): string {
   return `${sharedHead({ title, description, canonical, jsonLd })}
-<body class="bg-white text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
+<body class="bg-[#09090b] text-slate-100 font-sans antialiased">
   <div id="root" data-prerender="true">
-    <main style="max-width:48rem;margin:0 auto;padding:6rem 1.5rem 3rem;font-family:system-ui,sans-serif;">
+    <main style="max-width:48rem;margin:0 auto;padding:6rem 1.5rem 3rem;font-family:Inter,system-ui,sans-serif;">
       ${bodyHtml}
     </main>
   </div>
