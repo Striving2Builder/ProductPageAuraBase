@@ -172,14 +172,14 @@ export const PRICING_PLANS: PricingPlan[] = [
     name: 'Monthly',
     price: '$12.99',
     billing: 'Billed monthly',
-    cta: 'Coming Soon'
+    cta: 'Download in-app'
   },
   {
     name: 'Quarterly',
     price: '$29.99',
     billing: 'Billed every 3 months',
     savings: 'save 23%',
-    cta: 'Coming Soon'
+    cta: 'Download in-app'
   },
   {
     name: 'Yearly',
@@ -187,6 +187,6 @@ export const PRICING_PLANS: PricingPlan[] = [
     billing: 'Billed annually',
     savings: 'save 36%',
     isPopular: true,
-    cta: 'Coming Soon'
+    cta: 'Download in-app'
   }
 ];
