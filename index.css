@@ -45,5 +45,5 @@ html {
 }
 
 body {
-    @apply bg-white text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100 font-sans;
+    @apply bg-[#08090e] text-slate-100 transition-colors duration-300 font-sans;
 }

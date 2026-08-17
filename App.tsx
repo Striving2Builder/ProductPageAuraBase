@@ -1,9 +1,10 @@
-import React, { Suspense, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PrivacyPolicyView from './PrivacyPolicy';
 import TermsOfUseView from './TermsOfUse';
 import { AiCouncilBlogs } from './AiCouncilBlogs';
 import BlogPostView from './BlogPostView';
 import { Seo } from './Seo';
+import LandingPage from './src/landing/LandingPage';
 import {
   HOME_JSON_LD,
   OG_IMAGE,
@@ -13,8 +14,6 @@ import {
   SITE_TITLE,
   SITE_URL,
 } from './siteMeta';
-
-const LandingPage = React.lazy(() => import('./src/landing/LandingPage'));
 
 function getInitialView(): string {
   const path = window.location.pathname.replace(/\/$/, '') || '/';
@@ -67,9 +66,7 @@ const App: React.FC = () => {
           ogImageAlt={OG_IMAGE_ALT}
           jsonLd={HOME_JSON_LD}
         />
-        <Suspense fallback={null}>
-          <LandingPage />
-        </Suspense>
+        <LandingPage />
       </>
     );
   }
