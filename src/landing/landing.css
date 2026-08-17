@@ -799,118 +799,458 @@
     }
 
     /* ============================================
-       NUTRITION — Section 4
+       NUTRITION — Section 4 (Fuel stack)
        ============================================ */
-    .nutrition__features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-      margin-top: 3rem;
+    #nutrition .section-title em {
+      font-style: normal;
+      color: var(--teal-400);
     }
 
-    .nutrition__demo {
+    .nutrition-stack-poster {
+      position: relative;
+      margin: 3.25rem auto 4.5rem;
+      padding: 1.75rem 1.5rem 1.5rem 1.75rem;
+      background:
+        radial-gradient(1200px 280px at 20% 0%, rgba(20,184,166,0.08), transparent 60%),
+        var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+    }
+
+    .nutrition-stack-poster__caption {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin: 0 0 1.25rem 2.1rem;
+    }
+
+    .nutrition-stack {
+      position: relative;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      margin: 3.5rem 0 1rem;
-      gap: 1.25rem;
     }
 
-    .nutrition__demo-caption {
-      font-size: 0.9rem;
+    .nutrition-stack::before {
+      content: "";
+      position: absolute;
+      left: 15px;
+      top: 22px;
+      bottom: 22px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--teal-500), rgba(20,184,166,0.15));
+    }
+
+    .nutrition-stack-row {
+      display: grid;
+      grid-template-columns: 32px 72px 1fr auto;
+      gap: 1rem;
+      align-items: center;
+      padding: 0.95rem 1rem 0.95rem 0;
+      position: relative;
+    }
+
+    .nutrition-stack-row + .nutrition-stack-row {
+      border-top: 1px solid var(--border);
+    }
+
+    .nutrition-stack-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--bg-primary);
+      border: 2px solid var(--teal-400);
+      margin-left: 10px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 0 0 4px rgba(20,184,166,0.12);
+    }
+
+    .nutrition-stack-idx {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      color: var(--teal-300);
+    }
+
+    .nutrition-stack-copy h3 {
+      margin: 0 0 0.15rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .nutrition-stack-copy p {
+      margin: 0;
+      font-size: 0.8rem;
       color: var(--text-secondary);
-      text-align: center;
-      max-width: 420px;
+    }
+
+    .nutrition-stack-verb {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal-400);
+      background: rgba(20,184,166,0.1);
+      border: 1px solid rgba(20,184,166,0.18);
+      padding: 0.28rem 0.7rem;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+
+    .nutrition-stack-row.is-l1 {
+      background: linear-gradient(90deg, rgba(20,184,166,0.06), transparent 55%);
+      border-radius: 16px 16px 0 0;
+    }
+
+    .nutrition-stack-row.is-l4 {
+      border-radius: 0 0 16px 16px;
+    }
+
+    .nutrition-layer {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 3rem;
+      align-items: center;
+      padding: 2.75rem 0;
+    }
+
+    .nutrition-layer--flip {
+      grid-template-columns: auto minmax(0, 1fr);
+    }
+
+    .nutrition-layer--flip .nutrition-layer__copy { order: 2; }
+    .nutrition-layer--flip .nutrition-layer__visual { order: 1; }
+
+    .nutrition-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--teal-400);
+      margin-bottom: 0.85rem;
+    }
+
+    .nutrition-kicker b {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      background: rgba(20,184,166,0.12);
+      border: 1px solid rgba(20,184,166,0.22);
+      font-size: 0.62rem;
+    }
+
+    .nutrition-layer h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.55rem, 3vw, 2.1rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin: 0 0 0.85rem;
+    }
+
+    .nutrition-lead {
+      margin: 0 0 1.35rem;
+      color: var(--text-secondary);
+      font-size: 0.98rem;
+      max-width: 460px;
+      line-height: 1.7;
+    }
+
+    .nutrition-connector {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 0.25rem 0;
+    }
+
+    .nutrition-connector::before,
+    .nutrition-connector::after {
+      content: "";
+      width: 72px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(20,184,166,0.45), transparent);
+    }
+
+    .nutrition-connector span {
+      color: var(--teal-400);
+      border: 1px solid rgba(20,184,166,0.2);
+      background: rgba(20,184,166,0.06);
+      padding: 0.35rem 0.85rem;
+      border-radius: 100px;
+    }
+
+    .nutrition-pipe {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.65rem;
+      margin: 1.5rem 0 0.25rem;
+    }
+
+    .nutrition-pipe-step {
+      position: relative;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1rem 0.85rem 0.95rem;
+      min-height: 148px;
+    }
+
+    .nutrition-pipe-step svg.icon { display: block; margin-bottom: 0.7rem; }
+
+    .nutrition-pipe-step strong {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .nutrition-pipe-step span {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+
+    .nutrition-pipe-step .n {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 0.62rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    .nutrition-stamps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.55rem;
+    }
+
+    .nutrition-stamp {
+      font-size: 0.58rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: 1px solid rgba(20,184,166,0.28);
+      color: var(--teal-300);
+      padding: 0.18rem 0.45rem;
+      border-radius: 4px;
+    }
+
+    .nutrition-truth {
+      margin-top: 1.1rem;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      border-left: 2px solid var(--teal-500);
+      padding-left: 0.85rem;
       line-height: 1.6;
     }
 
-    .nutrition__feature {
+    .nutrition-truth strong { color: var(--text-primary); }
+
+    .nutrition-more {
+      margin: 0.9rem 0 0;
+      font-size: 0.82rem;
+    }
+
+    .nutrition-more a {
+      color: var(--teal-400);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .nutrition-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.15rem;
+    }
+
+    .nutrition-metric {
+      min-width: 72px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.55rem 0.7rem 0.5rem;
+    }
+
+    .nutrition-metric small {
+      display: block;
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+    }
+
+    .nutrition-metric b {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 800;
+    }
+
+    .nutrition-metric.is-cals b { color: #34d399; }
+    .nutrition-metric.is-prot b { color: #38bdf8; }
+    .nutrition-metric.is-carb b { color: #fb923c; }
+    .nutrition-metric.is-fat b { color: #f59e0b; }
+
+    .nutrition-merge {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 1rem;
+    }
+
+    .nutrition-chip {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 0.32rem 0.75rem;
+      background: rgba(255,255,255,0.02);
+    }
+
+    .nutrition-chip.is-on {
+      color: var(--teal-300);
+      border-color: rgba(20,184,166,0.3);
+      background: rgba(20,184,166,0.08);
+    }
+
+    .nutrition-outcomes {
+      display: grid;
+      gap: 0.55rem;
+      margin-top: 1.1rem;
+    }
+
+    .nutrition-outcome {
+      display: grid;
+      grid-template-columns: 18px 1fr;
+      gap: 0.65rem;
+      align-items: start;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+    }
+
+    .nutrition-outcome i {
+      width: 8px;
+      height: 8px;
+      margin-top: 0.45rem;
+      border-radius: 50%;
+      background: var(--teal-400);
+      display: block;
+      font-style: normal;
+    }
+
+    .nutrition-outcome strong { color: var(--text-primary); }
+
+    .nutrition-phones {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .nutrition-phone {
+      width: 230px;
+      height: 478px;
+      background: #08090e;
+      border: 10px solid #1a1d26;
+      border-radius: 32px;
       position: relative;
       overflow: hidden;
+      box-shadow: 0 24px 50px -16px rgba(0,0,0,0.7), 0 0 32px rgba(20,184,166,0.12);
+      flex-shrink: 0;
     }
 
-    .nutrition__feature-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      margin-bottom: 1.25rem;
-      background: rgba(20,184,166,0.08);
-      border: 1px solid rgba(20,184,166,0.12);
+    .nutrition-phone--hero {
+      width: 248px;
+      height: 516px;
     }
 
-    .nutrition__feature-title {
-      font-weight: 700;
-      font-size: 1.15rem;
-      margin-bottom: 0.75rem;
+    .nutrition-phone::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 72px;
+      height: 18px;
+      background: #000;
+      border-radius: 12px;
+      z-index: 2;
     }
 
-    .nutrition__feature-desc {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      line-height: 1.7;
+    .nutrition-phone picture {
+      display: block;
+      width: 100%;
+      height: 100%;
     }
 
-    .nutrition__methodology {
-      margin-top: 3rem;
-      background: linear-gradient(135deg, rgba(20, 184, 166, 0.04), rgba(99, 102, 241, 0.04));
-      border: 1px dashed rgba(20, 184, 166, 0.2);
-      border-radius: var(--radius-xl);
-      padding: 2.5rem 2rem;
+    .nutrition-phone img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .nutrition-phone-cap {
+      margin-top: 0.85rem;
+      font-size: 0.72rem;
+      color: var(--text-muted);
       text-align: center;
-      position: relative;
+      max-width: 248px;
+      line-height: 1.5;
     }
 
-    .methodology__badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.35rem 0.85rem;
-      border-radius: 100px;
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      background: rgba(20, 184, 166, 0.1);
-      color: var(--teal-300);
-      margin-bottom: 1rem;
+    .nutrition-phones + .nutrition-phone-cap {
+      max-width: 476px;
     }
 
-    .methodology__title {
-      font-family: var(--font-display);
-      font-size: 1.5rem;
-      font-weight: 750;
-      color: var(--text-primary);
-      margin-bottom: 0.75rem;
-      letter-spacing: -0.01em;
-    }
-
-    .methodology__text {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      max-width: 800px;
-      margin: 0 auto 1.5rem;
-      line-height: 1.7;
-    }
-
-    .methodology__logos {
+    .nutrition-visual {
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 0.75rem;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .methodology__logo-tag {
-      font-size: 0.75rem;
-      font-weight: 600;
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      padding: 0.4rem 1rem;
-      border-radius: 30px;
-      color: var(--text-secondary);
+    @media (max-width: 900px) {
+      .nutrition-layer,
+      .nutrition-layer--flip {
+        grid-template-columns: 1fr;
+      }
+      .nutrition-layer--flip .nutrition-layer__copy,
+      .nutrition-layer--flip .nutrition-layer__visual { order: unset; }
+      .nutrition-visual { align-items: center; }
+      .nutrition-pipe { grid-template-columns: 1fr 1fr; }
+      .nutrition-stack-row { grid-template-columns: 32px 1fr; }
+      .nutrition-stack-idx,
+      .nutrition-stack-verb { display: none; }
+      .nutrition-phone,
+      .nutrition-phone--hero { width: 210px; height: 436px; }
+    }
+
+    @media (max-width: 560px) {
+      .nutrition-phones {
+        flex-direction: column;
+        align-items: center;
+      }
+      .nutrition-phones + .nutrition-phone-cap { max-width: 210px; }
+      .nutrition-pipe { grid-template-columns: 1fr; }
     }
 
     /* ============================================

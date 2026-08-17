@@ -567,108 +567,186 @@
     <div class="container">
       <div class="text-center reveal">
         <div class="section-label">Nutrition</div>
-        <h2 class="section-title">Log faster. Understand more.</h2>
+        <h2 class="section-title">Log faster.<br /><em>Then actually understand it.</em></h2>
+        <p class="section-sub mx-auto">One scan starts a stack: official numbers, a complete day, then a coach that can finally see the week.</p>
       </div>
 
-      <div class="nutrition__features reveal reveal--delay-1">
-        <div class="glass-card nutrition__feature">
-          <div class="nutrition__feature-icon">📸</div>
-          <div class="nutrition__feature-title">AI Meal Scanner</div>
-          <div class="nutrition__feature-desc">
-            Snap a photo of your plate, review, and log.<br><br>
-            <strong>How it works:</strong> AI identifies the meal, its ingredients, and estimates portion size. Calorie, macro, and micro data are pulled from official sources — the <strong>USDA</strong> and <strong>CNF</strong> (Canadian Nutrient File). We combine both layers for a more accurate reading than vision-only estimates.<br><br>
-            <a href="/blogs/ai-meal-photo-accuracy-research" style="color: var(--teal-400); font-weight: 600; text-decoration: underline; text-underline-offset: 3px;">Read: What research says about AI meal photo accuracy →</a>
-            · <a href="/blogs/aria-ai-meal-scanner-v2" style="color: var(--teal-400); font-weight: 600; text-decoration: underline; text-underline-offset: 3px;">Inside our Hybrid Scanner V2 →</a>
-          </div>
-        </div>
-
-        <div class="glass-card nutrition__feature">
-          <div class="nutrition__feature-icon">🔍</div>
-          <div class="nutrition__feature-title">Smart Barcode Scanner</div>
-          <div class="nutrition__feature-desc">
-            Scan packaged foods, snacks, and supplements for instant, exact logging. Perfect for on-the-go tracking.
-          </div>
-        </div>
-
-        <div class="glass-card nutrition__feature">
-          <div class="nutrition__feature-icon">🔬</div>
-          <div class="nutrition__feature-title">Micronutrient Insights</div>
-          <div class="nutrition__feature-desc">
-            Spot micro and macro gaps across food &amp; supplements. Watch your daily intake aggregate against baseline references.
-          </div>
-        </div>
-
-        <div class="glass-card nutrition__feature">
-          <div class="nutrition__feature-icon">💊</div>
-          <div class="nutrition__feature-title">Supplement Stack</div>
-          <div class="nutrition__feature-desc">
-            Log your daily stacks, track precise doses and timing, and compare active ingredients to clinical reference ranges.
-          </div>
-        </div>
-
-        <div class="glass-card nutrition__feature">
-          <div class="nutrition__feature-icon">🎯</div>
-          <div class="nutrition__feature-title">Personalized Targets</div>
-          <div class="nutrition__feature-desc">
-            Customizable goals for macros, steps, calories, and sleep based on your biometrics and historical data.
-          </div>
-        </div>
-
-        <div class="glass-card nutrition__feature">
-          <div class="nutrition__feature-icon">🍳</div>
-          <div class="nutrition__feature-title">AI Nutritionist Coach</div>
-          <div class="nutrition__feature-desc">
-            Meet <strong>Aria</strong> — your dual-mode nutrition intelligence that turns what you log into actionable guidance.<br><br>
-            <strong>International AI Chef:</strong> Culturally authentic meal recommendations adapted to global cuisine choices. Close macro gaps with recipes you'll actually enjoy — not generic diet templates.<br><br>
-            <strong>AI Nutritionist:</strong> Analyzes your week's logged meals and delivers a plain-English Diet Assessment — what you're nailing, where the gaps are, and what to adjust next.<br><br>
-            <a href="/blogs/aria-ai-nutritionist-diet" style="color: var(--teal-400); font-weight: 600; text-decoration: underline; text-underline-offset: 3px;">Read: The AI Nutritionist approach →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="nutrition__demo reveal reveal--delay-2">
-        <div class="phone-mockup">
-          <div class="phone-speaker"></div>
-          <div class="phone-camera"></div>
-          <div class="phone-screen">
-            <div class="phone-slides">
-              <picture><source srcset="/assets/3/01-nutrition-ios.webp" type="image/webp" /><img src="/assets/3/01-nutrition-ios.jpg" class="phone-slide active" alt="AuraBase Nutrition Dashboard — log meals, view calorie goals, and track daily macro progress" fetchpriority="high" /></picture>
-              <picture><source srcset="/assets/3/02-water-ios.webp" type="image/webp" /><img src="/assets/3/02-water-ios.jpg" class="phone-slide" alt="AuraBase Water Tracker — check daily hydration goals and log water intake" loading="lazy" /></picture>
-              <picture><source srcset="/assets/3/03-supplements-ios.webp" type="image/webp" /><img src="/assets/3/03-supplements-ios.jpg" class="phone-slide" alt="AuraBase Supplement Log — manage your supplement stacks, view dosages, and track active compounds" loading="lazy" /></picture>
-              <picture><source srcset="/assets/3/04-micronutrient-report-ios.webp" type="image/webp" /><img src="/assets/3/04-micronutrient-report-ios.jpg" class="phone-slide" alt="AuraBase Micronutrient Report — see detailed breakdown of vitamins, minerals, and overall intake targets" loading="lazy" /></picture>
-              <picture><source srcset="/assets/3/05-micronutrient-list-ios.webp" type="image/webp" /><img src="/assets/3/05-micronutrient-list-ios.jpg" class="phone-slide" alt="AuraBase Micronutrient List — track specific nutrient values, percentages of recommended daily intake, and sources" loading="lazy" /></picture>
-              <picture><source srcset="/assets/3/06-ai-nutritionist-ios.webp" type="image/webp" /><img src="/assets/3/06-ai-nutritionist-ios.jpg" class="phone-slide" alt="AuraBase Aria AI Nutritionist — view weekly diet assessments and personalized meal suggestions" loading="lazy" /></picture>
+      <aside class="nutrition-stack-poster reveal reveal--delay-1" aria-label="Four-layer Fuel stack">
+        <p class="nutrition-stack-poster__caption">The Fuel stack</p>
+        <div class="nutrition-stack">
+          <div class="nutrition-stack-row is-l1">
+            <div class="nutrition-stack-dot"></div>
+            <div class="nutrition-stack-idx">01</div>
+            <div class="nutrition-stack-copy">
+              <h3>AI Meal Scan</h3>
+              <p>Snap the plate. AI names foods and portions. USDA + CNF supply the chemistry.</p>
             </div>
-            <button class="phone-nav-btn prev-btn" aria-label="Previous nutrition screenshot">&lt;</button>
-            <button class="phone-nav-btn next-btn" aria-label="Next nutrition screenshot">&gt;</button>
-            <div class="phone-dots">
-              <span class="phone-dot active" data-index="0"></span>
-              <span class="phone-dot" data-index="1"></span>
-              <span class="phone-dot" data-index="2"></span>
-              <span class="phone-dot" data-index="3"></span>
-              <span class="phone-dot" data-index="4"></span>
-              <span class="phone-dot" data-index="5"></span>
+            <div class="nutrition-stack-verb">Foundation</div>
+          </div>
+          <div class="nutrition-stack-row">
+            <div class="nutrition-stack-dot"></div>
+            <div class="nutrition-stack-idx">02</div>
+            <div class="nutrition-stack-copy">
+              <h3>Calories, macros, micros</h3>
+              <p>Every logged meal writes into the day and the micronutrient report — not as a guess, as scaled reference data.</p>
             </div>
+            <div class="nutrition-stack-verb">Feeds</div>
+          </div>
+          <div class="nutrition-stack-row">
+            <div class="nutrition-stack-dot"></div>
+            <div class="nutrition-stack-idx">03</div>
+            <div class="nutrition-stack-copy">
+              <h3>Supplement tracking</h3>
+              <p>The stack joins the same totals. Food + pills, one picture of the day.</p>
+            </div>
+            <div class="nutrition-stack-verb">Enhances</div>
+          </div>
+          <div class="nutrition-stack-row is-l4">
+            <div class="nutrition-stack-dot"></div>
+            <div class="nutrition-stack-idx">04</div>
+            <div class="nutrition-stack-copy">
+              <h3>AI Nutritionist</h3>
+              <p>Aria reads the week of real logs and turns it into an assessment, lessons, and to-dos.</p>
+            </div>
+            <div class="nutrition-stack-verb">Over time</div>
           </div>
         </div>
-        <p class="nutrition__demo-caption">Snap, review, and log — see the AI Meal Scanner and nutrition dashboard in action.</p>
-      </div>
+      </aside>
 
-      <!-- Accuracy Methodology Banner -->
-      <div class="nutrition__methodology reveal reveal--delay-3">
-        <div class="methodology__badge">🔬 Data Integrity &amp; Accuracy</div>
-        <h3 class="methodology__title">Our Smart Data Methodology</h3>
-        <p class="methodology__text">
-          Most AI trackers rely on LLM estimates, leading to "nutritional hallucinations." AuraBase uses AI for parsing inputs, but anchors all results in peer-reviewed industry databases. We cross-reference your food and supplements with the <strong>USDA (United States Department of Agriculture)</strong> and the <strong>CDI (Canadian Nutrient File)</strong> to layer in validated macro, micro, and active supplement compound values with clinical accuracy.
-        </p>
-        <div class="methodology__logos">
-          <span class="methodology__logo-tag">🏛️ USDA Reference Database</span>
-          <span class="methodology__logo-tag">🍁 CDI Food Registry</span>
-          <span class="methodology__logo-tag">🛡️ Anti-Hallucination Anchoring</span>
+      <article class="nutrition-layer reveal">
+        <div class="nutrition-layer__copy">
+          <div class="nutrition-kicker"><b>01</b> AI Meal Scan</div>
+          <h3>AI finds the food. Official databases do the math.</h3>
+          <p class="nutrition-lead">Snap a plate. AuraBase identifies what’s there and how much — then looks up calories, macros, and micros in USDA and the Canadian Nutrient File.</p>
+          <div class="nutrition-pipe" aria-label="Scan methodology">
+            <div class="nutrition-pipe-step">
+              <span class="n">01</span>
+              <svg class="icon" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                <rect x="3" y="6" width="22" height="16" rx="3" stroke="#2dd4bf" stroke-width="1.6"/>
+                <circle cx="14" cy="14" r="4.2" stroke="#5ee3d4" stroke-width="1.6"/>
+                <path d="M9 6l1.4-2h7.2L19 6" stroke="#2dd4bf" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+              <strong>Snap</strong>
+              <span>Photograph the meal. That’s the whole log.</span>
+            </div>
+            <div class="nutrition-pipe-step">
+              <span class="n">02</span>
+              <svg class="icon" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                <path d="M14 4l1.4 6.2L22 10l-5.2 3.2L18.2 20 14 16.4 9.8 20l1.4-6.8L6 10l6.6.2L14 4z" stroke="#5ee3d4" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+              <strong>Identify</strong>
+              <span>AI names ingredients and estimates portion (g).</span>
+            </div>
+            <div class="nutrition-pipe-step">
+              <span class="n">03</span>
+              <svg class="icon" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                <ellipse cx="14" cy="8" rx="8" ry="3.2" stroke="#2dd4bf" stroke-width="1.6"/>
+                <path d="M6 8v12c0 1.8 3.6 3.2 8 3.2s8-1.4 8-3.2V8" stroke="#2dd4bf" stroke-width="1.6"/>
+                <path d="M6 14c0 1.8 3.6 3.2 8 3.2s8-1.4 8-3.2" stroke="#5ee3d4" stroke-width="1.4"/>
+              </svg>
+              <strong>Look up</strong>
+              <span>Each item is matched to a real database row.</span>
+              <div class="nutrition-stamps">
+                <span class="nutrition-stamp">USDA</span>
+                <span class="nutrition-stamp">CNF</span>
+              </div>
+            </div>
+            <div class="nutrition-pipe-step">
+              <span class="n">04</span>
+              <svg class="icon" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                <path d="M5 20V10h4v10H5zm7 0V6h4v14h-4zm7 0v-7h4v7h-4z" fill="#2dd4bf"/>
+              </svg>
+              <strong>Scale</strong>
+              <span>Reference data × estimated grams. Not an AI guess.</span>
+            </div>
+          </div>
+          <p class="nutrition-truth"><strong>Perception plus provenance.</strong> AI sees the plate. USDA and Health Canada CNF supply what’s in each gram.</p>
+          <p class="nutrition-more"><a href="/blogs/aria-ai-meal-scanner-v2">Inside our Hybrid Scanner V2 →</a></p>
         </div>
-      </div>
+        <div class="nutrition-layer__visual nutrition-visual">
+          <div class="nutrition-phone nutrition-phone--hero">
+            <picture><source srcset="/assets/3/layer-1-meal-scanner.webp" type="image/webp" /><img src="/assets/3/layer-1-meal-scanner.jpg" alt="AuraBase AI Meal Scanner matching a salmon and shrimp meal to Health Canada CNF entries" fetchpriority="high" /></picture>
+          </div>
+          <p class="nutrition-phone-cap">6 of 6 items database-matched via Health Canada CNF</p>
+        </div>
+      </article>
+
+      <div class="nutrition-connector" aria-hidden="true"><span>↓ feeds</span></div>
+
+      <article class="nutrition-layer nutrition-layer--flip reveal">
+        <div class="nutrition-layer__copy">
+          <div class="nutrition-kicker"><b>02</b> The numbers</div>
+          <h3>That scan writes calories, macros, and micros.</h3>
+          <p class="nutrition-lead">Layer 1 is not a party trick. It is the input to the day. The same matched rows fill the calorie ring, the macro bars, and the micronutrient report — including confidence, because the source is known.</p>
+          <div class="nutrition-metrics" aria-label="Example meal totals from the scan">
+            <div class="nutrition-metric is-cals"><small>Cals</small><b>825</b></div>
+            <div class="nutrition-metric is-prot"><small>Prot</small><b>57g</b></div>
+            <div class="nutrition-metric is-carb"><small>Carbs</small><b>86g</b></div>
+            <div class="nutrition-metric is-fat"><small>Fat</small><b>28g</b></div>
+          </div>
+          <p class="nutrition-truth">One plate. Four macros. A full micro profile — because CNF and USDA carry vitamins and minerals, not just energy.</p>
+        </div>
+        <div class="nutrition-layer__visual nutrition-visual">
+          <div class="nutrition-phones">
+            <div class="nutrition-phone">
+              <picture><source srcset="/assets/3/layer-2-nutrition.webp" type="image/webp" /><img src="/assets/3/layer-2-nutrition.jpg" alt="AuraBase nutrition dashboard with calorie gauge, macros, and AI Meal Scanner" loading="lazy" /></picture>
+            </div>
+            <div class="nutrition-phone">
+              <picture><source srcset="/assets/3/layer-2-micros.webp" type="image/webp" /><img src="/assets/3/layer-2-micros.jpg" alt="AuraBase micronutrient report showing vitamins that need attention" loading="lazy" /></picture>
+            </div>
+          </div>
+          <p class="nutrition-phone-cap">Daily fuel on the left. Micronutrient report on the right.</p>
+        </div>
+      </article>
+
+      <div class="nutrition-connector" aria-hidden="true"><span>↓ enhanced by</span></div>
+
+      <article class="nutrition-layer reveal">
+        <div class="nutrition-layer__copy">
+          <div class="nutrition-kicker"><b>03</b> The stack</div>
+          <h3>Supplements don’t live in a side quest.</h3>
+          <p class="nutrition-lead">Logging a zinc capsule should change the same micronutrient picture as logging the salmon. Layer 3 joins food and the stack so “Combined” is the truth of the day — not two apps you have to add in your head.</p>
+          <div class="nutrition-merge">
+            <span class="nutrition-chip">Food</span>
+            <span class="nutrition-chip">+</span>
+            <span class="nutrition-chip">Supplements</span>
+            <span class="nutrition-chip is-on">= Combined</span>
+          </div>
+          <p class="nutrition-truth">This is why the report can say what’s still low after the stack — and what the stack is actually covering.</p>
+        </div>
+        <div class="nutrition-layer__visual nutrition-visual">
+          <div class="nutrition-phone nutrition-phone--hero">
+            <picture><source srcset="/assets/3/layer-3-supplements.webp" type="image/webp" /><img src="/assets/3/layer-3-supplements.jpg" alt="AuraBase supplement tracking with daily goal and morning stack" loading="lazy" /></picture>
+          </div>
+          <p class="nutrition-phone-cap">Taken, paused, dosed — against the same nutrient totals</p>
+        </div>
+      </article>
+
+      <div class="nutrition-connector" aria-hidden="true"><span>↓ over time</span></div>
+
+      <article class="nutrition-layer nutrition-layer--flip reveal">
+        <div class="nutrition-layer__copy">
+          <div class="nutrition-kicker"><b>04</b> AI Nutritionist</div>
+          <h3>Aria coaches from a week of real logs — not a questionnaire.</h3>
+          <p class="nutrition-lead">Once layers 1–3 have been running, the AI Nutritionist has something worth reading: scanned meals, official composition, and a stack that actually hit the bloodstream of the data. That’s when a diet assessment can become lessons, insights, and to-dos.</p>
+          <div class="nutrition-outcomes">
+            <div class="nutrition-outcome"><i></i><span><strong>Overview</strong> — a plain-English read of the week.</span></div>
+            <div class="nutrition-outcome"><i></i><span><strong>Lessons</strong> — what’s working (protein, timing, gaps).</span></div>
+            <div class="nutrition-outcome"><i></i><span><strong>To-dos</strong> — what to eat, supplement, or adjust next.</span></div>
+          </div>
+          <p class="nutrition-more"><a href="/blogs/aria-ai-nutritionist-diet">Read: The AI Nutritionist approach →</a></p>
+        </div>
+        <div class="nutrition-layer__visual nutrition-visual">
+          <div class="nutrition-phone nutrition-phone--hero">
+            <picture><source srcset="/assets/3/06-ai-nutritionist-ios.webp" type="image/webp" /><img src="/assets/3/06-ai-nutritionist-ios.jpg" alt="AuraBase Aria AI Diet Assessment summarizing a week of logged nutrition" loading="lazy" /></picture>
+          </div>
+          <p class="nutrition-phone-cap">Weekly diet assessment from logged intake</p>
+        </div>
+      </article>
     </div>
-  </section>  <!-- ========================================
+  </section>
+
+  <!-- ========================================
        SECTION 4.5 — FITNESS & TRAINING
        ======================================== -->
   <section class="section section--alt" id="training">
