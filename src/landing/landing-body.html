@@ -47,7 +47,7 @@
     <div class="hero__bg-glow hero__bg-glow--3"></div>
     <div class="hero__grid-overlay"></div>
 
-    <div class="hero__container">
+    <div class="hero__container" style="grid-template-columns: minmax(0, 650px); justify-content: center;">
       <div class="hero__content">
         <div class="badge" style="margin-bottom: 2rem;">
           <span class="badge__dot"></span>
@@ -59,8 +59,38 @@
         </h1>
 
         <p class="hero__sub">
-          AuraBase connects the health data other apps leave in silos — so you can see what actually works for your body and test it in <em>The Lab</em>.
+          Ever wonder whether eating 2,300 or 2,700 calories a day affects your weight? Or whether training three days a week works better for you than four or five? AuraBase helps you test those questions in <em>The Lab</em>.
         </p>
+        <p class="hero__sub hero__sub--supporting">
+          AuraBase connects the health data other apps leave in silos.
+        </p>
+
+        <div class="hero__inline-phone">
+          <div class="phone-mockup">
+            <div class="phone-speaker"></div>
+            <div class="phone-camera"></div>
+            <div class="phone-screen">
+              <div class="phone-slides">
+                <picture><source srcset="/assets/5/SS1RM-S1.webp" type="image/webp" /><img src="/assets/5/SS1RM-S1.png" class="phone-slide active" alt="AuraBase Aria AI Chef — personalized meal recommendations on mobile" fetchpriority="high" /></picture>
+                <picture><source srcset="/assets/5/SS1RM-S2.webp" type="image/webp" /><img src="/assets/5/SS1RM-S2.png" class="phone-slide" alt="AuraBase AI Nutritionist — weekly diet assessment and macro tracking" loading="lazy" /></picture>
+                <picture><source srcset="/assets/5/SS1RM-S3.webp" type="image/webp" /><img src="/assets/5/SS1RM-S3.png" class="phone-slide" alt="AuraBase International AI Chef — global cuisine meal planner" loading="lazy" /></picture>
+                <picture><source srcset="/assets/5/SSBW-S1.webp" type="image/webp" /><img src="/assets/5/SSBW-S1.png" class="phone-slide" alt="AuraBase recipe recommendations adapted to your nutrition goals" loading="lazy" /></picture>
+                <picture><source srcset="/assets/5/SSBW-S2.webp" type="image/webp" /><img src="/assets/5/SSBW-S2.png" class="phone-slide" alt="AuraBase AI meal planning and grocery list builder" loading="lazy" /></picture>
+                <picture><source srcset="/assets/5/SSBW-S3.webp" type="image/webp" /><img src="/assets/5/SSBW-S3.png" class="phone-slide" alt="AuraBase nutrition coach Aria — saved meals and recipes" loading="lazy" /></picture>
+              </div>
+              <button class="phone-nav-btn prev-btn" aria-label="Previous screenshot">&lt;</button>
+              <button class="phone-nav-btn next-btn" aria-label="Next screenshot">&gt;</button>
+              <div class="phone-dots">
+                <span class="phone-dot active" data-index="0"></span>
+                <span class="phone-dot" data-index="1"></span>
+                <span class="phone-dot" data-index="2"></span>
+                <span class="phone-dot" data-index="3"></span>
+                <span class="phone-dot" data-index="4"></span>
+                <span class="phone-dot" data-index="5"></span>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div class="hero__actions">
           <a href="https://apps.apple.com/ca/app/aurabase-mind-body-tracker/id6760844634" target="_blank" rel="noopener noreferrer" class="store-btn">
@@ -117,32 +147,6 @@
         </div>
       </div>
 
-      <div class="hero__phone-column">
-        <div class="phone-mockup">
-          <div class="phone-speaker"></div>
-          <div class="phone-camera"></div>
-          <div class="phone-screen">
-            <div class="phone-slides">
-              <picture><source srcset="/assets/5/SS1RM-S1.webp" type="image/webp" /><img src="/assets/5/SS1RM-S1.png" class="phone-slide active" alt="AuraBase Aria AI Chef — personalized meal recommendations on mobile" fetchpriority="high" /></picture>
-              <picture><source srcset="/assets/5/SS1RM-S2.webp" type="image/webp" /><img src="/assets/5/SS1RM-S2.png" class="phone-slide" alt="AuraBase AI Nutritionist — weekly diet assessment and macro tracking" loading="lazy" /></picture>
-              <picture><source srcset="/assets/5/SS1RM-S3.webp" type="image/webp" /><img src="/assets/5/SS1RM-S3.png" class="phone-slide" alt="AuraBase International AI Chef — global cuisine meal planner" loading="lazy" /></picture>
-              <picture><source srcset="/assets/5/SSBW-S1.webp" type="image/webp" /><img src="/assets/5/SSBW-S1.png" class="phone-slide" alt="AuraBase recipe recommendations adapted to your nutrition goals" loading="lazy" /></picture>
-              <picture><source srcset="/assets/5/SSBW-S2.webp" type="image/webp" /><img src="/assets/5/SSBW-S2.png" class="phone-slide" alt="AuraBase AI meal planning and grocery list builder" loading="lazy" /></picture>
-              <picture><source srcset="/assets/5/SSBW-S3.webp" type="image/webp" /><img src="/assets/5/SSBW-S3.png" class="phone-slide" alt="AuraBase nutrition coach Aria — saved meals and recipes" loading="lazy" /></picture>
-            </div>
-            <button class="phone-nav-btn prev-btn" aria-label="Previous screenshot">&lt;</button>
-            <button class="phone-nav-btn next-btn" aria-label="Next screenshot">&gt;</button>
-            <div class="phone-dots">
-              <span class="phone-dot active" data-index="0"></span>
-              <span class="phone-dot" data-index="1"></span>
-              <span class="phone-dot" data-index="2"></span>
-              <span class="phone-dot" data-index="3"></span>
-              <span class="phone-dot" data-index="4"></span>
-              <span class="phone-dot" data-index="5"></span>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -737,10 +741,35 @@
           <p class="nutrition-more"><a href="/blogs/aria-ai-nutritionist-diet">Read: The AI Nutritionist approach →</a></p>
         </div>
         <div class="nutrition-layer__visual nutrition-visual">
-          <div class="nutrition-phone nutrition-phone--hero">
-            <picture><source srcset="/assets/3/06-ai-nutritionist-ios.webp" type="image/webp" /><img src="/assets/3/06-ai-nutritionist-ios.jpg" alt="AuraBase Aria AI Diet Assessment summarizing a week of logged nutrition" loading="lazy" /></picture>
+          <div class="nutrition-phones">
+            <div class="nutrition-phone-card">
+              <div class="nutrition-phone nutrition-phone--hero">
+                <picture><source srcset="/assets/3/06-ai-nutritionist-ios.webp" type="image/webp" /><img src="/assets/3/06-ai-nutritionist-ios.jpg" alt="AuraBase Aria AI Diet Assessment summarizing a week of logged nutrition" loading="lazy" /></picture>
+              </div>
+              <p class="nutrition-phone-cap">Weekly diet assessment from logged intake</p>
+            </div>
+            <div class="nutrition-phone-card">
+              <div class="nutrition-phone nutrition-phone--slideshow">
+                <div class="phone-slides">
+                  <picture><source srcset="/assets/2/AI3.webp" type="image/webp" /><img src="/assets/2/AI3.jpg" class="phone-slide active" alt="AuraBase International AI Chef Canadian meal recommendation" loading="lazy" /></picture>
+                  <picture><source srcset="/assets/2/AI4.webp" type="image/webp" /><img src="/assets/2/AI4.jpg" class="phone-slide" alt="AuraBase International AI Chef Chinese meal recommendation" loading="lazy" /></picture>
+                  <picture><source srcset="/assets/2/AI5.webp" type="image/webp" /><img src="/assets/2/AI5.jpg" class="phone-slide" alt="AuraBase International AI Chef Greek meal recommendation" loading="lazy" /></picture>
+                  <picture><source srcset="/assets/2/AI6.webp" type="image/webp" /><img src="/assets/2/AI6.jpg" class="phone-slide" alt="AuraBase International AI Chef Korean meal recommendation" loading="lazy" /></picture>
+                  <picture><source srcset="/assets/2/AI7.webp" type="image/webp" /><img src="/assets/2/AI7.jpg" class="phone-slide" alt="AuraBase International AI Chef Lebanese meal recommendation" loading="lazy" /></picture>
+                </div>
+                <button class="phone-nav-btn prev-btn" aria-label="Previous International Chef screenshot">&lt;</button>
+                <button class="phone-nav-btn next-btn" aria-label="Next International Chef screenshot">&gt;</button>
+                <div class="phone-dots">
+                  <span class="phone-dot active" data-index="0"></span>
+                  <span class="phone-dot" data-index="1"></span>
+                  <span class="phone-dot" data-index="2"></span>
+                  <span class="phone-dot" data-index="3"></span>
+                  <span class="phone-dot" data-index="4"></span>
+                </div>
+              </div>
+              <p class="nutrition-phone-cap">AI International Chef</p>
+            </div>
           </div>
-          <p class="nutrition-phone-cap">Weekly diet assessment from logged intake</p>
         </div>
       </article>
     </div>
@@ -751,12 +780,75 @@
        ======================================== -->
   <section class="section section--alt" id="training">
     <div class="container">
-      <div class="text-center reveal">
-        <div class="section-label">Proprietary Training Engines</div>
-        <h2 class="section-title">A step ahead of the marketplace.</h2>
+      <div class="text-center">
+        <div class="section-label">Training</div>
+        <h2 class="section-title">Log it. Get coached.<br />See your patterns.</h2>
         <p class="section-sub mx-auto">
-          Generic fitness trackers just list logs. AuraBase powers your training through three dedicated engines — plus Atlas, your AI Fitness Coach.
+          Bring strength, yoga, and endurance training into one place. Log a session, get support as you move, and build a clearer picture of your training over time.
         </p>
+      </div>
+
+      <div class="training-story">
+        <article class="training-story__row">
+          <div class="training-story__copy">
+            <span class="training-story__step">01</span>
+            <h3>Set up your workouts once.</h3>
+            <p>Then log them with one tap. AuraBase uses your workout history and signals from your wearable to make future logging faster.</p>
+            <div class="training-story__labels"><span>AuraForge</span><span>AuraFlex</span><span>AuraEndure</span></div>
+          </div>
+          <div class="training-story__phones training-story__phones--slideshow" aria-label="Screenshots showing reusable workouts, yoga flows, and wearable activity">
+            <div class="phone-mockup">
+              <div class="phone-speaker"></div>
+              <div class="phone-camera"></div>
+              <div class="phone-screen">
+                <div class="phone-slides">
+                  <img src="/assets/4/AuraForge/Screenshot_20260831-162745_AuraBase.jpg" class="phone-slide active" alt="AuraForge personal strength routine and training insight" loading="lazy" />
+                  <img src="/assets/4/AuraFlex/Screenshot_20260831-163037_AuraBase.jpg" class="phone-slide" alt="AuraFlex advanced yoga flow builder" loading="lazy" />
+                  <img src="/assets/4/AuraEndure/Screenshot 2026-09-01 112110.png" class="phone-slide" alt="AuraEndure wearable activity import queue" loading="lazy" />
+                  <img src="/assets/4/AuraEndure/Screenshot 2026-09-01 112116.png" class="phone-slide" alt="AuraEndure imported cardio activity detail" loading="lazy" />
+                </div>
+                <button class="phone-nav-btn prev-btn" aria-label="Previous logging screenshot">&lt;</button>
+                <button class="phone-nav-btn next-btn" aria-label="Next logging screenshot">&gt;</button>
+                <div class="phone-dots">
+                  <span class="phone-dot active" data-index="0"></span>
+                  <span class="phone-dot" data-index="1"></span>
+                  <span class="phone-dot" data-index="2"></span>
+                  <span class="phone-dot" data-index="3"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="training-story__row training-story__row--reverse">
+          <div class="training-story__copy">
+            <span class="training-story__step">02</span>
+            <h3>Get support while you move.</h3>
+            <p>Use the guidance that fits the session in front of you: training tips in Logic Bank, voice guidance for your yoga flows, and practical tools for planning and reviewing form.</p>
+            <div class="training-story__labels"><span>Logic Bank</span><span>Yoga TTS</span><span>AI Trainer</span></div>
+          </div>
+          <div class="training-story__phones training-story__phones--four" aria-label="Screenshots showing workout guidance tools">
+            <div class="training-phone-card training-phone-card--primary"><div class="training-phone training-phone--image training-phone--primary"><img src="/assets/4/AuraForge/Screenshot_20260831-162751_AuraBase.jpg" alt="AuraForge Logic Bank progressive overload prompt" loading="lazy" /></div><span class="training-phone__caption">Logic Bank tips</span></div>
+            <div class="training-phone-card"><div class="training-phone training-phone--image"><img src="/assets/4/AI Trainer/Screenshot 2026-08-31 210649.png" alt="AuraBase AI-guided yoga session" loading="lazy" /></div><span class="training-phone__caption">Yoga TTS</span></div>
+            <div class="training-phone-card"><div class="training-phone training-phone--image"><img src="/assets/4/AI Trainer/Screenshot_20260831-163631_AuraBase.jpg" alt="AuraBase AI Workout Planner configuration" loading="lazy" /></div><span class="training-phone__caption">Workout planner</span></div>
+            <div class="training-phone-card"><div class="training-phone training-phone--image"><picture><source srcset="/assets/4/AI Trainer/Screenshot_20260624-182755_AuraBase.webp" type="image/webp" /><img src="/assets/4/AI Trainer/Screenshot_20260624-182755_AuraBase.jpg" alt="AuraBase live biomechanics analyzer with side-by-side movement view" loading="lazy" /></picture></div><span class="training-phone__caption">Biomechanics feedback</span></div>
+          </div>
+        </article>
+
+        <article class="training-story__row">
+          <div class="training-story__copy">
+            <span class="training-story__step">03</span>
+            <h3>See your training in context.</h3>
+            <p>Ready to Train brings body-part recovery into your daily view. As your training record grows, AuraBase helps you explore the patterns in your sessions and take useful questions into The Lab.</p>
+            <div class="training-story__labels"><span>Ready to Train</span><span>Training history</span><span>The Lab</span></div>
+          </div>
+          <div class="training-story__phones training-story__phones--four" aria-label="Screenshots showing training readiness and insights">
+            <div class="training-phone-card training-phone-card--primary"><div class="training-phone training-phone--image training-phone--primary"><img src="/assets/4/AuraForge/Screenshot_20260831-162638_AuraBase.jpg" alt="AuraBase Ready to Train body-part recovery view" loading="lazy" /></div><span class="training-phone__caption">Ready to Train</span></div>
+            <div class="training-phone-card"><div class="training-phone training-phone--image"><img src="/assets/4/AI Trainer/Screenshot_20260831-163613_AuraBase.jpg" alt="AuraBase strength benchmarks and progression chart" loading="lazy" /></div><span class="training-phone__caption">Strength benchmarks</span></div>
+            <div class="training-phone-card"><div class="training-phone training-phone--image"><picture><source srcset="/assets/4/Screenshot_20260624-182438_AuraBase.webp" type="image/webp" /><img src="/assets/4/Screenshot_20260624-182438_AuraBase.jpg" alt="AuraBase training consistency calendar" loading="lazy" /></picture></div><span class="training-phone__caption">Training history</span></div>
+            <div class="training-phone-card"><div class="training-phone training-phone--image"><picture><source srcset="/assets/5/SS1RM-S2.webp" type="image/webp" /><img src="/assets/5/SS1RM-S2.png" alt="AuraBase Lab protocol results for strength training" loading="lazy" /></picture></div><span class="training-phone__caption">Lab results</span></div>
+          </div>
+        </article>
       </div>
 
       <div class="training__grid reveal reveal--delay-1" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3.5rem;">
@@ -836,8 +928,8 @@
               <picture><source srcset="/assets/4/Screenshot_20260624-182417_AuraBase.webp" type="image/webp" /><img src="/assets/4/Screenshot_20260624-182417_AuraBase.jpg" class="phone-slide" alt="Comprehensive custom workout template list and builder" loading="lazy" /></picture>
               <picture><source srcset="/assets/4/Screenshot_20260624-182431_AuraBase.webp" type="image/webp" /><img src="/assets/4/Screenshot_20260624-182431_AuraBase.jpg" class="phone-slide" alt="AuraEndure cardio session tracking with cardiac drift analysis" loading="lazy" /></picture>
               <picture><source srcset="/assets/4/Screenshot_20260624-182438_AuraBase.webp" type="image/webp" /><img src="/assets/4/Screenshot_20260624-182438_AuraBase.jpg" class="phone-slide" alt="Training volume breakdown dashboard" loading="lazy" /></picture>
-              <picture><source srcset="/assets/4/Screenshot_20260624-182755_AuraBase.webp" type="image/webp" /><img src="/assets/4/Screenshot_20260624-182755_AuraBase.jpg" class="phone-slide" alt="Atlas AI Fitness Coach generating structured training templates" loading="lazy" /></picture>
-              <picture><source srcset="/assets/4/Screenshot_20260624-182816_AuraBase.webp" type="image/webp" /><img src="/assets/4/Screenshot_20260624-182816_AuraBase.jpg" class="phone-slide" alt="Atlas live BioMechanics workout form analysis camera feedback" loading="lazy" /></picture>
+              <img src="/assets/4/Screenshot_20260624-182755_AuraBase.jpg" class="phone-slide" alt="Atlas AI Fitness Coach generating structured training templates" loading="lazy" />
+              <img src="/assets/4/Screenshot_20260624-182816_AuraBase.jpg" class="phone-slide" alt="Atlas live BioMechanics workout form analysis camera feedback" loading="lazy" />
             </div>
             <button class="phone-nav-btn prev-btn" aria-label="Previous training screenshot">&lt;</button>
             <button class="phone-nav-btn next-btn" aria-label="Next training screenshot">&gt;</button>
@@ -864,200 +956,38 @@
 
 
   <!-- ========================================
-       SECTION 5 — THE DAILY LOOP
+       SECTION 6 — BLOGS
        ======================================== -->
-  <section class="section" id="pillars">
+  <section class="section" id="blogs">
     <div class="container">
       <div class="text-center reveal">
-        <div class="section-label">Your Daily Loop</div>
-        <h2 class="section-title">Train · Fuel · Recover</h2>
+        <div class="section-label">From AuraBase</div>
+        <h2 class="section-title">Read the work behind the app.</h2>
         <p class="section-sub mx-auto">
-          Three connected domains. One picture of how you perform and bounce back.
+          Notes on training, nutrition, personal experiments, and the decisions shaping AuraBase.
         </p>
       </div>
 
-      <div class="pillars reveal reveal--delay-1">
-        <div class="pillars__tabs">
-          <button class="pillars__tab pillars__tab--active" onclick="switchPillar('train', this)">Train</button>
-          <button class="pillars__tab" onclick="switchPillar('fuel', this)">Fuel</button>
-          <button class="pillars__tab" onclick="switchPillar('recover', this)">Recover</button>
+      <div class="blog-carousel reveal reveal--delay-1" aria-label="Featured AuraBase blog posts">
+        <div class="blog-carousel__viewport">
+          <a class="blog-carousel__card" href="/blogs/lab-data-driven-pivot">
+            <div><div class="blog-carousel__meta">The Lab · June 2026</div><h3 class="blog-carousel__title">Why we rebuilt AuraBase around The Lab</h3><p class="blog-carousel__description">A founder's note on personal experiments, signal mapping, and the Train, Fuel, Recover loop.</p></div><span class="blog-carousel__read">Read article →</span>
+          </a>
+          <a class="blog-carousel__card" href="/blogs/aria-ai-meal-scanner-v2">
+            <div><div class="blog-carousel__meta">Nutrition · June 2026</div><h3 class="blog-carousel__title">Why your meal photo needs a database</h3><p class="blog-carousel__description">Inside AuraBase's hybrid AI Meal Scanner and the reference data behind each logged meal.</p></div><span class="blog-carousel__read">Read article →</span>
+          </a>
+          <a class="blog-carousel__card" href="/blogs/aria-ai-nutritionist-diet">
+            <div><div class="blog-carousel__meta">Nutrition · May 2026</div><h3 class="blog-carousel__title">The AI Nutritionist</h3><p class="blog-carousel__description">How Aria uses your logged nutrition to surface practical next steps and meal ideas.</p></div><span class="blog-carousel__read">Read article →</span>
+          </a>
+          <a class="blog-carousel__card" href="/blogs/atlas-yoga-wearables">
+            <div><div class="blog-carousel__meta">Training · May 2026</div><h3 class="blog-carousel__title">The data-driven yogi</h3><p class="blog-carousel__description">A look at bringing yoga practice and wearable activity into the same training record.</p></div><span class="blog-carousel__read">Read article →</span>
+          </a>
         </div>
-
-        <!-- TRAIN -->
-        <div class="pillars__panel pillars__panel--active" id="pillar-train">
-          <div class="pillars__list">
-            <div class="pillars__item">
-              <span class="pillars__item-icon">🏋️‍♂️</span>
-              <div>
-                <div class="pillars__item-name">Workout logging &amp; smart suggestions</div>
-                <div class="pillars__item-desc">Log weight, reps, and sets simply, with adaptive recommendations based on physical feedback.</div>
-              </div>
-            </div>
-            <div class="pillars__item">
-              <span class="pillars__item-icon">⌚</span>
-              <div>
-                <div class="pillars__item-name">Activity sync</div>
-                <div class="pillars__item-desc">Pull daily active minutes, heart rates, and workouts directly from Garmin, Apple Health, and Google Health Connect.</div>
-              </div>
-            </div>
-            <div class="pillars__item">
-              <span class="pillars__item-icon">⚡</span>
-              <div>
-                <div class="pillars__item-name">Recovery-aware training context</div>
-                <div class="pillars__item-desc">Receive real-time training load warnings and load recommendations relative to your nervous system recovery scores.</div>
-              </div>
-            </div>
-            <div class="pillars__item">
-              <span class="pillars__item-icon">🧪</span>
-              <div>
-                <div class="pillars__item-name">Feeds The Lab as experiment variables</div>
-                <div class="pillars__item-desc">Every workout and performance metric is auto-mapped into The Lab, giving you concrete variables to test.</div>
-              </div>
-            </div>
-            <div class="pillars__item">
-              <span class="pillars__item-icon">🏋️</span>
-              <div>
-                <div class="pillars__item-name">AI Fitness Coach (Atlas)</div>
-                <div class="pillars__item-desc">AI Workout Planner for personalized programming, plus live BioMechanics form analysis — real-time movement feedback from your camera.</div>
-              </div>
-            </div>
-          </div>
+        <div class="blog-carousel__controls">
+          <button class="blog-carousel__button" type="button" data-blog-carousel="previous" aria-label="Previous blog posts">&larr;</button>
+          <button class="blog-carousel__button" type="button" data-blog-carousel="next" aria-label="Next blog posts">&rarr;</button>
         </div>
-
-        <!-- FUEL -->
-        <div class="pillars__panel" id="pillar-fuel">
-          <div class="pillars__list">
-            <div class="pillars__item">
-              <span class="pillars__item-icon">📸</span>
-              <div>
-                <div class="pillars__item-name">AI Meal Scanner</div>
-                <div class="pillars__item-desc">Scan a plate, get an instant volume assessment, and log your ingredients automatically.</div>
-              </div>
-            </div>
-            <div class="pillars__item">
-              <span class="pillars__item-icon">🔍</span>
-              <div>
-                <div class="pillars__item-name">Barcode &amp; supplement stack</div>
-                <div class="pillars__item-desc">Quickly scan barcodes for packaged snacks, and manage your vitamin/supplement dosing schedules.</div>
-              </div>
-            </div>
-            <div class="pillars__item">
-              <span class="pillars__item-icon">🔬</span>
-              <div>
-                <div class="pillars__item-name">Micronutrient insights (profile-gated)</div>
-                <div class="pillars__item-desc">Review your absolute aggregate intake of vitamins and minerals, safely kept private within your personal profile.</div>
-              </div>
-            </div>
-            <div class="pillars__item">
-              <span class="pillars__item-icon">🎯</span>
-              <div>
-                <div class="pillars__item-name">Personalized macro targets</div>
-                <div class="pillars__item-desc">Receive baseline macro suggestions calibrated for weight management, recovery speed, or general longevity goals.</div>
-              </div>
-            </div>
-            <div class="pillars__item">
-              <span class="pillars__item-icon">🍳</span>
-              <div>
-                <div class="pillars__item-name">AI Nutritionist Coach (Aria)</div>
-                <div class="pillars__item-desc">International AI Chef for global-cuisine meal recommendations, plus weekly Diet Assessment from your AI Nutritionist — what you're nailing and where the gaps are.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- RECOVER -->
-        <div class="pillars__panel" id="pillar-recover">
-          <div class="pillars__list">
-            <div class="pillars__item">
-              <span class="pillars__item-icon">📡</span>
-              <div>
-                <div class="pillars__item-name">Sleep Recovery Radar (“last night → today”)</div>
-                <div class="pillars__item-desc">Sync last night's deep, REM, and light cycles to map your readiness and metabolic bounce-back.</div>
-              </div>
-            </div>
-            <div class="pillars__item">
-              <span class="pillars__item-icon">🧠</span>
-              <div>
-                <div class="pillars__item-name">Mood &amp; screen time in context</div>
-                <div class="pillars__item-desc">Correlate daily mental check-ins with your physical and digital strain profiles to view what triggers stress.</div>
-              </div>
-            </div>
-            <div class="pillars__item">
-              <span class="pillars__item-icon">🍺</span>
-              <div>
-                <div class="pillars__item-name">Vice &amp; habit logging (non-judgmental)</div>
-                <div class="pillars__item-desc">Log your alcohol intake, nicotine usage, and caffeine levels objectively without judgment or gamified pressure.</div>
-              </div>
-            </div>
-            <div class="pillars__item">
-              <span class="pillars__item-icon">🧘‍♂️</span>
-              <div>
-                <div class="pillars__item-name">Meditation, breathwork, cycle tracking</div>
-                <div class="pillars__item-desc">Soothe somatic systems with guide exercises, breathe to steady heart rate, and track monthly cycle timelines.</div>
-              </div>
-            </div>
-            <div class="pillars__item">
-              <span class="pillars__item-icon">🎧</span>
-              <div>
-                <div class="pillars__item-name">Sound Sanctuary</div>
-                <div class="pillars__item-desc">Immersive 3D audio environments for stress relief and mental clarity — therapeutic soundscapes, binaural beats, and ambient sessions to help you unwind and recover. <a href="/blogs/solace" style="color: var(--teal-400); font-weight: 600;">Learn about Sound Sanctuary →</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="text-center reveal reveal--delay-2" style="margin-top: 3rem;">
-        <p style="font-size: 1.05rem; font-weight: 500; color: var(--teal-300); max-width: 750px; margin: 0 auto; line-height: 1.65; border: 1px solid rgba(20, 184, 166, 0.15); background: rgba(20, 184, 166, 0.03); padding: 1.25rem 2rem; border-radius: var(--radius-md);">
-          What you train and fuel shows up in how you recover — and The Lab shows you what actually moves the needle.
-        </p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================================
-       SECTION 6 — AI COACHES (Secondary)
-       ======================================== -->
-  <section class="section" id="coaches">
-    <div class="container">
-      <div class="text-center reveal">
-        <div class="section-label">Your AI Team</div>
-        <h2 class="section-title">Guidance when you want it.</h2>
-        <p class="section-sub mx-auto">
-          AI coaches suggest — they don't diagnose. Every surface discloses limitations. Clear AI disclosure on all interactions.
-        </p>
-      </div>
-
-      <div class="coaches__grid reveal reveal--delay-1" style="max-width: 700px; margin-left: auto; margin-right: auto;">
-        <div class="glass-card coach-card">
-          <div class="coach-card__avatar icon-food">🍳</div>
-          <div class="coach-card__name">Aria</div>
-          <div class="coach-card__role">International AI Chef &amp; AI Nutritionist</div>
-          <div class="coach-card__desc">
-            <strong>International AI Chef:</strong> Culturally authentic meal recommendations adapted to global cuisine choices — close macro gaps with recipes you'll actually enjoy.<br><br>
-            <strong>AI Nutritionist:</strong> Analyzes your week's logged meals and delivers a plain-English Diet Assessment — what you're nailing, where the gaps are, and what to adjust next.
-          </div>
-          <div class="coach-card__disclosure">AI-generated suggestions · Not medical advice</div>
-        </div>
-
-        <div class="glass-card coach-card">
-          <div class="coach-card__avatar icon-rose">🏋️</div>
-          <div class="coach-card__name">Atlas</div>
-          <div class="coach-card__role">AI Fitness Coach</div>
-          <div class="coach-card__desc">
-            <strong>AI Workout Planner:</strong> Personalized workout plans calibrated to your goals, fitness level, available equipment, and recovery scores. Import plans directly into your log.<br><br>
-            <strong>BioMechanics Form Analysis:</strong> Real-time exercise form analysis powered by computer vision. Perform movements on camera and get instant biomechanics feedback to train more effectively and reduce injury risk.
-          </div>
-          <div class="coach-card__disclosure">AI-generated suggestions · Not medical advice</div>
-        </div>
-
-      </div>
-
-      <div class="text-center reveal reveal--delay-2" style="margin-top: 2rem;">
-        <p style="font-size: 0.85rem; color: var(--text-secondary);">
-          Looking for The Lab? That's the <a href="#lab" style="color: var(--teal-400); font-weight: 600; text-decoration: underline; text-underline-offset: 3px;">experiment engine</a> — not a persona.
-        </p>
+        <a class="blog-carousel__all" href="/blogs">View all blogs →</a>
       </div>
     </div>
   </section>
@@ -1110,38 +1040,6 @@
           <div>
             <div class="trust__item-title">TLS / SSL in Transit</div>
             <div class="trust__item-desc">All data moving between your device and our servers is encrypted end-to-end via TLS/SSL. Nothing travels in plaintext.</div>
-          </div>
-        </div>
-
-        <div class="trust__item glass-card">
-          <div class="trust__item-icon">🛡️</div>
-          <div>
-            <div class="trust__item-title">Row-Level Database Security</div>
-            <div class="trust__item-desc">RLS policies ensure each user can only ever query their own rows. No cross-account data leakage is architecturally possible.</div>
-          </div>
-        </div>
-
-        <div class="trust__item glass-card">
-          <div class="trust__item-icon">🔗</div>
-          <div>
-            <div class="trust__item-title">Optional Integrations, Zero Defaults</div>
-            <div class="trust__item-desc">Apple Health, Health Connect, Garmin — you choose what to connect. We display N/A when data isn't available, never fabricate defaults.</div>
-          </div>
-        </div>
-
-        <div class="trust__item glass-card">
-          <div class="trust__item-icon">🗑️</div>
-          <div>
-            <div class="trust__item-title">Full Account Deletion</div>
-            <div class="trust__item-desc">Delete your account and every associated record from Settings in seconds. Full control, no hoops, no retention.</div>
-          </div>
-        </div>
-
-        <div class="trust__item glass-card">
-          <div class="trust__item-icon">🩺</div>
-          <div>
-            <div class="trust__item-title">Wellness Tool Disclosure</div>
-            <div class="trust__item-desc">AuraBase is not a medical device. AI suggestions are informational only. Every AI surface is clearly labelled.</div>
           </div>
         </div>
 
@@ -1289,6 +1187,7 @@
           <span class="footer__name">AuraBase</span>
         </div>
         <div class="footer__links">
+          <a href="/blogs" class="footer__link">Blogs</a>
           <a href="/privacypolicy" class="footer__link">Privacy Policy</a>
           <a href="/termsofuse" class="footer__link">Terms of Use</a>
           <a href="https://www.instagram.com/aurabaseapp/" target="_blank" rel="noopener noreferrer" class="footer__link">Instagram</a>

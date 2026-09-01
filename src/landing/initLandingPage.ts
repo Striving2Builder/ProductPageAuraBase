@@ -52,7 +52,7 @@ export function initLandingPage(root: HTMLElement): () => void {
   });
 
   const mockupCleanups: Array<() => void> = [];
-    root.querySelectorAll('.phone-mockup').forEach((mockup) => {
+    root.querySelectorAll('.phone-mockup, .nutrition-phone--slideshow').forEach((mockup) => {
       const slides = mockup.querySelectorAll<HTMLElement>('img.phone-slide, .phone-slide');
     const dots = mockup.querySelectorAll('.phone-dot');
     const prevBtn = mockup.querySelector('.prev-btn');
@@ -106,11 +106,35 @@ export function initLandingPage(root: HTMLElement): () => void {
     });
   });
 
+  const blogCarouselCleanups: Array<() => void> = [];
+  root.querySelectorAll<HTMLElement>('.blog-carousel').forEach((carousel) => {
+    const viewport = carousel.querySelector<HTMLElement>('.blog-carousel__viewport');
+    const previousButton = carousel.querySelector<HTMLButtonElement>('[data-blog-carousel="previous"]');
+    const nextButton = carousel.querySelector<HTMLButtonElement>('[data-blog-carousel="next"]');
+
+    const scrollByCard = (direction: number) => {
+      if (!viewport) return;
+      const card = viewport.querySelector<HTMLElement>('.blog-carousel__card');
+      const gap = Number.parseFloat(getComputedStyle(viewport).columnGap) || 0;
+      viewport.scrollBy({ left: direction * ((card?.offsetWidth ?? viewport.clientWidth) + gap), behavior: 'smooth' });
+    };
+
+    const onPrevious = () => scrollByCard(-1);
+    const onNext = () => scrollByCard(1);
+    previousButton?.addEventListener('click', onPrevious);
+    nextButton?.addEventListener('click', onNext);
+    blogCarouselCleanups.push(() => {
+      previousButton?.removeEventListener('click', onPrevious);
+      nextButton?.removeEventListener('click', onNext);
+    });
+  });
+
   return () => {
     revealObserver.disconnect();
     window.removeEventListener('scroll', onScroll);
     anchorCleanups.forEach((cleanup) => cleanup());
     mockupCleanups.forEach((cleanup) => cleanup());
+    blogCarouselCleanups.forEach((cleanup) => cleanup());
     delete window.switchPillar;
   };
 }

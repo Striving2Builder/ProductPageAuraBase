@@ -10,6 +10,9 @@ function enhanceLandingImages(html: string): string {
     /<img([^>]*?)src="\/assets\/([^"]+\.(png|jpe?g))"([^>]*?)>/gi,
     (_match, before, file, ext, after) => {
       const webp = file.replace(/\.(png|jpe?g)$/i, '.webp');
+      if (!fs.existsSync(path.join(root, 'public', 'assets', webp))) {
+        return `<img${before}src="/assets/${file}"${after}>`;
+      }
       return `<picture><source srcset="/assets/${webp}" type="image/webp" /><img${before}src="/assets/${file}"${after}></picture>`;
     }
   );
@@ -52,7 +55,7 @@ body = body.replace(
 
 const landingDir = path.join(root, 'src', 'landing');
 fs.mkdirSync(landingDir, { recursive: true });
-fs.writeFileSync(path.join(landingDir, 'landing.css'), scopeLandingCss(styleMatch[1].trim()));
-fs.writeFileSync(path.join(landingDir, 'landing-body.html'), enhanceLandingImages(body.trim()));
+fs.writeFileSync(path.join(landingDir, 'landing.css'), scopeLandingCss(styleMatch[1].trim()).replace(/\r\n/g, '\n'));
+fs.writeFileSync(path.join(landingDir, 'landing-body.html'), enhanceLandingImages(body.trim()).replace(/\r\n/g, '\n'));
 
 console.log(`Prepared landing assets in ${landingDir}`);
