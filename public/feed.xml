@@ -8,70 +8,70 @@
     <lastBuildDate>Thu, 10 Sep 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://aurabase.app/feed.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AI-Only vs. AI + USDA/CNF: The Two Approaches to Meal Scanning, Compared</title>
+      <title>AI-Only vs. AI + USDA/CNF Meal Scanning</title>
       <link>https://aurabase.app/blogs/ai-only-vs-database-grounded-meal-scanning</link>
       <guid isPermaLink="true">https://aurabase.app/blogs/ai-only-vs-database-grounded-meal-scanning</guid>
       <description>A direct comparison of pure vision-AI calorie estimation vs. AI combined with USDA FoodData Central and Canadian Nutrient File data.</description>
       <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Build Your Own Yoga Class: Inside AuraFlex's AI Voice-Guided Flow Builder</title>
+      <title>Inside AuraFlex's AI Voice-Guided Yoga Builder</title>
       <link>https://aurabase.app/blogs/auraflex-ai-voice-yoga-flow-builder</link>
       <guid isPermaLink="true">https://aurabase.app/blogs/auraflex-ai-voice-yoga-flow-builder</guid>
       <description>AuraFlex lets you build a custom yoga sequence, save it, and turn it into an AI voice-narrated lesson with transcript and breath cues.</description>
       <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>AI Photo Body Fat Estimation vs DXA &amp; Evolt: What the Science Says</title>
+      <title>AI Photo Body Fat vs. DXA &amp; Evolt: The Science</title>
       <link>https://aurabase.app/blogs/ai-body-fat-vs-dxa-evolt</link>
       <guid isPermaLink="true">https://aurabase.app/blogs/ai-body-fat-vs-dxa-evolt</guid>
       <description>Can smartphone photos estimate body composition? We look at peer-reviewed studies comparing AI computer vision to DXA scans and BIA machines.</description>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>From Mind, Body &amp; Spirit to The Lab: Why We Rebuilt AuraBase Around Your Data</title>
+      <title>Why We Rebuilt AuraBase Around The Lab</title>
       <link>https://aurabase.app/blogs/lab-data-driven-pivot</link>
       <guid isPermaLink="true">https://aurabase.app/blogs/lab-data-driven-pivot</guid>
       <description>Founder's note on pivoting to personal experiments, cross-domain signal mapping, and AuraBase's Train, Fuel, Recover data loop.</description>
       <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>What Research Says About AI Meal Photos for Calories &amp; Macros — and Where AuraBase Stands</title>
+      <title>What Research Says About AI Meal Photo Accuracy</title>
       <link>https://aurabase.app/blogs/ai-meal-photo-accuracy-research</link>
       <guid isPermaLink="true">https://aurabase.app/blogs/ai-meal-photo-accuracy-research</guid>
       <description>Aria on meal-photo research (2021–2026), hybrid USDA + Canadian Nutrient File grounding, and AuraBase's honest accuracy position.</description>
       <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Why Your Meal Photo Needs a Database: Inside AuraBase's Hybrid AI Meal Scanner V2</title>
+      <title>Inside AuraBase's Hybrid AI Meal Scanner V2</title>
       <link>https://aurabase.app/blogs/aria-ai-meal-scanner-v2</link>
       <guid isPermaLink="true">https://aurabase.app/blogs/aria-ai-meal-scanner-v2</guid>
       <description>How GPS, timestamps, and EXIF improve meal scans, plus AuraBase V2's hybrid LLM + USDA/Canadian Nutrient File architecture.</description>
       <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Introducing Our YouTube Music Page: An Extension of the Sound Sanctuary</title>
+      <title>Our YouTube Music Page: The Sound Sanctuary</title>
       <link>https://aurabase.app/blogs/sound-sanctuary-youtube-music</link>
       <guid isPermaLink="true">https://aurabase.app/blogs/sound-sanctuary-youtube-music</guid>
       <description>Launching our YouTube Music Artist Page — a digital sanctuary for meditation, yoga, deep focus, and healing. New spiritual meditation tracks released monthly.</description>
       <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Matter Over Mind: The Biological Impact of Mindfulness Meditation</title>
+      <title>Matter Over Mind: Mindfulness Meditation</title>
       <link>https://aurabase.app/blogs/zenith-mindfulness-anxiety</link>
       <guid isPermaLink="true">https://aurabase.app/blogs/zenith-mindfulness-anxiety</guid>
       <description>How mindfulness meditation rewires neural pathways associated with anxiety. Clinical protocols from Zenith, your AI Mindfulness Guide at AuraBase.</description>
       <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>The AI Nutritionist: Designing Your Optimal Healthy Eating Plan</title>
+      <title>The AI Nutritionist: Your Optimal Eating Plan</title>
       <link>https://aurabase.app/blogs/aria-ai-nutritionist-diet</link>
       <guid isPermaLink="true">https://aurabase.app/blogs/aria-ai-nutritionist-diet</guid>
       <description>Stop crash dieting. Learn how Aria, your Global AI Nutritionist, architects personalized healthy eating plans from global cuisine.</description>
       <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>The Data-Driven Yogi: Merging Ancient Flow with Modern Wearables</title>
+      <title>The Data-Driven Yogi: Yoga Meets Wearables</title>
       <link>https://aurabase.app/blogs/atlas-yoga-wearables</link>
       <guid isPermaLink="true">https://aurabase.app/blogs/atlas-yoga-wearables</guid>
       <description>How Atlas merges yoga, wearable fitness trackers, and AI coaching to turn every session into actionable biometric data.</description>
@@ -92,35 +92,35 @@
       <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Beyond the Mirror: How MediaPipe is Forcing Perfect Form</title>
+      <title>Beyond the Mirror: MediaPipe Perfects Form</title>
       <link>https://aurabase.app/blogs/atlas</link>
       <guid isPermaLink="true">https://aurabase.app/blogs/atlas</guid>
       <description>Atlas uses Google MediaPipe BlazePose to track 33 body landmarks in real time and correct your form before injury occurs.</description>
       <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Beyond &quot;Chicken and Rice&quot;: Reclaiming Macros Through Global Cuisine</title>
+      <title>Beyond &quot;Chicken and Rice&quot;: Global Cuisine Macros</title>
       <link>https://aurabase.app/blogs/aria</link>
       <guid isPermaLink="true">https://aurabase.app/blogs/aria</guid>
       <description>Aria's Cultural Nuance Engine builds macro-perfect meal plans from South Asian, Mediterranean, East Asian, and Latin American cuisines.</description>
       <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Hacking Your Circadian Rhythm: What Your Wearable Isn't Telling You</title>
+      <title>Hacking Your Circadian Rhythm</title>
       <link>https://aurabase.app/blogs/luna</link>
       <guid isPermaLink="true">https://aurabase.app/blogs/luna</guid>
       <description>Luna transforms raw wearable sleep data into personalized Sleep Optimization Protocols and hormetic stress cycles.</description>
       <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>The Physical ROI of Mental Stillness: Rewiring Brain and Body</title>
+      <title>The Physical ROI of Mental Stillness</title>
       <link>https://aurabase.app/blogs/zenith</link>
       <guid isPermaLink="true">https://aurabase.app/blogs/zenith</guid>
       <description>Daily mindfulness meditation lowers cortisol, improves HRV, and accelerates physical recovery. The science from Zenith.</description>
       <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Sounds that Shape Your Mind: The Science of Binaural Beats</title>
+      <title>Sounds That Shape Your Mind: Binaural Beats</title>
       <link>https://aurabase.app/blogs/solace</link>
       <guid isPermaLink="true">https://aurabase.app/blogs/solace</guid>
       <description>Solace explains how binaural beats trigger brainwave entrainment for deep focus, relaxation, and restorative sleep.</description>

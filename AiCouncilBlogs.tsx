@@ -9,7 +9,7 @@ export const BLOG_POSTS = [
     authorBadge: '🏋️‍♂️ Atlas • AI Fitness & BioMechanics Coach',
     accentColor: 'text-orange-500 border-orange-500/20',
     glowColor: 'from-orange-500',
-    title: 'AI Photo Body Fat Estimation vs DXA & Evolt: What the Science Says',
+    title: 'AI Photo Body Fat vs. DXA & Evolt: The Science',
     content: (
       <>
         <p className="mb-6 text-lg text-slate-300 font-light">
@@ -67,7 +67,7 @@ export const BLOG_POSTS = [
     authorBadge: '✨ Founder\'s note • AuraBase',
     accentColor: 'text-teal-400 border-teal-500/30',
     glowColor: 'from-teal-500',
-    title: 'From Mind, Body & Spirit to The Lab: Why We Rebuilt AuraBase Around Your Data',
+    title: 'Why We Rebuilt AuraBase Around The Lab',
     content: (
       <>
         <p className="mb-6 text-lg text-slate-300 font-light">
@@ -155,7 +155,7 @@ export const BLOG_POSTS = [
     authorBadge: '🌍 Aria • Global AI Nutritionist & Chef',
     accentColor: 'text-green-500 border-green-500/20',
     glowColor: 'from-green-500',
-    title: 'What Research Says About AI Meal Photos for Calories & Macros — and Where AuraBase Stands',
+    title: 'What Research Says About AI Meal Photo Accuracy',
     content: (
       <>
         <p className="mb-6 text-lg text-slate-300 font-light">
@@ -248,7 +248,7 @@ export const BLOG_POSTS = [
     authorBadge: '🌍 Aria • Global AI Nutritionist & Chef',
     accentColor: 'text-green-500 border-green-500/20',
     glowColor: 'from-green-500',
-    title: 'Why Your Meal Photo Needs a Database: Inside AuraBase\'s Hybrid AI Meal Scanner V2',
+    title: 'Inside AuraBase\'s Hybrid AI Meal Scanner V2',
     content: (
       <>
         <p className="mb-6 text-lg text-slate-300 font-light">
@@ -338,7 +338,7 @@ export const BLOG_POSTS = [
     authorBadge: '🌍 Aria • Global AI Nutritionist & Chef',
     accentColor: 'text-green-500 border-green-500/20',
     glowColor: 'from-green-500',
-    title: 'AI-Only vs. AI + USDA/CNF: The Two Approaches to Meal Scanning, Compared',
+    title: 'AI-Only vs. AI + USDA/CNF Meal Scanning',
     content: (
       <>
         <p className="mb-6 text-lg text-slate-300 font-light">
@@ -406,7 +406,7 @@ export const BLOG_POSTS = [
     authorBadge: '🏋️ Atlas • AI Fitness Trainer',
     accentColor: 'text-brand-500 border-brand-500/20',
     glowColor: 'from-brand-500',
-    title: 'Build Your Own Yoga Class: Inside AuraFlex\'s AI Voice-Guided Flow Builder',
+    title: 'Inside AuraFlex\'s AI Voice-Guided Yoga Builder',
     content: (
       <>
         <p className="mb-6 text-lg text-slate-300 font-light">
@@ -476,7 +476,7 @@ export const BLOG_POSTS = [
     authorBadge: '🎵 Solace • Sound Sanctuary Guide',
     accentColor: 'text-blue-500 border-blue-500/20',
     glowColor: 'from-blue-500',
-    title: 'Introducing Our YouTube Music Page: An Extension of the Sound Sanctuary',
+    title: 'Our YouTube Music Page: The Sound Sanctuary',
     content: (
       <>
         <p className="mb-6 text-lg text-slate-300 font-light">
@@ -529,7 +529,7 @@ export const BLOG_POSTS = [
     authorBadge: '🧘 Zenith • AI Mindfulness Guide',
     accentColor: 'text-teal-500 border-teal-500/20',
     glowColor: 'from-teal-500',
-    title: 'Matter Over Mind: The Biological Impact of Mindfulness Meditation',
+    title: 'Matter Over Mind: Mindfulness Meditation',
     content: (
       <>
         <p className="mb-6 text-lg text-slate-300 font-light">When people ask "mindfulness what is it?", they often imagine escaping to silent meditation retreats or achieving a mystical state of peace and mind. In reality, practicing mindfulness is about cultivating a resilient mindset and developing mindful self compassion. You don't need hours of transcendental meditation or complex mindfulness exercises to see results; a simple 5 minute meditation or 10 minute meditation can drastically alter your neurochemistry, shifting you from a state of survival into a creative mind.</p>
@@ -549,7 +549,7 @@ export const BLOG_POSTS = [
     authorBadge: '🌍 Aria • Global AI Nutritionist & Chef',
     accentColor: 'text-green-500 border-green-500/20',
     glowColor: 'from-green-500',
-    title: 'The AI Nutritionist: Designing Your Optimal Healthy Eating Plan',
+    title: 'The AI Nutritionist: Your Optimal Eating Plan',
     content: (
       <>
         <p className="mb-6 text-lg text-slate-300 font-light">The internet is flooded with generic weight loss programs and crash diets that fail 90% of the time. The reality of diet and health is that human biology is too complex for one-size-fits-all solutions. You do not need another restrictive, very low calorie diet that leaves you exhausted. What you need is an intelligent, dynamic approach to healthy eating—a perfectly balanced diet for weight loss that adapts to your unique metabolic demands.</p>
@@ -569,7 +569,7 @@ export const BLOG_POSTS = [
     authorBadge: '🏋️ Atlas • AI Fitness Trainer',
     accentColor: 'text-brand-500 border-brand-500/20',
     glowColor: 'from-brand-500',
-    title: 'The Data-Driven Yogi: Merging Ancient Flow with Modern Wearables',
+    title: 'The Data-Driven Yogi: Yoga Meets Wearables',
     content: (
       <>
         <p className="mb-6 text-lg text-slate-300 font-light">When most people think of a gym tracker or an exercise workout log, they picture barbells and treadmills. But as an <strong>ai personal trainer</strong>, my definition of fitness logging extends far beyond traditional iron. Integrating ancient practices like hot yoga or a dynamic vinyasa yoga flow into your weekly routine is one of the most effective strategies for long-term mobility, yoga fitness, and injury prevention.</p>
@@ -666,7 +666,7 @@ export const BLOG_POSTS = [
     authorBadge: '🏋️ Atlas • AI Fitness Trainer',
     accentColor: 'text-brand-500 border-brand-500/20',
     glowColor: 'from-brand-500',
-    title: 'Beyond the Mirror: How MediaPipe is Forcing Perfect Form',
+    title: 'Beyond the Mirror: MediaPipe Perfects Form',
     content: (
       <>
         <p className="mb-6 text-lg text-slate-300 font-light">For decades, checking your form meant staring into a gym mirror or hiring an expensive personal trainer. But the human eye is flawed, and mirrors can't calculate joint angles in a three-dimensional plane. Welcome to the era of computational biomechanics.</p>
@@ -686,7 +686,7 @@ export const BLOG_POSTS = [
     authorBadge: '🌍 Aria • Global AI Nutritionist & Chef',
     accentColor: 'text-green-500 border-green-500/20',
     glowColor: 'from-green-500',
-    title: 'Beyond "Chicken and Rice": Reclaiming Macros Through Global Cuisine',
+    title: 'Beyond "Chicken and Rice": Global Cuisine Macros',
     content: (
       <>
         <p className="mb-6 text-lg text-slate-300 font-light">The biggest failure of the modern diet industry is its staggering lack of cultural diversity. Open almost any meal planner app today, and you're funneled into a strictly Western, Euro-centric view of "eating clean"—dominated by grilled chicken breasts, steamed broccoli, and oat bowls. But what happens when you want to hit 150 grams of protein on a plant-based Indian diet, or maintain keto macros while eating authentic Latin American dishes?</p>
@@ -706,7 +706,7 @@ export const BLOG_POSTS = [
     authorBadge: '🌙 Luna • AI Wellness & Biohacker',
     accentColor: 'text-purple-500 border-purple-500/20',
     glowColor: 'from-purple-500',
-    title: 'Hacking Your Circadian Rhythm: What Your Wearable Isn\'t Telling You',
+    title: 'Hacking Your Circadian Rhythm',
     content: (
       <>
         <p className="mb-6 text-lg text-slate-300 font-light">You wake up, check your apple watch sleep tracking or other wearable fitness tracker, and it says you slept for 7 hours and your HRV is 45ms. Now what? Raw data without a protocol is just noise. The future of biohacking isn't just in the hardware you wear; it's in the intelligence that interprets it.</p>
@@ -726,7 +726,7 @@ export const BLOG_POSTS = [
     authorBadge: '🧘 Zenith • AI Mindfulness Guide',
     accentColor: 'text-teal-500 border-teal-500/20',
     glowColor: 'from-teal-500',
-    title: 'The Physical ROI of Mental Stillness: Rewiring Brain and Body',
+    title: 'The Physical ROI of Mental Stillness',
     content: (
       <>
         <p className="mb-6 text-lg text-slate-300 font-light">We often treat mental fitness and physical health as two separate silos. But the truth is, an unregulated nervous system will actively sabotage your physical performance. When you are overwhelmed or anxious, your body floods with cortisol—throttling your recovery, disrupting your sleep, and increasing your risk of injury.</p>
@@ -746,7 +746,7 @@ export const BLOG_POSTS = [
     authorBadge: '🎵 Solace • Sound Sanctuary Guide',
     accentColor: 'text-blue-500 border-blue-500/20',
     glowColor: 'from-blue-500',
-    title: 'Sounds that Shape Your Mind: The Science of Binaural Beats',
+    title: 'Sounds That Shape Your Mind: Binaural Beats',
     content: (
       <>
         <p className="mb-6 text-lg text-slate-300 font-light">Our days are filled with jarring auditory noise—notifications, traffic, chatter. But what if you could weaponize sound to force your brain into states of deep focus or profound relaxation? Welcome to the Sound Sanctuary.</p>

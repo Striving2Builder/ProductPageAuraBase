@@ -16,7 +16,7 @@ export const BLOG_INDEX_META = {
 export const BLOG_POSTS_META: BlogPostMeta[] = [
   {
     id: 'ai-body-fat-vs-dxa-evolt',
-    title: 'AI Photo Body Fat Estimation vs DXA & Evolt: What the Science Says',
+    title: 'AI Photo Body Fat vs. DXA & Evolt: The Science',
     description:
       'Can smartphone photos estimate body composition? We look at peer-reviewed studies comparing AI computer vision to DXA scans and BIA machines.',
     author: 'Atlas',
@@ -24,7 +24,7 @@ export const BLOG_POSTS_META: BlogPostMeta[] = [
   },
   {
     id: 'lab-data-driven-pivot',
-    title: 'From Mind, Body & Spirit to The Lab: Why We Rebuilt AuraBase Around Your Data',
+    title: 'Why We Rebuilt AuraBase Around The Lab',
     description:
       'Founder\'s note on pivoting to personal experiments, cross-domain signal mapping, and AuraBase\'s Train, Fuel, Recover data loop.',
     author: 'AuraBase',
@@ -32,7 +32,7 @@ export const BLOG_POSTS_META: BlogPostMeta[] = [
   },
   {
     id: 'ai-meal-photo-accuracy-research',
-    title: 'What Research Says About AI Meal Photos for Calories & Macros — and Where AuraBase Stands',
+    title: 'What Research Says About AI Meal Photo Accuracy',
     description:
       'Aria on meal-photo research (2021–2026), hybrid USDA + Canadian Nutrient File grounding, and AuraBase\'s honest accuracy position.',
     author: 'Aria',
@@ -40,7 +40,7 @@ export const BLOG_POSTS_META: BlogPostMeta[] = [
   },
   {
     id: 'aria-ai-meal-scanner-v2',
-    title: 'Why Your Meal Photo Needs a Database: Inside AuraBase\'s Hybrid AI Meal Scanner V2',
+    title: 'Inside AuraBase\'s Hybrid AI Meal Scanner V2',
     description:
       'How GPS, timestamps, and EXIF improve meal scans, plus AuraBase V2\'s hybrid LLM + USDA/Canadian Nutrient File architecture.',
     author: 'Aria',
@@ -48,7 +48,7 @@ export const BLOG_POSTS_META: BlogPostMeta[] = [
   },
   {
     id: 'ai-only-vs-database-grounded-meal-scanning',
-    title: 'AI-Only vs. AI + USDA/CNF: The Two Approaches to Meal Scanning, Compared',
+    title: 'AI-Only vs. AI + USDA/CNF Meal Scanning',
     description:
       'A direct comparison of pure vision-AI calorie estimation vs. AI combined with USDA FoodData Central and Canadian Nutrient File data.',
     author: 'Aria',
@@ -56,7 +56,7 @@ export const BLOG_POSTS_META: BlogPostMeta[] = [
   },
   {
     id: 'auraflex-ai-voice-yoga-flow-builder',
-    title: 'Build Your Own Yoga Class: Inside AuraFlex\'s AI Voice-Guided Flow Builder',
+    title: 'Inside AuraFlex\'s AI Voice-Guided Yoga Builder',
     description:
       'AuraFlex lets you build a custom yoga sequence, save it, and turn it into an AI voice-narrated lesson with transcript and breath cues.',
     author: 'Atlas',
@@ -64,7 +64,7 @@ export const BLOG_POSTS_META: BlogPostMeta[] = [
   },
   {
     id: 'sound-sanctuary-youtube-music',
-    title: 'Introducing Our YouTube Music Page: An Extension of the Sound Sanctuary',
+    title: 'Our YouTube Music Page: The Sound Sanctuary',
     description:
       'Launching our YouTube Music Artist Page — a digital sanctuary for meditation, yoga, deep focus, and healing. New spiritual meditation tracks released monthly.',
     author: 'Solace',
@@ -72,7 +72,7 @@ export const BLOG_POSTS_META: BlogPostMeta[] = [
   },
   {
     id: 'zenith-mindfulness-anxiety',
-    title: 'Matter Over Mind: The Biological Impact of Mindfulness Meditation',
+    title: 'Matter Over Mind: Mindfulness Meditation',
     description:
       'How mindfulness meditation rewires neural pathways associated with anxiety. Clinical protocols from Zenith, your AI Mindfulness Guide at AuraBase.',
     author: 'Zenith',
@@ -80,7 +80,7 @@ export const BLOG_POSTS_META: BlogPostMeta[] = [
   },
   {
     id: 'aria-ai-nutritionist-diet',
-    title: 'The AI Nutritionist: Designing Your Optimal Healthy Eating Plan',
+    title: 'The AI Nutritionist: Your Optimal Eating Plan',
     description:
       'Stop crash dieting. Learn how Aria, your Global AI Nutritionist, architects personalized healthy eating plans from global cuisine.',
     author: 'Aria',
@@ -88,7 +88,7 @@ export const BLOG_POSTS_META: BlogPostMeta[] = [
   },
   {
     id: 'atlas-yoga-wearables',
-    title: 'The Data-Driven Yogi: Merging Ancient Flow with Modern Wearables',
+    title: 'The Data-Driven Yogi: Yoga Meets Wearables',
     description:
       'How Atlas merges yoga, wearable fitness trackers, and AI coaching to turn every session into actionable biometric data.',
     author: 'Atlas',
@@ -112,7 +112,7 @@ export const BLOG_POSTS_META: BlogPostMeta[] = [
   },
   {
     id: 'atlas',
-    title: 'Beyond the Mirror: How MediaPipe is Forcing Perfect Form',
+    title: 'Beyond the Mirror: MediaPipe Perfects Form',
     description:
       'Atlas uses Google MediaPipe BlazePose to track 33 body landmarks in real time and correct your form before injury occurs.',
     author: 'Atlas',
@@ -120,7 +120,7 @@ export const BLOG_POSTS_META: BlogPostMeta[] = [
   },
   {
     id: 'aria',
-    title: 'Beyond "Chicken and Rice": Reclaiming Macros Through Global Cuisine',
+    title: 'Beyond "Chicken and Rice": Global Cuisine Macros',
     description:
       'Aria\'s Cultural Nuance Engine builds macro-perfect meal plans from South Asian, Mediterranean, East Asian, and Latin American cuisines.',
     author: 'Aria',
@@ -128,7 +128,7 @@ export const BLOG_POSTS_META: BlogPostMeta[] = [
   },
   {
     id: 'luna',
-    title: 'Hacking Your Circadian Rhythm: What Your Wearable Isn\'t Telling You',
+    title: 'Hacking Your Circadian Rhythm',
     description:
       'Luna transforms raw wearable sleep data into personalized Sleep Optimization Protocols and hormetic stress cycles.',
     author: 'Luna',
@@ -136,7 +136,7 @@ export const BLOG_POSTS_META: BlogPostMeta[] = [
   },
   {
     id: 'zenith',
-    title: 'The Physical ROI of Mental Stillness: Rewiring Brain and Body',
+    title: 'The Physical ROI of Mental Stillness',
     description:
       'Daily mindfulness meditation lowers cortisol, improves HRV, and accelerates physical recovery. The science from Zenith.',
     author: 'Zenith',
@@ -144,7 +144,7 @@ export const BLOG_POSTS_META: BlogPostMeta[] = [
   },
   {
     id: 'solace',
-    title: 'Sounds that Shape Your Mind: The Science of Binaural Beats',
+    title: 'Sounds That Shape Your Mind: Binaural Beats',
     description:
       'Solace explains how binaural beats trigger brainwave entrainment for deep focus, relaxation, and restorative sleep.',
     author: 'Solace',
