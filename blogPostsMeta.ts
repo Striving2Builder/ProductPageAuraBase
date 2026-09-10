@@ -47,6 +47,22 @@ export const BLOG_POSTS_META: BlogPostMeta[] = [
     lastmod: '2026-06-09',
   },
   {
+    id: 'ai-only-vs-database-grounded-meal-scanning',
+    title: 'AI-Only vs. AI + USDA/CNF: The Two Approaches to Meal Scanning, Compared',
+    description:
+      'A direct comparison of pure vision-AI calorie estimation versus AI combined with USDA FoodData Central and Canadian Nutrient File data — with the numbers from the latest research.',
+    author: 'Aria',
+    lastmod: '2026-09-10',
+  },
+  {
+    id: 'auraflex-ai-voice-yoga-flow-builder',
+    title: 'Build Your Own Yoga Class: Inside AuraFlex\'s AI Voice-Guided Flow Builder',
+    description:
+      'AuraFlex now lets you build a custom yoga sequence, save it, and turn it into an AI voice-narrated lesson with transcript and breath cues. Here is how it works.',
+    author: 'Atlas',
+    lastmod: '2026-09-10',
+  },
+  {
     id: 'sound-sanctuary-youtube-music',
     title: 'Introducing Our YouTube Music Page: An Extension of the Sound Sanctuary',
     description:
