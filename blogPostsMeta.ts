@@ -10,7 +10,7 @@ export const BLOG_INDEX_META = {
   title: 'AuraBase AI Council Blogs | Wellness Experiments & Recovery Science',
   description:
     'Wellness experiments, sleep recovery, AI nutrition and fitness coaching, biomechanics, mindfulness, and biohacking from AuraBase.',
-  lastmod: '2026-07-08',
+  lastmod: '2026-09-10',
 };
 
 export const BLOG_POSTS_META: BlogPostMeta[] = [
@@ -50,7 +50,7 @@ export const BLOG_POSTS_META: BlogPostMeta[] = [
     id: 'ai-only-vs-database-grounded-meal-scanning',
     title: 'AI-Only vs. AI + USDA/CNF: The Two Approaches to Meal Scanning, Compared',
     description:
-      'A direct comparison of pure vision-AI calorie estimation versus AI combined with USDA FoodData Central and Canadian Nutrient File data — with the numbers from the latest research.',
+      'A direct comparison of pure vision-AI calorie estimation vs. AI combined with USDA FoodData Central and Canadian Nutrient File data.',
     author: 'Aria',
     lastmod: '2026-09-10',
   },
@@ -58,7 +58,7 @@ export const BLOG_POSTS_META: BlogPostMeta[] = [
     id: 'auraflex-ai-voice-yoga-flow-builder',
     title: 'Build Your Own Yoga Class: Inside AuraFlex\'s AI Voice-Guided Flow Builder',
     description:
-      'AuraFlex now lets you build a custom yoga sequence, save it, and turn it into an AI voice-narrated lesson with transcript and breath cues. Here is how it works.',
+      'AuraFlex lets you build a custom yoga sequence, save it, and turn it into an AI voice-narrated lesson with transcript and breath cues.',
     author: 'Atlas',
     lastmod: '2026-09-10',
   },

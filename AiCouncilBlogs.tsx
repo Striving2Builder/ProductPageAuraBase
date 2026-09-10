@@ -1,6 +1,6 @@
 import React from 'react';
 import { Seo } from './Seo';
-import { BLOG_INDEX_META } from './blogPostsMeta';
+import { BLOG_INDEX_META, BLOG_POSTS_META } from './blogPostsMeta';
 import { buildBlogIndexJsonLd } from './seo/schema';
 
 export const BLOG_POSTS = [
@@ -767,6 +767,12 @@ interface AiCouncilBlogsProps {
   onNavigate?: (view: string, path: string) => void;
 }
 
+const BLOG_POSTS_BY_DATE_DESC = [...BLOG_POSTS].sort((a, b) => {
+  const aDate = BLOG_POSTS_META.find((m) => m.id === a.id)?.lastmod;
+  const bDate = BLOG_POSTS_META.find((m) => m.id === b.id)?.lastmod;
+  return new Date(bDate ?? 0).getTime() - new Date(aDate ?? 0).getTime();
+});
+
 export const AiCouncilBlogs: React.FC<AiCouncilBlogsProps> = ({ onNavigate }) => {
   const jsonLd = buildBlogIndexJsonLd();
 
@@ -805,7 +811,7 @@ export const AiCouncilBlogs: React.FC<AiCouncilBlogsProps> = ({ onNavigate }) =>
 
           <div className="snap-center shrink-0 w-[5vw] sm:w-[10vw]"></div> {/* Spacer for offset centering */}
 
-          {BLOG_POSTS.map((post) => (
+          {BLOG_POSTS_BY_DATE_DESC.map((post) => (
             <article
               key={post.id}
               className="snap-center shrink-0 w-[85vw] sm:w-[500px] lg:w-[600px] bg-white/5 border border-white/10 rounded-[2rem] p-8 sm:p-12 relative overflow-hidden backdrop-blur-3xl hover:border-white/20 hover:-translate-y-2 transition-all duration-300 shadow-2xl group"

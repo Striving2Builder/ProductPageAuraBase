@@ -11,6 +11,7 @@ export const GOOGLE_PLAY_URL =
 
 export function buildBlogPostingJsonLd(post: BlogPostMeta) {
   const url = `${SITE_URL}/blogs/${post.id}`;
+  const isOrganizationAuthor = post.author === 'AuraBase';
   return {
     '@type': 'BlogPosting',
     headline: post.title,
@@ -19,10 +20,9 @@ export function buildBlogPostingJsonLd(post: BlogPostMeta) {
     datePublished: post.lastmod,
     dateModified: post.lastmod,
     image: OG_IMAGE,
-    author: {
-      '@type': 'Person',
-      name: post.author,
-    },
+    author: isOrganizationAuthor
+      ? { '@type': 'Organization', name: post.author }
+      : { '@type': 'Person', name: post.author },
     publisher: {
       '@type': 'Organization',
       name: 'AuraBase',
@@ -69,7 +69,10 @@ export function buildBlogIndexJsonLd() {
       headline: post.title,
       url: `${SITE_URL}/blogs/${post.id}`,
       dateModified: post.lastmod,
-      author: { '@type': 'Person', name: post.author },
+      author:
+        post.author === 'AuraBase'
+          ? { '@type': 'Organization', name: post.author }
+          : { '@type': 'Person', name: post.author },
       publisher: { '@type': 'Organization', name: 'AuraBase' },
     })),
   };

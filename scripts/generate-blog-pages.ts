@@ -1,16 +1,17 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { renderToStaticMarkup } from 'react-dom/server';
 import { BLOG_INDEX_META, BLOG_POSTS_META } from '../blogPostsMeta';
+import { BLOG_POSTS } from '../AiCouncilBlogs';
 import { buildBlogIndexJsonLd, buildBlogPostPageJsonLd } from '../seo/schema';
-import { clipMetaDescription } from '../siteMeta';
+import { clipMetaDescription, OG_IMAGE, SITE_URL } from '../siteMeta';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 const blogsDir = path.join(root, 'blogs');
 
-const SITE = 'https://aurabase.app';
-const OG_IMAGE = `${SITE}/og-default.svg`;
+const SITE = SITE_URL;
 
 function escapeHtml(value: string): string {
   return value
@@ -130,9 +131,23 @@ function writeBlogPostPages(): void {
   fs.mkdirSync(blogsDir, { recursive: true });
 
   for (const post of BLOG_POSTS_META) {
+    const fullPost = BLOG_POSTS.find((p) => p.id === post.id);
+    if (!fullPost) {
+      console.warn(`No BLOG_POSTS entry found for "${post.id}" — skipping article body.`);
+    }
+
     const canonical = `${SITE}/blogs/${post.id}`;
     const pageTitle = `${post.title} | AuraBase`;
     const jsonLd = buildBlogPostPageJsonLd(post);
+
+    const articleHtml = fullPost ? renderToStaticMarkup(fullPost.content) : `<p>${escapeHtml(post.description)}</p>`;
+    const referencesHtml = fullPost
+      ? `
+      <h2>${escapeHtml(fullPost.referencesType)}</h2>
+      <ul>
+        ${fullPost.references.map((ref) => `<li>${escapeHtml(ref)}</li>`).join('\n        ')}
+      </ul>`
+      : '';
 
     const html = pageShell({
       title: pageTitle,
@@ -143,7 +158,8 @@ function writeBlogPostPages(): void {
       <p><a href="/blogs">← All blogs</a> · <a href="/">AuraBase home</a></p>
       <p style="color:#64748b;font-size:0.875rem;text-transform:uppercase;letter-spacing:0.08em;">${escapeHtml(post.author)}</p>
       <h1>${escapeHtml(post.title)}</h1>
-      <p>${escapeHtml(post.description)}</p>
+      ${articleHtml}
+      ${referencesHtml}
       <p><a href="/#nutrition">Nutrition features</a> · <a href="/#training">Training &amp; biomechanics</a> · <a href="/#lab">The Lab</a></p>
     `,
     });

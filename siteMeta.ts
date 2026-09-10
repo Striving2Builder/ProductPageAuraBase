@@ -130,6 +130,8 @@ export const NOSCRIPT_SUMMARY = `
   <p><strong>AuraBase — Health, Recovery &amp; Personal Experiments.</strong> ${SITE_DESCRIPTION}</p>
   <p>Connect sleep, nutrition, supplements, mood, and habits. Run personal wellness experiments in The Lab. AI coaches include Aria (nutrition) and Atlas (fitness &amp; biomechanics).</p>
   <ul>
+    <li><a href="/blogs/ai-only-vs-database-grounded-meal-scanning">AI-only vs. AI + USDA/CNF meal scanning</a></li>
+    <li><a href="/blogs/auraflex-ai-voice-yoga-flow-builder">AuraFlex AI voice-guided yoga flow builder</a></li>
     <li><a href="/blogs/aria-ai-meal-scanner-v2">AI Meal Scanner deep dive</a></li>
     <li><a href="/blogs/atlas">BioMechanics form analysis</a></li>
     <li><a href="/blogs/solace">Sound Sanctuary &amp; binaural beats</a></li>

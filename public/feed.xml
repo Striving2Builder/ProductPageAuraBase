@@ -5,8 +5,22 @@
     <link>https://aurabase.app/blogs</link>
     <description>Wellness experiments, sleep recovery, AI nutrition and fitness coaching, biomechanics, mindfulness, and biohacking from AuraBase.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jul 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://aurabase.app/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI-Only vs. AI + USDA/CNF: The Two Approaches to Meal Scanning, Compared</title>
+      <link>https://aurabase.app/blogs/ai-only-vs-database-grounded-meal-scanning</link>
+      <guid isPermaLink="true">https://aurabase.app/blogs/ai-only-vs-database-grounded-meal-scanning</guid>
+      <description>A direct comparison of pure vision-AI calorie estimation vs. AI combined with USDA FoodData Central and Canadian Nutrient File data.</description>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Build Your Own Yoga Class: Inside AuraFlex's AI Voice-Guided Flow Builder</title>
+      <link>https://aurabase.app/blogs/auraflex-ai-voice-yoga-flow-builder</link>
+      <guid isPermaLink="true">https://aurabase.app/blogs/auraflex-ai-voice-yoga-flow-builder</guid>
+      <description>AuraFlex lets you build a custom yoga sequence, save it, and turn it into an AI voice-narrated lesson with transcript and breath cues.</description>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>AI Photo Body Fat Estimation vs DXA &amp; Evolt: What the Science Says</title>
       <link>https://aurabase.app/blogs/ai-body-fat-vs-dxa-evolt</link>
@@ -34,20 +48,6 @@
       <guid isPermaLink="true">https://aurabase.app/blogs/aria-ai-meal-scanner-v2</guid>
       <description>How GPS, timestamps, and EXIF improve meal scans, plus AuraBase V2's hybrid LLM + USDA/Canadian Nutrient File architecture.</description>
       <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>AI-Only vs. AI + USDA/CNF: The Two Approaches to Meal Scanning, Compared</title>
-      <link>https://aurabase.app/blogs/ai-only-vs-database-grounded-meal-scanning</link>
-      <guid isPermaLink="true">https://aurabase.app/blogs/ai-only-vs-database-grounded-meal-scanning</guid>
-      <description>A direct comparison of pure vision-AI calorie estimation versus AI combined with USDA FoodData Central and Canadian Nutrient File data — with the numbers from the latest research.</description>
-      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Build Your Own Yoga Class: Inside AuraFlex's AI Voice-Guided Flow Builder</title>
-      <link>https://aurabase.app/blogs/auraflex-ai-voice-yoga-flow-builder</link>
-      <guid isPermaLink="true">https://aurabase.app/blogs/auraflex-ai-voice-yoga-flow-builder</guid>
-      <description>AuraFlex now lets you build a custom yoga sequence, save it, and turn it into an AI voice-narrated lesson with transcript and breath cues. Here is how it works.</description>
-      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>Introducing Our YouTube Music Page: An Extension of the Sound Sanctuary</title>

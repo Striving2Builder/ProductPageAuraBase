@@ -15,7 +15,9 @@ function escapeXml(value: string): string {
     .replace(/"/g, '&quot;');
 }
 
-const items = BLOG_POSTS_META.map((post) => {
+const items = [...BLOG_POSTS_META]
+  .sort((a, b) => new Date(b.lastmod).getTime() - new Date(a.lastmod).getTime())
+  .map((post) => {
   const url = `${SITE_URL}/blogs/${post.id}`;
   return `    <item>
       <title>${escapeXml(post.title)}</title>

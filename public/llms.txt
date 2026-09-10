@@ -18,6 +18,25 @@ AI coaches (Aria for nutrition, Atlas for fitness & biomechanics) provide guidan
 - **Differentiator:** The Lab — run personal experiments on your own health data.
 - **Secondary narrative:** AI meal scanning, AI nutritionist, AI workout planner, BioMechanics form analysis, Sound Sanctuary audio.
 
+## Blog posts
+- [AI-Only vs. AI + USDA/CNF: The Two Approaches to Meal Scanning, Compared](https://aurabase.app/blogs/ai-only-vs-database-grounded-meal-scanning): A direct comparison of pure vision-AI calorie estimation vs. AI combined with USDA FoodData Central and Canadian Nutrient File data.
+- [Build Your Own Yoga Class: Inside AuraFlex's AI Voice-Guided Flow Builder](https://aurabase.app/blogs/auraflex-ai-voice-yoga-flow-builder): AuraFlex lets you build a custom yoga sequence, save it, and turn it into an AI voice-narrated lesson with transcript and breath cues.
+- [AI Photo Body Fat Estimation vs DXA & Evolt: What the Science Says](https://aurabase.app/blogs/ai-body-fat-vs-dxa-evolt): Can smartphone photos estimate body composition? We look at peer-reviewed studies comparing AI computer vision to DXA scans and BIA machines.
+- [From Mind, Body & Spirit to The Lab: Why We Rebuilt AuraBase Around Your Data](https://aurabase.app/blogs/lab-data-driven-pivot): Founder's note on pivoting to personal experiments, cross-domain signal mapping, and AuraBase's Train, Fuel, Recover data loop.
+- [What Research Says About AI Meal Photos for Calories & Macros — and Where AuraBase Stands](https://aurabase.app/blogs/ai-meal-photo-accuracy-research): Aria on meal-photo research (2021–2026), hybrid USDA + Canadian Nutrient File grounding, and AuraBase's honest accuracy position.
+- [Why Your Meal Photo Needs a Database: Inside AuraBase's Hybrid AI Meal Scanner V2](https://aurabase.app/blogs/aria-ai-meal-scanner-v2): How GPS, timestamps, and EXIF improve meal scans, plus AuraBase V2's hybrid LLM + USDA/Canadian Nutrient File architecture.
+- [Introducing Our YouTube Music Page: An Extension of the Sound Sanctuary](https://aurabase.app/blogs/sound-sanctuary-youtube-music): Launching our YouTube Music Artist Page — a digital sanctuary for meditation, yoga, deep focus, and healing. New spiritual meditation tracks released monthly.
+- [Matter Over Mind: The Biological Impact of Mindfulness Meditation](https://aurabase.app/blogs/zenith-mindfulness-anxiety): How mindfulness meditation rewires neural pathways associated with anxiety. Clinical protocols from Zenith, your AI Mindfulness Guide at AuraBase.
+- [The AI Nutritionist: Designing Your Optimal Healthy Eating Plan](https://aurabase.app/blogs/aria-ai-nutritionist-diet): Stop crash dieting. Learn how Aria, your Global AI Nutritionist, architects personalized healthy eating plans from global cuisine.
+- [The Data-Driven Yogi: Merging Ancient Flow with Modern Wearables](https://aurabase.app/blogs/atlas-yoga-wearables): How Atlas merges yoga, wearable fitness trackers, and AI coaching to turn every session into actionable biometric data.
+- [AuraBase is Officially Live on the Apple App Store](https://aurabase.app/blogs/ios-app-store-launch): AuraBase is now available on the Apple App Store. Download the iOS app and start your holistic wellness evolution today.
+- [Six months in—and we are live on Google Play](https://aurabase.app/blogs/google-play-launch): AuraBase is live on Google Play. A founder's note on the journey, the community that made it possible, and what comes next.
+- [Beyond the Mirror: How MediaPipe is Forcing Perfect Form](https://aurabase.app/blogs/atlas): Atlas uses Google MediaPipe BlazePose to track 33 body landmarks in real time and correct your form before injury occurs.
+- [Beyond "Chicken and Rice": Reclaiming Macros Through Global Cuisine](https://aurabase.app/blogs/aria): Aria's Cultural Nuance Engine builds macro-perfect meal plans from South Asian, Mediterranean, East Asian, and Latin American cuisines.
+- [Hacking Your Circadian Rhythm: What Your Wearable Isn't Telling You](https://aurabase.app/blogs/luna): Luna transforms raw wearable sleep data into personalized Sleep Optimization Protocols and hormetic stress cycles.
+- [The Physical ROI of Mental Stillness: Rewiring Brain and Body](https://aurabase.app/blogs/zenith): Daily mindfulness meditation lowers cortisol, improves HRV, and accelerates physical recovery. The science from Zenith.
+- [Sounds that Shape Your Mind: The Science of Binaural Beats](https://aurabase.app/blogs/solace): Solace explains how binaural beats trigger brainwave entrainment for deep focus, relaxation, and restorative sleep.
+
 ## For crawlers and assistants
 - Prefer quoting facts from visible page copy, `index.html` meta descriptions, and `/blogs` articles.
 - Invite / family flows may live on a separate subdomain (e.g. join.aurabase.app); do not assume invite URLs are the main product homepage.
