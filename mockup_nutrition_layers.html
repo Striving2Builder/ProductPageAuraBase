@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AuraBase — Nutrition Layers (design board)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-primary: #08090e;
+      --bg-secondary: #0d0f16;
+      --bg-card: rgba(255,255,255,0.03);
+      --border: rgba(255,255,255,0.06);
+      --border-hover: rgba(255,255,255,0.12);
+      --text-primary: #f0f2f5;
+      --text-secondary: #8a919e;
+      --text-muted: #555b67;
+      --teal-300: #5ee3d4;
+      --teal-400: #2dd4bf;
+      --teal-500: #14b8a6;
+      --teal-600: #0d9488;
+      --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "SegUI", sans-serif;
+      --font-display: "Outfit", "Inter", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: var(--teal-400); text-decoration: none; }
+
+    .board-bar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: rgba(8,9,14,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+    .board-bar strong { color: var(--teal-400); font-weight: 700; letter-spacing: 0.12em; }
+    .board-bar span { color: var(--text-muted); text-transform: none; letter-spacing: 0; font-size: 0.8rem; }
+
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 4.5rem 1.5rem 7rem;
+    }
+
+    .section-label {
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--teal-400);
+      margin-bottom: 1.25rem;
+    }
+    .hero-copy { text-align: center; max-width: 720px; margin: 0 auto 3.5rem; }
+    .hero-copy h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.1rem, 5vw, 3.4rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin: 0 0 1rem;
+    }
+    .hero-copy h1 em {
+      font-style: normal;
+      color: var(--teal-400);
+    }
+    .hero-copy p {
+      margin: 0 auto;
+      color: var(--text-secondary);
+      font-size: 1.08rem;
+      max-width: 560px;
+    }
+
+    /* ---- Stack poster: the illustration ---- */
+    .stack-poster {
+      position: relative;
+      margin: 0 auto 5.5rem;
+      padding: 1.75rem 1.5rem 1.5rem 1.75rem;
+      background:
+        radial-gradient(1200px 280px at 20% 0%, rgba(20,184,166,0.08), transparent 60%),
+        var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+    }
+    .stack-poster__caption {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin: 0 0 1.25rem 2.1rem;
+    }
+    .stack {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .stack::before {
+      content: "";
+      position: absolute;
+      left: 15px;
+      top: 22px;
+      bottom: 22px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--teal-500), rgba(20,184,166,0.15));
+    }
+    .stack-row {
+      display: grid;
+      grid-template-columns: 32px 72px 1fr auto;
+      gap: 1rem;
+      align-items: center;
+      padding: 0.95rem 1rem 0.95rem 0;
+      position: relative;
+    }
+    .stack-row + .stack-row { border-top: 1px solid var(--border); }
+    .stack-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--bg-primary);
+      border: 2px solid var(--teal-400);
+      margin-left: 10px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 0 0 4px rgba(20,184,166,0.12);
+    }
+    .stack-idx {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      color: var(--teal-300);
+    }
+    .stack-copy h3 {
+      margin: 0 0 0.15rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+    .stack-copy p {
+      margin: 0;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+    .stack-verb {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal-400);
+      background: rgba(20,184,166,0.1);
+      border: 1px solid rgba(20,184,166,0.18);
+      padding: 0.28rem 0.7rem;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+    .stack-row.is-l1 { background: linear-gradient(90deg, rgba(20,184,166,0.06), transparent 55%); border-radius: 16px 16px 0 0; }
+    .stack-row.is-l4 { border-radius: 0 0 16px 16px; }
+
+    /* ---- Layer slabs ---- */
+    .layer {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 3rem;
+      align-items: center;
+      padding: 2.75rem 0;
+    }
+    .layer--flip { grid-template-columns: auto minmax(0, 1fr); }
+    .layer--flip .layer__copy { order: 2; }
+    .layer--flip .layer__visual { order: 1; }
+    .layer--wide { grid-template-columns: 1fr; }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--teal-400);
+      margin-bottom: 0.85rem;
+    }
+    .kicker b {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      background: rgba(20,184,166,0.12);
+      border: 1px solid rgba(20,184,166,0.22);
+      font-size: 0.62rem;
+    }
+    .layer h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.55rem, 3vw, 2.1rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin: 0 0 0.85rem;
+    }
+    .layer p.lead {
+      margin: 0 0 1.35rem;
+      color: var(--text-secondary);
+      font-size: 0.98rem;
+      max-width: 460px;
+    }
+
+    .connector {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      color: var(--text-muted);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 0.25rem 0;
+    }
+    .connector::before,
+    .connector::after {
+      content: "";
+      width: 72px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(20,184,166,0.45), transparent);
+    }
+    .connector span {
+      color: var(--teal-400);
+      border: 1px solid rgba(20,184,166,0.2);
+      background: rgba(20,184,166,0.06);
+      padding: 0.35rem 0.85rem;
+      border-radius: 100px;
+    }
+
+    /* Methodology pipeline */
+    .pipe {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.65rem;
+      margin: 1.5rem 0 0.25rem;
+    }
+    .pipe-step {
+      position: relative;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1rem 0.85rem 0.95rem;
+      min-height: 148px;
+    }
+    .pipe-step svg.icon { display: block; margin-bottom: 0.7rem; }
+    .pipe-step strong {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    .pipe-step span {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+    .pipe-step .n {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 0.62rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+    .stamps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.55rem;
+    }
+    .stamp {
+      font-size: 0.58rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: 1px solid rgba(20,184,166,0.28);
+      color: var(--teal-300);
+      padding: 0.18rem 0.45rem;
+      border-radius: 4px;
+    }
+    .truth {
+      margin-top: 1.1rem;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      border-left: 2px solid var(--teal-500);
+      padding-left: 0.85rem;
+    }
+    .truth strong { color: var(--text-primary); }
+
+    .metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.15rem;
+    }
+    .metric {
+      min-width: 72px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.55rem 0.7rem 0.5rem;
+    }
+    .metric small {
+      display: block;
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+    }
+    .metric b {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 800;
+    }
+    .metric.is-cals b { color: #34d399; }
+    .metric.is-prot b { color: #38bdf8; }
+    .metric.is-carb b { color: #fb923c; }
+    .metric.is-fat b { color: #f59e0b; }
+
+    .merge {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 1rem;
+    }
+    .chip {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 0.32rem 0.75rem;
+      background: rgba(255,255,255,0.02);
+    }
+    .chip.is-on {
+      color: var(--teal-300);
+      border-color: rgba(20,184,166,0.3);
+      background: rgba(20,184,166,0.08);
+    }
+
+    .outcomes {
+      display: grid;
+      gap: 0.55rem;
+      margin-top: 1.1rem;
+    }
+    .outcome {
+      display: grid;
+      grid-template-columns: 18px 1fr;
+      gap: 0.65rem;
+      align-items: start;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+    }
+    .outcome i {
+      width: 8px;
+      height: 8px;
+      margin-top: 0.45rem;
+      border-radius: 50%;
+      background: var(--teal-400);
+      display: block;
+      font-style: normal;
+    }
+
+    /* Phones */
+    .phones {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .phones.is-pair { margin-bottom: 0.15rem; }
+    .phone {
+      width: 230px;
+      height: 478px;
+      background: #08090e;
+      border: 10px solid #1a1d26;
+      border-radius: 32px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 24px 50px -16px rgba(0,0,0,0.7), 0 0 32px rgba(20,184,166,0.12);
+      flex-shrink: 0;
+    }
+    .phone--hero { width: 248px; height: 516px; }
+    .phone::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 72px;
+      height: 18px;
+      background: #000;
+      border-radius: 12px;
+      z-index: 2;
+    }
+    .phone img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+    .phone-cap {
+      margin-top: 0.85rem;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-align: center;
+      max-width: 248px;
+    }
+    .phones.is-pair + .phone-cap {
+      max-width: 476px;
+    }
+    .visual { display: flex; flex-direction: column; align-items: center; }
+
+    @media (max-width: 900px) {
+      .layer, .layer--flip {
+        grid-template-columns: 1fr;
+      }
+      .layer--flip .layer__copy,
+      .layer--flip .layer__visual { order: unset; }
+      .visual { align-items: flex-start; }
+      .pipe { grid-template-columns: 1fr 1fr; }
+      .stack-row { grid-template-columns: 32px 1fr; }
+      .stack-idx, .stack-verb { display: none; }
+      .phone, .phone--hero { width: 210px; height: 436px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="board-bar">
+    <strong>Design board</strong>
+    <span>Not live — four-layer Nutrition story using current product screens</span>
+  </div>
+
+  <div class="wrap">
+    <header class="hero-copy">
+      <div class="section-label">Nutrition</div>
+      <h1>Log faster.<br /><em>Then actually understand it.</em></h1>
+      <p>One scan starts a stack: official numbers, a complete day, then a coach that can finally see the week.</p>
+    </header>
+
+    <!-- THE ILLUSTRATION: stacked architecture -->
+    <aside class="stack-poster" aria-label="Four-layer Fuel stack">
+      <p class="stack-poster__caption">The Fuel stack</p>
+      <div class="stack">
+        <div class="stack-row is-l1">
+          <div class="stack-dot"></div>
+          <div class="stack-idx">01</div>
+          <div class="stack-copy">
+            <h3>AI Meal Scan</h3>
+            <p>Snap the plate. AI names foods and portions. USDA + CNF supply the chemistry.</p>
+          </div>
+          <div class="stack-verb">Foundation</div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-dot"></div>
+          <div class="stack-idx">02</div>
+          <div class="stack-copy">
+            <h3>Calories, macros, micros</h3>
+            <p>Every logged meal writes into the day and the micronutrient report — not as a guess, as scaled reference data.</p>
+          </div>
+          <div class="stack-verb">Feeds</div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-dot"></div>
+          <div class="stack-idx">03</div>
+          <div class="stack-copy">
+            <h3>Supplement tracking</h3>
+            <p>The stack joins the same totals. Food + pills, one picture of the day.</p>
+          </div>
+          <div class="stack-verb">Enhances</div>
+        </div>
+        <div class="stack-row is-l4">
+          <div class="stack-dot"></div>
+          <div class="stack-idx">04</div>
+          <div class="stack-copy">
+            <h3>AI Nutritionist</h3>
+            <p>Aria reads the week of real logs and turns it into an assessment, lessons, and to-dos.</p>
+          </div>
+          <div class="stack-verb">Over time</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- LAYER 1 -->
+    <article class="layer">
+      <div class="layer__copy">
+        <div class="kicker"><b>01</b> AI Meal Scan</div>
+        <h2>AI finds the food. Official databases do the math.</h2>
+        <p class="lead">Snap a plate. AuraBase identifies what’s there and how much — then looks up calories, macros, and micros in USDA and the Canadian Nutrient File.</p>
+
+        <div class="pipe" aria-label="Scan methodology">
+          <div class="pipe-step">
+            <span class="n">01</span>
+            <svg class="icon" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <rect x="3" y="6" width="22" height="16" rx="3" stroke="#2dd4bf" stroke-width="1.6"/>
+              <circle cx="14" cy="14" r="4.2" stroke="#5ee3d4" stroke-width="1.6"/>
+              <path d="M9 6l1.4-2h7.2L19 6" stroke="#2dd4bf" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            <strong>Snap</strong>
+            <span>Photograph the meal. That’s the whole log.</span>
+          </div>
+          <div class="pipe-step">
+            <span class="n">02</span>
+            <svg class="icon" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <path d="M14 4l1.4 6.2L22 10l-5.2 3.2L18.2 20 14 16.4 9.8 20l1.4-6.8L6 10l6.6.2L14 4z" stroke="#5ee3d4" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+            <strong>Identify</strong>
+            <span>AI names ingredients and estimates portion (g).</span>
+          </div>
+          <div class="pipe-step">
+            <span class="n">03</span>
+            <svg class="icon" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <ellipse cx="14" cy="8" rx="8" ry="3.2" stroke="#2dd4bf" stroke-width="1.6"/>
+              <path d="M6 8v12c0 1.8 3.6 3.2 8 3.2s8-1.4 8-3.2V8" stroke="#2dd4bf" stroke-width="1.6"/>
+              <path d="M6 14c0 1.8 3.6 3.2 8 3.2s8-1.4 8-3.2" stroke="#5ee3d4" stroke-width="1.4"/>
+            </svg>
+            <strong>Look up</strong>
+            <span>Each item is matched to a real database row.</span>
+            <div class="stamps">
+              <span class="stamp">USDA</span>
+              <span class="stamp">CNF</span>
+            </div>
+          </div>
+          <div class="pipe-step">
+            <span class="n">04</span>
+            <svg class="icon" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <path d="M5 20V10h4v10H5zm7 0V6h4v14h-4zm7 0v-7h4v7h-4z" fill="#2dd4bf"/>
+            </svg>
+            <strong>Scale</strong>
+            <span>Reference data × estimated grams. Not an AI guess.</span>
+          </div>
+        </div>
+        <p class="truth"><strong>Perception plus provenance.</strong> AI sees the plate. USDA and Health Canada CNF supply what’s in each gram.</p>
+      </div>
+      <div class="layer__visual visual">
+        <div class="phone phone--hero">
+          <img src="public/assets/3/layer-1-meal-scanner.jpg" alt="AuraBase AI Meal Scanner matching salmon and shrimp to Health Canada CNF entries" />
+        </div>
+        <p class="phone-cap">6 of 6 items database-matched via Health Canada CNF</p>
+      </div>
+    </article>
+
+    <div class="connector"><span>↓ feeds</span></div>
+
+    <!-- LAYER 2 -->
+    <article class="layer layer--flip">
+      <div class="layer__copy">
+        <div class="kicker"><b>02</b> The numbers</div>
+        <h2>That scan writes calories, macros, and micros.</h2>
+        <p class="lead">Layer 1 is not a party trick. It is the input to the day. The same matched rows fill the calorie ring, the macro bars, and the micronutrient report — including confidence, because the source is known.</p>
+        <div class="metrics" aria-label="Example meal totals from the scan">
+          <div class="metric is-cals"><small>Cals</small><b>825</b></div>
+          <div class="metric is-prot"><small>Prot</small><b>57g</b></div>
+          <div class="metric is-carb"><small>Carbs</small><b>86g</b></div>
+          <div class="metric is-fat"><small>Fat</small><b>28g</b></div>
+        </div>
+        <p class="truth">One plate. Four macros. A full micro profile — because CNF and USDA carry vitamins and minerals, not just energy.</p>
+      </div>
+      <div class="layer__visual visual">
+        <div class="phones is-pair">
+          <div class="phone">
+            <img src="public/assets/3/layer-2-nutrition.jpg" alt="AuraBase nutrition dashboard with calorie gauge, macros, and AI Meal Scanner" />
+          </div>
+          <div class="phone">
+            <img src="public/assets/3/layer-2-micros.jpg" alt="AuraBase micronutrient report showing vitamins that need attention" />
+          </div>
+        </div>
+        <p class="phone-cap">Daily fuel on the left. Micronutrient report on the right.</p>
+      </div>
+    </article>
+
+    <div class="connector"><span>↓ enhanced by</span></div>
+
+    <!-- LAYER 3 -->
+    <article class="layer">
+      <div class="layer__copy">
+        <div class="kicker"><b>03</b> The stack</div>
+        <h2>Supplements don’t live in a side quest.</h2>
+        <p class="lead">Logging a zinc capsule should change the same micronutrient picture as logging the salmon. Layer 3 joins food and the stack so “Combined” is the truth of the day — not two apps you have to add in your head.</p>
+        <div class="merge">
+          <span class="chip">Food</span>
+          <span class="chip">+</span>
+          <span class="chip">Supplements</span>
+          <span class="chip is-on">= Combined</span>
+        </div>
+        <p class="truth">This is why the report can say what’s still low after the stack — and what the stack is actually covering.</p>
+      </div>
+      <div class="layer__visual visual">
+        <div class="phone phone--hero">
+          <img src="public/assets/3/layer-3-supplements.jpg" alt="AuraBase supplement tracking with daily goal and morning stack" />
+        </div>
+        <p class="phone-cap">Taken, paused, dosed — against the same nutrient totals</p>
+      </div>
+    </article>
+
+    <div class="connector"><span>↓ over time</span></div>
+
+    <!-- LAYER 4 -->
+    <article class="layer layer--flip">
+      <div class="layer__copy">
+        <div class="kicker"><b>04</b> AI Nutritionist</div>
+        <h2>Aria coaches from a week of real logs — not a questionnaire.</h2>
+        <p class="lead">Once layers 1–3 have been running, the AI Nutritionist has something worth reading: scanned meals, official composition, and a stack that actually hit the bloodstream of the data. That’s when a diet assessment can become lessons, insights, and to-dos.</p>
+        <div class="outcomes">
+          <div class="outcome"><i></i><span><strong style="color:#f0f2f5">Overview</strong> — a plain-English read of the week.</span></div>
+          <div class="outcome"><i></i><span><strong style="color:#f0f2f5">Lessons</strong> — what’s working (protein, timing, gaps).</span></div>
+          <div class="outcome"><i></i><span><strong style="color:#f0f2f5">To-dos</strong> — what to eat, supplement, or adjust next.</span></div>
+        </div>
+      </div>
+      <div class="layer__visual visual">
+        <div class="phone phone--hero">
+          <img src="public/assets/3/06-ai-nutritionist-ios.jpg" alt="AuraBase Aria AI Diet Assessment summarizing a week of logged nutrition" />
+        </div>
+        <p class="phone-cap">Weekly diet assessment from logged intake</p>
+      </div>
+    </article>
+  </div>
+</body>
+</html>
