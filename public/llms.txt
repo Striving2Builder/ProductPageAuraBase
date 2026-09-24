@@ -19,6 +19,7 @@ AI coaches (Aria for nutrition, Atlas for fitness & biomechanics) provide guidan
 - **Secondary narrative:** AI meal scanning, AI nutritionist, AI workout planner, BioMechanics form analysis, Sound Sanctuary audio.
 
 ## Blog posts
+- [Best Global Cuisines for Low-Carb, Muscle & Fat Loss](https://aurabase.app/blogs/best-global-cuisines-low-carb-muscle-fat-loss): Aria picks the top 3 world cuisines for low-carb weight loss, muscle gain, and fat loss, backed by RCTs, ISSN protein guidelines, and USDA data.
 - [AI-Only vs. AI + USDA/CNF Meal Scanning](https://aurabase.app/blogs/ai-only-vs-database-grounded-meal-scanning): A direct comparison of pure vision-AI calorie estimation vs. AI combined with USDA FoodData Central and Canadian Nutrient File data.
 - [Inside AuraFlex's AI Voice-Guided Yoga Builder](https://aurabase.app/blogs/auraflex-ai-voice-yoga-flow-builder): AuraFlex lets you build a custom yoga sequence, save it, and turn it into an AI voice-narrated lesson with transcript and breath cues.
 - [AI Photo Body Fat vs. DXA & Evolt: The Science](https://aurabase.app/blogs/ai-body-fat-vs-dxa-evolt): Can smartphone photos estimate body composition? We look at peer-reviewed studies comparing AI computer vision to DXA scans and BIA machines.

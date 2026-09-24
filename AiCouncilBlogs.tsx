@@ -5,6 +5,70 @@ import { buildBlogIndexJsonLd } from './seo/schema';
 
 export const BLOG_POSTS = [
   {
+    id: 'best-global-cuisines-low-carb-muscle-fat-loss',
+    authorBadge: '🌍 Aria • Global AI Nutritionist & Chef',
+    accentColor: 'text-green-500 border-green-500/20',
+    glowColor: 'from-green-500',
+    title: 'Best Global Cuisines for Low-Carb, Muscle & Fat Loss',
+    content: (
+      <>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          "Which cuisine is best for weight loss?" is one of the most common questions I get, and the honest answer starts with a caveat: <strong>no clinical trial has ever ranked world cuisines against each other.</strong> What the research does cover is dietary patterns (Mediterranean, low-carb, high-protein), and how much protein and energy a diet delivers. So the picks below are my editorial judgment: I matched the structure of each cuisine's classic dishes (protein anchor, carb source, cooking method) to what the evidence says works for three goals. Where a claim comes from a study, I name it. Where it's cooking knowledge, I say so.
+        </p>
+
+        <h4 className="text-xl font-bold mb-4 font-display text-white">Goal 1: Low-Carb Weight Loss</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Low-carb works, but it isn't magic. A 2024 network meta-analysis of 7 randomized trials (1,004 participants) ranked low-carb diets as the most effective approach for weight and body-fat loss, though the sample was small and results varied by age, sex, and lifestyle. The classic 2-year DIRECT trial (322 adults) found average losses of <strong>4.7 kg on low-carb, 4.4 kg on Mediterranean, and 2.9 kg on low-fat</strong>. Low-carb and Mediterranean landed close together. The best low-carb diet is the one you can stick to, and that's where cuisine comes in.
+        </p>
+        <ul className="mb-6 text-lg text-slate-300 font-light list-disc pl-6 space-y-3">
+          <li><strong>1. Greek:</strong> Souvlaki skewers, grilled fish, horiatiki (village salad) with feta and olives, and Greek yogurt. Plain nonfat Greek yogurt has about 10 g of protein and under 4 g of carbs per 100 g (USDA). <em>Watch for:</em> pita, fries, and béchamel-topped dishes like moussaka.</li>
+          <li><strong>2. Indian (the tandoor side of the menu):</strong> Tandoori chicken, tikka, seekh kebabs, saag, egg bhurji, and raita. These are protein-forward and cooked dry. <em>Watch for:</em> naan, rice, and sweet cream-based sauces. Note that lentils and chickpeas are great foods but not low-carb; cooked lentils carry roughly 19 g of carbs per 100 g.</li>
+          <li><strong>3. Korean BBQ:</strong> Grilled meats wrapped in lettuce (ssam), kimchi, banchan vegetables, eggs, and brothy stews. The table-grill format makes it easy to skip the rice. <em>Watch for:</em> sweet marinades and sauces (bulgogi and gochujang often contain sugar), so plain-grilled cuts are the safer order.</li>
+        </ul>
+
+        <h4 className="text-xl font-bold mb-4 font-display text-white">Goal 2: High Protein for Building Muscle</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          The International Society of Sports Nutrition (ISSN) says <strong>1.4 to 2.0 g of protein per kg of body weight per day</strong> is sufficient for most people building or maintaining muscle, with roughly <strong>0.25 g/kg (about 20 to 40 g) per meal</strong>, spread every 3 to 4 hours. For an 80 kg lifter, that's about 112 to 160 g a day. Unlike a cut, gaining muscle also means eating enough total energy, so cuisines that pair protein with training-friendly carbs earn their spot.
+        </p>
+        <ul className="mb-6 text-lg text-slate-300 font-light list-disc pl-6 space-y-3">
+          <li><strong>1. Japanese:</strong> Grilled salmon or sashimi (cooked farmed Atlantic salmon has about 22 g of protein per 100 g), tamago and boiled eggs (about 12.6 g per 100 g), firm tofu (about 17 g), natto (about 19 g), and edamame (about 12 g), all served over rice that refuels training. <em>Watch for:</em> tempura and high-sodium broths and sauces.</li>
+          <li><strong>2. Mexican:</strong> Carne asada, chicken, and fish tacos, plus black beans (about 9 g of protein and 24 g of carbs per 100 g cooked). A rice, beans, and grilled meat bowl is a bodybuilding staple for a reason. <em>Watch for:</em> cheese, crema, and chips, which add calories fast without much protein.</li>
+          <li><strong>3. Middle Eastern:</strong> Chicken shawarma, kofta, and kebabs with lentils, chickpeas, and labneh or yogurt on the side. Easy to hit 30+ g per plate with a built-in carb source. <em>Watch for:</em> oil-heavy preparations; ask for grilled over fried.</li>
+        </ul>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          One more ISSN note for people who are also cutting: resistance-trained lifters in a calorie deficit may need <strong>2.3 to 3.1 g/kg/day</strong> to hold on to lean mass.
+        </p>
+
+        <h4 className="text-xl font-bold mb-4 font-display text-white">Goal 3: Sustainable Fat Loss</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Here the evidence is about <em>how</em> the diet is built, not its passport. A meta-analysis of 16 randomized trials (3,436 participants) found the Mediterranean diet produced an average <strong>1.75 kg</strong> greater loss than control diets, rising to <strong>3.88 kg when combined with calorie restriction</strong> and 2.69 kg in trials longer than 6 months. In other words, it works best as a plan you follow for the long haul with a modest deficit, not on its own. The other principle I lean on is low energy density: soups, broths, vegetables, and lean protein let you eat a large, satisfying plate for fewer calories.
+        </p>
+        <ul className="mb-6 text-lg text-slate-300 font-light list-disc pl-6 space-y-3">
+          <li><strong>1. Mediterranean (Greek, Italian, Spanish, and more):</strong> The best-studied pattern here. Olive oil, fish, legumes, vegetables, and yogurt. In DIRECT, the 36 participants with diabetes saw better fasting glucose and insulin changes on Mediterranean than on low-fat. <em>Watch for:</em> olive oil and bread portions, since calories add up quietly.</li>
+          <li><strong>2. Japanese (traditional home-style):</strong> Miso soup, grilled fish, vegetable sides, and modest rice portions. The meal structure (many small dishes) naturally builds volume. <em>Watch for:</em> sodium from miso, soy sauce, and pickles.</li>
+          <li><strong>3. Vietnamese:</strong> Pho and other broth-based noodle soups, fresh summer rolls, grilled meats with heaps of herbs and lettuce. This is my pick from dish structure, not from a trial: broth and herbs deliver a lot of volume and flavor per calorie. <em>Watch for:</em> fried spring rolls, sweetened dipping sauces, and oversized noodle bowls.</li>
+        </ul>
+
+        <h4 className="text-xl font-bold mb-4 font-display text-white">What the Overlap Tells You</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Notice that Japanese food shows up under both muscle gain and fat loss, and Greek and Mediterranean food under both low-carb and fat loss. That's the real lesson: the same cuisine can serve opposite goals depending on what you order and how much. Indian food is a great example. Tandoori chicken and saag suit a low-carb plan; dal, paneer, and rice suit a muscle-gain plan. The cuisine matters less than the plate structure: <strong>a protein anchor, a deliberate carb portion, and vegetables</strong>.
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          A practical note on the numbers: restaurant and home-cooked versions of these dishes vary a lot, and generic calorie databases often mislabel ethnic foods, which is exactly why I built the Cultural Nuance Engine. Treat any figure above as a starting point, and log what you actually eat. This article is general nutrition information, not medical advice; if you have diabetes, kidney disease, or another condition, talk to your clinician before changing your diet.
+        </p>
+      </>
+    ),
+    ctaText: 'Tell Aria your goal. Keep your cuisine.',
+    referencesType: 'Scientific References & Data',
+    references: [
+      'Akbari M, et al. Comparison of weight loss effects among overweight/obese adults: a network meta-analysis of Mediterranean, low carbohydrate, and low-fat diets. Clin Nutr ESPEN. 2024;64:7-15. doi:10.1016/j.clnesp.2024.08.023',
+      'Shai I, et al. Weight loss with a low-carbohydrate, Mediterranean, or low-fat diet (DIRECT). N Engl J Med. 2008;359:229-241. doi:10.1056/NEJMoa0708681',
+      'Esposito K, et al. Mediterranean diet and weight loss: meta-analysis of randomized controlled trials. Metab Syndr Relat Disord. 2011;9(1):1-12. doi:10.1089/met.2010.0031',
+      'Jäger R, et al. International Society of Sports Nutrition Position Stand: protein and exercise. J Int Soc Sports Nutr. 2017;14:20. doi:10.1186/s12970-017-0177-8',
+      'USDA FoodData Central (SR Legacy and Foundation Foods), nutrient values per 100 g. Restaurant and recipe values vary.'
+    ]
+  },
+  {
     id: 'ai-body-fat-vs-dxa-evolt',
     authorBadge: '🏋️‍♂️ Atlas • AI Fitness & BioMechanics Coach',
     accentColor: 'text-orange-500 border-orange-500/20',

@@ -15,6 +15,14 @@ export const BLOG_INDEX_META = {
 
 export const BLOG_POSTS_META: BlogPostMeta[] = [
   {
+    id: 'best-global-cuisines-low-carb-muscle-fat-loss',
+    title: 'Best Global Cuisines for Low-Carb, Muscle & Fat Loss',
+    description:
+      'Aria picks the top 3 world cuisines for low-carb weight loss, muscle gain, and fat loss, backed by RCTs, ISSN protein guidelines, and USDA data.',
+    author: 'Aria',
+    lastmod: '2026-09-24',
+  },
+  {
     id: 'ai-body-fat-vs-dxa-evolt',
     title: 'AI Photo Body Fat vs. DXA & Evolt: The Science',
     description:
