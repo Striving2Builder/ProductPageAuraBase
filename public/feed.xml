@@ -5,8 +5,22 @@
     <link>https://aurabase.app/blogs</link>
     <description>Wellness experiments, sleep recovery, AI nutrition and fitness coaching, biomechanics, mindfulness, and biohacking from AuraBase.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://aurabase.app/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Calories from Scan to Scrapbook to Weekly Diet Assessment</title>
+      <link>https://aurabase.app/blogs/ai-calories-scrapbook-weekly-assessment</link>
+      <guid isPermaLink="true">https://aurabase.app/blogs/ai-calories-scrapbook-weekly-assessment</guid>
+      <description>How AuraBase turns AI Calories from the AI Meal Scanner into a meal scrapbook and a weekly AI Nutritionist assessment — USDA/CNF-backed, not guessed.</description>
+      <pubDate>Tue, 06 Oct 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>What Are AI Calories? FAQ</title>
+      <link>https://aurabase.app/blogs/what-are-ai-calories</link>
+      <guid isPermaLink="true">https://aurabase.app/blogs/what-are-ai-calories</guid>
+      <description>Plain answers on what AI Calories mean in AuraBase: AI Meal Scanner identifies the plate, USDA and CNF supply the calorie math.</description>
+      <pubDate>Tue, 06 Oct 2026 00:00:00 GMT</pubDate>
+    </item>
     <item>
       <title>Best Global Cuisines for Low-Carb, Muscle &amp; Fat Loss</title>
       <link>https://aurabase.app/blogs/best-global-cuisines-low-carb-muscle-fat-loss</link>

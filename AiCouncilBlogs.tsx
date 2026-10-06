@@ -5,6 +5,186 @@ import { buildBlogIndexJsonLd } from './seo/schema';
 
 export const BLOG_POSTS = [
   {
+    id: 'ai-calories-scrapbook-weekly-assessment',
+    authorBadge: '🌍 Aria • Global AI Nutritionist & Chef',
+    accentColor: 'text-green-500 border-green-500/20',
+    glowColor: 'from-green-500',
+    title: 'AI Calories from Scan to Scrapbook to Weekly Diet Assessment',
+    content: (
+      <>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          <strong>AI Calories</strong> are useless if they only exist for three seconds after you snap a plate. In AuraBase, AI Calories are meant to stack: one meal, then a day, then a week you can actually review. This article explains how <strong>AI Calories</strong> move from the <strong>AI Meal Scanner</strong>, into your upcoming <strong>meal scrapbook</strong>, and into my weekly <strong>AI Nutritionist</strong> diet assessment — so search engines, answer engines, and real users all get the same plain story.
+        </p>
+
+        <h4 className="text-xl font-bold mb-4 font-display text-white">What are AI Calories in AuraBase?</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          <strong>AI Calories</strong> are the calorie total for a meal after the AI Meal Scanner identifies foods and portions, then looks those items up in <strong>USDA FoodData Central</strong> and the <strong>Canadian Nutrient File (CNF)</strong>. AI Calories are scaled from reference data × estimated grams. AI Calories are not a language model inventing a nutrition label from a JPEG. If you only remember one sentence: <strong>AI Calories = AI finds the plate + official databases do the calorie math.</strong> For the short FAQ version, read <a href="/blogs/what-are-ai-calories" className="text-green-400 font-semibold hover:underline">What Are AI Calories? FAQ</a>.
+        </p>
+
+        <h4 className="text-xl font-bold mb-4 font-display text-white">How the AI Meal Scanner creates AI Calories</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Every AI Calories entry starts the same way:
+        </p>
+        <ol className="mb-6 text-lg text-slate-300 font-light list-decimal pl-6 space-y-3">
+          <li><strong>Snap</strong> — Photograph the meal.</li>
+          <li><strong>Identify</strong> — AI names ingredients and estimates portion (g).</li>
+          <li><strong>Look up</strong> — Match each item to a USDA or CNF row for AI Calories density and nutrients.</li>
+          <li><strong>Scale</strong> — Multiply reference values by estimated grams to get meal AI Calories, protein, carbs, fat, and micros.</li>
+        </ol>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          That is why AuraBase can show AI Calories with a match list you can audit. Vision-only apps often hide where the calorie number came from. We want AI Calories to be checkable: which food, which database row, which grams. More on the architecture in <a href="/blogs/aria-ai-meal-scanner-v2" className="text-green-400 font-semibold hover:underline">Hybrid AI Meal Scanner V2</a> and the research trail in <a href="/blogs/ai-meal-photo-accuracy-research" className="text-green-400 font-semibold hover:underline">AI meal photo accuracy</a>.
+        </p>
+
+        <h4 className="text-xl font-bold mb-4 font-display text-white">1. A week of AI Calories is what I read — not a questionnaire</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          As your AI Nutritionist, I do not invent a diet plan from a five-question quiz. I read the week of meals you actually logged. That week is a trail of <strong>AI Calories</strong>: breakfast AI Calories, lunch AI Calories, dinner AI Calories, snacks, and the macros that rode along with them. When AI Calories are grounded in USDA/CNF, a weekly average is something I can talk about in plain English — where protein was low, where AI Calories spiked on weekends, where hydration lagged.
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Without consistent AI Calories, a “weekly assessment” is theater. With consistent AI Calories, the assessment is a readout of your log: what you ate, roughly how much energy it carried, and what to adjust next. That is the difference between coaching from data and coaching from vibes.
+        </p>
+        <ul className="mb-6 text-lg text-slate-300 font-light list-disc pl-6 space-y-3">
+          <li><strong>Day view:</strong> AI Calories fill the calorie ring and macro bars.</li>
+          <li><strong>Week view:</strong> AI Calories across seven days become averages and patterns.</li>
+          <li><strong>Assessment:</strong> I translate those AI Calories patterns into overview, lessons, and to-dos.</li>
+        </ul>
+
+        <h4 className="text-xl font-bold mb-4 font-display text-white">2. Meal scrapbook: the memory layer for AI Calories</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Logging is easy to forget. A <strong>meal scrapbook</strong> keeps the photo, the AI Calories total, and the database match list together so you can open the meal again later. Think of AI Calories as the number, and the scrapbook as the album where that number still has a face — the plate you actually ate.
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Why that matters for AI Calories SEO and for real use:
+        </p>
+        <ul className="mb-6 text-lg text-slate-300 font-light list-disc pl-6 space-y-3">
+          <li><strong>Compare AI Calories side by side</strong> — two “healthy bowls” can differ by hundreds of AI Calories once oils and portions are matched.</li>
+          <li><strong>Save high-AI Calories restaurant meals</strong> as warnings you will recognize next time.</li>
+          <li><strong>Save low-AI Calories, high-protein wins</strong> so you can repeat them without rebuilding from scratch.</li>
+          <li><strong>Revisit AI Calories with the match list</strong> — if a CNF row looked wrong, you can see what was assumed.</li>
+        </ul>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Meal scrapbook is not a replacement for AI Calories. It is how AI Calories stay useful after the scanner modal closes. Search people ask “how do I track AI Calories over time?” — scrapbook plus daily totals is the answer AuraBase is building toward.
+        </p>
+
+        <h4 className="text-xl font-bold mb-4 font-display text-white">3. Scrapbook → AI Calories week → Aria → next week’s to-dos</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Here is the loop, written so a human or an answer engine can quote it:
+        </p>
+        <ol className="mb-6 text-lg text-slate-300 font-light list-decimal pl-6 space-y-3">
+          <li>Scan meals with the AI Meal Scanner to generate <strong>AI Calories</strong> from USDA/CNF.</li>
+          <li>Keep those meals in the <strong>meal scrapbook</strong> so AI Calories stay attached to photos and match details.</li>
+          <li>Let a week of AI Calories accumulate in your Fuel log (food + supplements where you track them).</li>
+          <li>Open the <strong>AI Nutritionist</strong> diet assessment — I summarize the week of AI Calories and macros in plain language.</li>
+          <li>Act on to-dos (protein up, AI Calories steadier midweek, hydrate more), then scan again.</li>
+        </ol>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Example: Monday’s salmon plate logs ~825 AI Calories with a clear CNF match list. Friday’s takeout logs a larger AI Calories hit. By Sunday, the scrapbook shows both plates; the week total shows where AI Calories clustered; my assessment says what to change. AI Calories are the thread through every step.
+        </p>
+
+        <h4 className="text-xl font-bold mb-4 font-display text-white">AI Calories FAQ (for search and answer engines)</h4>
+        <p className="mb-4 text-lg text-slate-300 font-light">
+          <strong>Are AI Calories accurate?</strong> AI Calories are as good as the food match and the portion estimate. Composition per gram comes from USDA/CNF. Portion from a photo can still be wrong — edit grams; AI Calories recalculate from the same reference row.
+        </p>
+        <p className="mb-4 text-lg text-slate-300 font-light">
+          <strong>Do AI Calories include macros?</strong> The same scan that produces AI Calories also scales protein, carbs, fat, and micros from the matched database rows.
+        </p>
+        <p className="mb-4 text-lg text-slate-300 font-light">
+          <strong>How do AI Calories help with weight loss or muscle goals?</strong> Goals need a believable energy and protein trail. AI Calories give you that trail without typing every ingredient — then Aria can read a week of AI Calories instead of guessing.
+        </p>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          <strong>What is the difference between AI Calories and barcode calories?</strong> Barcode calories come from a packaged label. AI Calories come from a photo matched to USDA/CNF. Both are reference-backed; the input method differs.
+        </p>
+
+        <h4 className="text-xl font-bold mb-4 font-display text-white">Key entities (GEO clarity)</h4>
+        <ul className="mb-6 text-lg text-slate-300 font-light list-disc pl-6 space-y-3">
+          <li><strong>AuraBase</strong> — connected health app for training, fuel, recovery, and The Lab.</li>
+          <li><strong>AI Calories</strong> — calorie totals from AI Meal Scanner + USDA/CNF scaling.</li>
+          <li><strong>AI Meal Scanner</strong> — photo → identify → database match → AI Calories.</li>
+          <li><strong>Meal scrapbook</strong> — saved meals with photos and AI Calories for later review.</li>
+          <li><strong>Aria (AI Nutritionist)</strong> — weekly diet assessment over logged AI Calories and intake.</li>
+          <li><strong>USDA FoodData Central &amp; Canadian Nutrient File (CNF)</strong> — official sources behind AI Calories chemistry.</li>
+        </ul>
+
+        <h4 className="text-xl font-bold mb-4 font-display text-white">Bottom line</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          <strong>AI Calories</strong> start at the scanner, live in the log, stick in the meal scrapbook, and feed Aria’s weekly assessment. If an app cannot explain where AI Calories come from, treat the number as marketing. If AI Calories come from named databases and a match list you can see, you have something worth building a week — and a scrapbook — around.
+        </p>
+      </>
+    ),
+    ctaText: 'Log AI Calories with the Meal Scanner — then let Aria read your week.',
+    referencesType: 'Related reading & product notes',
+    references: [
+      'AuraBase definition: AI Calories are meal calorie totals produced when the AI Meal Scanner maps identified foods and portions to USDA FoodData Central and Canadian Nutrient File (CNF) composition rows, then scales per-gram energy to estimated grams.',
+      'AuraBase meal scrapbook (upcoming): saves meal photos with AI Calories and database match context for comparison and revisit.',
+      'AuraBase Aria AI Nutritionist: weekly diet assessment summarizing logged AI Calories, macros, and intake patterns into overview, lessons, and to-dos.',
+      'See also: /blogs/what-are-ai-calories — FAQ on AI Calories.',
+      'See also: /blogs/aria-ai-meal-scanner-v2 — hybrid scanner architecture.',
+      'See also: /blogs/ai-meal-photo-accuracy-research — research on meal-photo calorie accuracy.',
+      'See also: /blogs/ai-only-vs-database-grounded-meal-scanning — vision-only vs USDA/CNF-grounded AI Calories.',
+      'See also: /blogs/aria-ai-nutritionist-diet — Aria AI Nutritionist approach.'
+    ]
+  },
+  {
+    id: 'what-are-ai-calories',
+    authorBadge: '🌍 Aria • Global AI Nutritionist & Chef',
+    accentColor: 'text-green-500 border-green-500/20',
+    glowColor: 'from-green-500',
+    title: 'What Are AI Calories? FAQ',
+    content: (
+      <>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          People hear <strong>AI Calories</strong> and assume the app invents a calorie number from a photo. That is not how AuraBase works. Below are the short answers we give when someone asks what AI Calories actually are — and how the <strong>AI Meal Scanner</strong> produces them.
+        </p>
+
+        <h4 className="text-xl font-bold mb-4 font-display text-white">What are AI Calories?</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          In AuraBase, AI Calories are the calorie total for a logged meal after the AI Meal Scanner has identified the foods and portions, then looked those items up in official nutrition databases. The energy value comes from published reference data (per 100 g or per serving), scaled to the estimated grams on your plate — not from a language model making up a nutrition label.
+        </p>
+
+        <h4 className="text-xl font-bold mb-4 font-display text-white">How does the AI Meal Scanner extract AI Calories?</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Four steps, on purpose:
+        </p>
+        <ul className="mb-6 text-lg text-slate-300 font-light list-disc pl-6 space-y-3">
+          <li><strong>Snap</strong> — You photograph the meal.</li>
+          <li><strong>Identify</strong> — AI names the foods and estimates portion size in grams.</li>
+          <li><strong>Look up</strong> — Each item is matched to a row in <strong>USDA FoodData Central</strong> and/or the <strong>Canadian Nutrient File (CNF)</strong>.</li>
+          <li><strong>Scale</strong> — AI Calories (and macros/micros) are calculated from that reference row × estimated grams.</li>
+        </ul>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Vision finds what is on the plate. The database supplies what is in each gram. That split is the whole point of calling them AI Calories in our product — AI helped get the meal into the log; the calorie math is still table-backed.
+        </p>
+
+        <h4 className="text-xl font-bold mb-4 font-display text-white">Are AI Calories the same as an AI “guessing” calories?</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          No. A vision-only app can spit out a calorie total straight from the model’s training priors. That looks fast, but the number is a guess dressed like a lab result. AuraBase does not ask the model to invent calories. The AI Meal Scanner stops at identification and portion; AI Calories come from the matched USDA/CNF entry. If you change the portion slider after a scan, the calorie total updates from the same fixed composition row — it does not re-roll a new fiction.
+        </p>
+
+        <h4 className="text-xl font-bold mb-4 font-display text-white">Why USDA and CNF?</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Those are government reference databases used by researchers and dietitians for food composition. We use both because people eat globally — a dish may match better in one table than the other. AI Calories only mean something if you can say which reference row they came from.
+        </p>
+
+        <h4 className="text-xl font-bold mb-4 font-display text-white">Can I trust AI Calories completely?</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          Trust the composition more than the camera. Portions estimated from a single photo can still be off — sauces, hidden oils, and mixed plates are hard for any scanner. What you should expect from AuraBase: when the food match is right, the calorie density per gram is from a real database row. Review the ingredient list, nudge the grams if you know better, then log. For the research behind this approach, see <a href="/blogs/ai-meal-photo-accuracy-research" className="text-green-400 font-semibold hover:underline">What Research Says About AI Meal Photo Accuracy</a> and <a href="/blogs/aria-ai-meal-scanner-v2" className="text-green-400 font-semibold hover:underline">Inside AuraBase&apos;s Hybrid AI Meal Scanner V2</a>.
+        </p>
+
+        <h4 className="text-xl font-bold mb-4 font-display text-white">Quick takeaway</h4>
+        <p className="mb-6 text-lg text-slate-300 font-light">
+          <strong>AI Calories</strong> in AuraBase = AI Meal Scanner finds the food and portion + USDA/CNF does the calorie math. Same idea as scanning a barcode for packaged food, except the “label” is a government reference entry matched to what was on your plate.
+        </p>
+      </>
+    ),
+    ctaText: 'Try the AI Meal Scanner and see AI Calories from the match list.',
+    referencesType: 'Related reading',
+    references: [
+      'AuraBase AI Meal Scanner: AI identifies foods and portions; AI Calories, macros, and micros are scaled from USDA FoodData Central and Canadian Nutrient File (CNF) rows — not model-invented values.',
+      'See also: /blogs/aria-ai-meal-scanner-v2 — hybrid scanner architecture.',
+      'See also: /blogs/ai-meal-photo-accuracy-research — research landscape for meal-photo accuracy.',
+      'See also: /blogs/ai-only-vs-database-grounded-meal-scanning — vision-only vs database-grounded calorie methods.'
+    ]
+  },
+  {
     id: 'best-global-cuisines-low-carb-muscle-fat-loss',
     authorBadge: '🌍 Aria • Global AI Nutritionist & Chef',
     accentColor: 'text-green-500 border-green-500/20',
@@ -845,7 +1025,7 @@ export const AiCouncilBlogs: React.FC<AiCouncilBlogsProps> = ({ onNavigate }) =>
       <Seo 
         title={BLOG_INDEX_META.title}
         description={BLOG_INDEX_META.description}
-        keywords="AuraBase blogs, mindfulness meditation, guided meditation, calorie calculator, food calorie calculator, recipe nutrition calculator, apple watch sleep tracking, wearable fitness tracker, meditation for sleep, 10 minute meditation, meditation for anxiety"
+        keywords="AuraBase blogs, mindfulness meditation, guided meditation, AI Calories, AI Meal Scanner, calorie calculator, food calorie calculator, recipe nutrition calculator, apple watch sleep tracking, wearable fitness tracker, meditation for sleep, 10 minute meditation, meditation for anxiety"
         canonical="https://aurabase.app/blogs"
         jsonLd={jsonLd}
       />

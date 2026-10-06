@@ -29,12 +29,18 @@ const BlogPostView: React.FC<BlogPostViewProps> = ({ postId, onBack }) => {
     `${post.title}. Read the full protocol and insights from ${post.authorBadge.split('•')[0].trim()} on AuraBase.`;
 
   const jsonLd = meta ? buildBlogPostPageJsonLd(meta) : undefined;
+  const isAiCaloriesPost =
+    postId === 'ai-calories-scrapbook-weekly-assessment' || postId === 'what-are-ai-calories';
+  const keywords = isAiCaloriesPost
+    ? 'AI Calories, AI Meal Scanner, AI Nutritionist, meal scrapbook, USDA, Canadian Nutrient File, CNF, calorie tracking, AuraBase Aria'
+    : undefined;
 
   return (
     <article className="min-h-screen pt-32 pb-24 bg-white dark:bg-slate-950 transition-colors duration-500">
       <Seo 
         title={`${post.title} | AuraBase`}
         description={description}
+        keywords={keywords}
         canonical={`https://aurabase.app/blogs/${post.id}`}
         ogImage={OG_IMAGE}
         ogImageAlt={OG_IMAGE_ALT}

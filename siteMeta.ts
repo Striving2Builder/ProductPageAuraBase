@@ -17,7 +17,7 @@ export const SITE_DESCRIPTION =
   'Connect sleep, nutrition, supplements, mood, and habits. Run personal wellness experiments in The Lab. Track. Test. Recover smarter.';
 
 export const SITE_KEYWORDS =
-  'health tracker, sleep recovery, meal scanner, AI nutritionist, AI chef, AI fitness trainer, biomechanics, workout planner, supplements, wellness experiments, mood tracker, habit tracker, personal biohacking, recovery radar';
+  'health tracker, sleep recovery, meal scanner, AI Meal Scanner, AI Calories, AI nutritionist, AI chef, AI Workout, AI fitness trainer, biomechanics, workout planner, supplements, wellness experiments, mood tracker, habit tracker, personal biohacking, recovery radar';
 
 export const OG_IMAGE = `${SITE_URL}/og-default.jpg`;
 
@@ -53,12 +53,12 @@ export const FAQ_ITEMS = [
   {
     question: 'How accurate is the AI Meal Scanner?',
     answer:
-      'AuraBase uses a hybrid approach: AI identifies food and portions, then anchors nutrition values to official USDA and Canadian Nutrient File databases rather than relying on vision-only estimates.',
+      'The AI Meal Scanner identifies food and portions, then extracts AI Calories and other nutrition values from official USDA and Canadian Nutrient File databases rather than relying on vision-only estimates.',
   },
   {
     question: 'Who are the AI coaches?',
     answer:
-      'Aria is your International AI Chef and AI Nutritionist for meal planning and diet assessment. Atlas is your AI Fitness Coach for workout planning and live BioMechanics form analysis.',
+      'Aria is your International AI Chef and AI Nutritionist for meal planning and diet assessment. Atlas is your AI Workout for planning and live BioMechanics form analysis.',
   },
   {
     question: 'Is my health data private?',

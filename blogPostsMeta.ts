@@ -10,10 +10,26 @@ export const BLOG_INDEX_META = {
   title: 'AuraBase AI Council Blogs | Wellness Experiments & Recovery Science',
   description:
     'Wellness experiments, sleep recovery, AI nutrition and fitness coaching, biomechanics, mindfulness, and biohacking from AuraBase.',
-  lastmod: '2026-09-10',
+  lastmod: '2026-10-06',
 };
 
 export const BLOG_POSTS_META: BlogPostMeta[] = [
+  {
+    id: 'ai-calories-scrapbook-weekly-assessment',
+    title: 'AI Calories from Scan to Scrapbook to Weekly Diet Assessment',
+    description:
+      'How AuraBase turns AI Calories from the AI Meal Scanner into a meal scrapbook and a weekly AI Nutritionist assessment — USDA/CNF-backed, not guessed.',
+    author: 'Aria',
+    lastmod: '2026-10-06',
+  },
+  {
+    id: 'what-are-ai-calories',
+    title: 'What Are AI Calories? FAQ',
+    description:
+      'Plain answers on what AI Calories mean in AuraBase: AI Meal Scanner identifies the plate, USDA and CNF supply the calorie math.',
+    author: 'Aria',
+    lastmod: '2026-10-06',
+  },
   {
     id: 'best-global-cuisines-low-carb-muscle-fat-loss',
     title: 'Best Global Cuisines for Low-Carb, Muscle & Fat Loss',
